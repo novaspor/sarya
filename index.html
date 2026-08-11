@@ -748,34 +748,86 @@ animation:appear .8s
 display:block
 }
 
-/* SÜRPRİZ */
-.surprise-btn{
-padding:16px 28px;
-border:1px solid #ff6d9e44;
-border-radius:18px;
-background:#ff287c16;
-color:#ffabc7;
-cursor:pointer;
-transition:.3s
-}
+<!-- SİNEMATİK SÜRPRİZ -->
+<div class="card surprise-card" id="surprise">
 
-.surprise-btn:hover{
-background:#ff287c28;
-transform:scale(1.04)
-}
+<h2>💗 SON BİR ŞEY...</h2>
 
-.secret{
-display:none;
-margin-top:25px;
-font-size:22px;
-line-height:1.9;
-color:#ffabc7;
-animation:appear .8s
-}
+<p class="text">
+BURAYA KADAR GELDİYSEN,
+SANA HAZIRLADIĞIM EN ÖZEL
+SÜRPRİZİ AÇABİLİRSİN.
+</p>
 
-.secret.show{
-display:block
-}
+<div class="divider"></div>
+
+<button class="surprise-btn" id="surpriseBtn" onclick="openFinalSurprise()">
+💗 KAPıyı AÇ
+</button>
+
+<div class="surprise-screen" id="surpriseScreen">
+
+<div class="surprise-stars"></div>
+
+<div class="surprise-content">
+
+<div class="surprise-small" id="surpriseSmall">
+BİR SONRAKİ SAYFADA NE VAR?
+</div>
+
+<div class="surprise-heart" id="surpriseHeart">
+❤️
+</div>
+
+<div class="surprise-text" id="surpriseText"></div>
+
+<button
+class="touch-final"
+id="touchFinal"
+onclick="revealFinalMessage()">
+❤️ KALBE DOKUN
+</button>
+
+<div class="final-message" id="finalMessage">
+
+<div class="final-line">
+SENİ GÖRDÜĞÜM İLK AN...
+</div>
+
+<div class="final-line">
+SENİ TANIDIĞIM İLK GÜN...
+</div>
+
+<div class="final-line">
+VE BUGÜN...
+</div>
+
+<div class="final-love">
+İYİ Kİ SEN. ❤️
+</div>
+
+<div class="final-date">
+15.12.2025 → ∞
+</div>
+
+<div class="final-last">
+BU HİKÂYENİN SONU YOK.
+</div>
+
+<button
+class="again-btn"
+onclick="replaySurprise()">
+💗 TEKRAR AÇ
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 
 /* FINAL */
 .final{
