@@ -13,8 +13,7 @@ body{
 font-family:Georgia,"Times New Roman",serif;
 color:#fff;
 background:#040004;
-overflow-x:hidden;
-cursor:default
+overflow-x:hidden
 }
 button,input{font:inherit}
 .hidden{display:none!important}
@@ -23,8 +22,8 @@ body:before{
 content:"";
 position:fixed;
 inset:0;
-pointer-events:none;
 z-index:0;
+pointer-events:none;
 background:
 radial-gradient(circle at 15% 10%,#c1166040,transparent 28%),
 radial-gradient(circle at 85% 80%,#790b4a40,transparent 34%),
@@ -103,9 +102,7 @@ box-shadow:0 15px 35px #ff126044;
 transition:.3s
 }
 
-.unlock:hover{
-transform:translateY(-3px)
-}
+.unlock:hover{transform:translateY(-3px)}
 
 #error{
 height:24px;
@@ -113,7 +110,7 @@ margin-top:12px;
 color:#ff91b5
 }
 
-/* GENEL */
+/* ANA */
 #site{
 position:relative;
 z-index:1
@@ -182,12 +179,7 @@ font-style:italic;
 letter-spacing:5px;
 line-height:.9;
 background:linear-gradient(
-90deg,
-#fff,
-#ff9fc0,
-#fff,
-#ff69a1,
-#fff
+90deg,#fff,#ff9fc0,#fff,#ff69a1,#fff
 );
 background-size:300%;
 -webkit-background-clip:text;
@@ -247,18 +239,11 @@ width:90px;
 height:1px;
 margin:25px auto;
 background:linear-gradient(
-90deg,
-transparent,
-#ff6e9f,
-transparent
+90deg,transparent,#ff6e9f,transparent
 )
 }
 
-/* SARYAMAA UNIVERSE */
-.universe{
-padding:30px 10px
-}
-
+/* UNIVERSE */
 .universe-title{
 font-family:Arial,sans-serif;
 font-size:11px;
@@ -311,11 +296,7 @@ margin-top:6px;
 color:#9f818d
 }
 
-/* KALBİMDEKİ YERİN */
-.heart-place{
-padding:10px 0 5px
-}
-
+/* KALPTEKİ YER */
 .big-heart{
 position:relative;
 width:200px;
@@ -340,7 +321,6 @@ position:absolute;
 z-index:2;
 font-size:19px;
 font-weight:bold;
-color:#fff;
 text-shadow:0 0 15px #ff2e7c
 }
 
@@ -350,6 +330,56 @@ line-height:1.8;
 color:#ffabc7;
 margin-top:15px
 }
+
+/* İLK AN */
+.first-time{
+padding:35px 20px;
+border-radius:28px;
+background:radial-gradient(circle at center,#ff287c18,transparent 70%)
+}
+
+.first-date{
+font-size:42px;
+font-style:italic;
+color:#ffabc7;
+margin:20px 0
+}
+
+.typewriter{
+min-height:130px;
+font-size:22px;
+line-height:1.7;
+color:#f6e1e9
+}
+
+/* IŞIK YOLU */
+.light-path{
+position:relative;
+height:100px;
+overflow:hidden;
+border-radius:25px;
+background:#00000025;
+margin-top:25px
+}
+
+.path-light{
+position:absolute;
+top:50%;
+width:10px;
+height:10px;
+border-radius:50%;
+background:#fff;
+box-shadow:
+0 0 10px #fff,
+0 0 25px #ff3d82,
+0 0 45px #ff3d82;
+animation:pathMove 3s infinite linear
+}
+
+.path-light:nth-child(2){animation-delay:.6s}
+.path-light:nth-child(3){animation-delay:1.2s}
+.path-light:nth-child(4){animation-delay:1.8s}
+.path-light:nth-child(5){animation-delay:2.4s}
 
 /* KALPTEN KALBE */
 .love-beam{
@@ -377,12 +407,7 @@ top:50%;
 height:4px;
 transform:translateY(-50%);
 background:linear-gradient(
-90deg,
-transparent,
-#ff4b8b,
-#fff,
-#ff4b8b,
-transparent
+90deg,transparent,#ff4b8b,#fff,#ff4b8b,transparent
 );
 box-shadow:0 0 18px #ff317c;
 animation:beamPulse 1.5s infinite
@@ -396,40 +421,10 @@ width:14px;
 height:14px;
 border-radius:50%;
 background:#fff;
-box-shadow:
-0 0 10px #fff,
-0 0 25px #ff3d82;
+box-shadow:0 0 10px #fff,0 0 25px #ff3d82;
 transform:translateY(-50%);
 animation:beamMove 2.5s infinite linear
 }
-
-/* IŞIK YOLU */
-.light-path{
-position:relative;
-height:100px;
-overflow:hidden;
-border-radius:25px;
-background:#00000025
-}
-
-.path-light{
-position:absolute;
-top:50%;
-width:10px;
-height:10px;
-border-radius:50%;
-background:#fff;
-box-shadow:
-0 0 10px #fff,
-0 0 25px #ff3d82,
-0 0 45px #ff3d82;
-animation:pathMove 3s infinite linear
-}
-
-.path-light:nth-child(2){animation-delay:.6s}
-.path-light:nth-child(3){animation-delay:1.2s}
-.path-light:nth-child(4){animation-delay:1.8s}
-.path-light:nth-child(5){animation-delay:2.4s}
 
 /* KALP NABZI */
 .pulse-zone{
@@ -506,10 +501,7 @@ justify-content:center;
 flex-shrink:0;
 background:
 radial-gradient(
-circle,
-#ffabc7 0 8%,
-#a8004b 9% 45%,
-#28000f 46% 100%
+circle,#ffabc7 0 8%,#a8004b 9% 45%,#28000f 46% 100%
 );
 box-shadow:0 0 30px #ff297755;
 animation:spin 4s linear infinite;
@@ -543,8 +535,7 @@ border:0;
 border-radius:50%;
 background:#ff377f;
 color:#fff;
-cursor:pointer;
-box-shadow:0 8px 25px #ff287044
+cursor:pointer
 }
 
 .progress{
@@ -564,14 +555,8 @@ font-size:10px;
 color:#9d7d89
 }
 
-.music-space{
-flex:1
-}
-
-.volume{
-width:80px;
-accent-color:#ff377f
-}
+.music-space{flex:1}
+.volume{width:80px;accent-color:#ff377f}
 
 /* GÖRSELLEŞTİRİCİ */
 .visualizer{
@@ -600,7 +585,7 @@ box-shadow:0 0 8px #ff3d7d66
 animation:equalizer .55s ease-in-out infinite alternate
 }
 
-/* GÜL YAĞMURU */
+/* GÜLLER */
 .rose-box{
 margin-top:25px;
 padding:25px;
@@ -609,7 +594,9 @@ background:#00000025;
 border:1px solid #ffffff0d
 }
 
-.rose-btn{
+.rose-btn,
+.surprise-btn,
+.final-btn{
 padding:16px 28px;
 border:0;
 border-radius:18px;
@@ -621,7 +608,9 @@ box-shadow:0 10px 30px #ff287044;
 transition:.3s
 }
 
-.rose-btn:hover{
+.rose-btn:hover,
+.surprise-btn:hover,
+.final-btn:hover{
 transform:translateY(-3px) scale(1.03)
 }
 
@@ -632,28 +621,6 @@ z-index:10000;
 pointer-events:none;
 font-size:28px;
 animation:fall linear forwards
-}
-
-/* İLK AN */
-.first-time{
-padding:35px 20px;
-border-radius:28px;
-background:
-radial-gradient(circle at center,#ff287c18,transparent 70%)
-}
-
-.first-time-date{
-font-size:42px;
-font-style:italic;
-color:#ffabc7;
-margin:20px 0
-}
-
-.typewriter{
-min-height:70px;
-font-size:22px;
-line-height:1.7;
-color:#f6e1e9
 }
 
 /* NEDENLER */
@@ -702,10 +669,6 @@ cursor:pointer;
 transition:.4s
 }
 
-.envelope:hover{
-transform:translateY(-5px) rotate(-1deg)
-}
-
 .envelope:before{
 content:"";
 position:absolute;
@@ -744,135 +707,158 @@ font-size:17px;
 animation:appear .8s
 }
 
-.letter.show{
-display:block
-}
+.letter.show{display:block}
 
-<!-- SİNEMATİK SÜRPRİZ -->
-<div class="card surprise-card" id="surprise">
-
-<h2>💗 SON BİR ŞEY...</h2>
-
-<p class="text">
-BURAYA KADAR GELDİYSEN,
-SANA HAZIRLADIĞIM EN ÖZEL
-SÜRPRİZİ AÇABİLİRSİN.
-</p>
-
-<div class="divider"></div>
-
-<button class="surprise-btn" id="surpriseBtn" onclick="openFinalSurprise()">
-💗 KAPıyı AÇ
-</button>
-
-<div class="surprise-screen" id="surpriseScreen">
-
-<div class="surprise-stars"></div>
-
-<div class="surprise-content">
-
-<div class="surprise-small" id="surpriseSmall">
-BİR SONRAKİ SAYFADA NE VAR?
-</div>
-
-<div class="surprise-heart" id="surpriseHeart">
-❤️
-</div>
-
-<div class="surprise-text" id="surpriseText"></div>
-
-<button
-class="touch-final"
-id="touchFinal"
-onclick="revealFinalMessage()">
-❤️ KALBE DOKUN
-</button>
-
-<div class="final-message" id="finalMessage">
-
-<div class="final-line">
-SENİ GÖRDÜĞÜM İLK AN...
-</div>
-
-<div class="final-line">
-SENİ TANIDIĞIM İLK GÜN...
-</div>
-
-<div class="final-line">
-VE BUGÜN...
-</div>
-
-<div class="final-love">
-İYİ Kİ SEN. ❤️
-</div>
-
-<div class="final-date">
-15.12.2025 → ∞
-</div>
-
-<div class="final-last">
-BU HİKÂYENİN SONU YOK.
-</div>
-
-<button
-class="again-btn"
-onclick="replaySurprise()">
-💗 TEKRAR AÇ
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-/* FINAL */
-.final{
-position:relative;
-overflow:hidden;
-margin-top:45px;
-padding:70px 25px;
-border-radius:40px;
-border:1px solid #ff4b8b25;
+/* GİZLİ SÜRPRİZ */
+.surprise-screen{
+position:fixed;
+inset:0;
+z-index:30000;
+display:none;
+align-items:center;
+justify-content:center;
+padding:25px;
 background:
-radial-gradient(circle at center,#ff287c18,transparent 68%)
+radial-gradient(circle at center,#4d0829,#100008 45%,#020002);
+overflow:hidden
 }
 
-.final h2{
-font-size:48px;
-font-weight:normal;
+.surprise-screen.open{
+display:flex;
+animation:fadeIn 1s
+}
+
+.surprise-stars{
+position:absolute;
+inset:0;
+background-image:
+radial-gradient(circle,#fff 1px,transparent 1px),
+radial-gradient(circle,#ff9fbe 1px,transparent 1px);
+background-size:80px 80px,120px 120px;
+opacity:.25;
+animation:starMove 18s linear infinite
+}
+
+.surprise-content{
+position:relative;
+z-index:2;
+width:min(850px,95%);
+text-align:center
+}
+
+.surprise-small{
+font-family:Arial,sans-serif;
+font-size:11px;
+letter-spacing:5px;
+color:#bd9eab;
+animation:fadeIn 1s
+}
+
+.surprise-heart{
+font-size:130px;
+margin:25px 0;
+filter:
+drop-shadow(0 0 25px #ff2279)
+drop-shadow(0 0 70px #ff227988);
+animation:bigHeart 1.8s infinite
+}
+
+.surprise-text{
+min-height:100px;
+font-size:clamp(24px,4vw,42px);
 font-style:italic;
-letter-spacing:3px;
-color:#ffabc7;
-margin-bottom:20px
+line-height:1.6;
+color:#fff
 }
 
-.infinity{
-font-size:42px;
-color:#ff75a8;
-margin-top:25px
-}
-
-.final-btn{
-margin-top:30px;
+.touch-final{
+display:none;
+margin:25px auto 0;
 padding:16px 28px;
-border:0;
+border:1px solid #ff7da855;
 border-radius:20px;
-background:linear-gradient(135deg,#ff4786,#9b0045);
-color:#fff;
+background:#ff287c18;
+color:#ffb2ca;
 font-weight:bold;
 cursor:pointer;
-box-shadow:0 10px 35px #ff287055
+animation:pulseButton 1.5s infinite
 }
 
-/* DOKUNMA */
+.touch-final.show{display:block}
+
+.final-message{
+display:none;
+margin-top:20px
+}
+
+.final-message.show{
+display:block;
+animation:appear 1s
+}
+
+.final-line{
+font-size:clamp(20px,4vw,34px);
+line-height:1.8;
+color:#f8e5ec;
+opacity:0;
+animation:lineReveal .9s forwards
+}
+
+.final-line:nth-child(1){animation-delay:.2s}
+.final-line:nth-child(2){animation-delay:1.1s}
+.final-line:nth-child(3){animation-delay:2s}
+
+.final-love{
+margin-top:28px;
+font-size:clamp(35px,8vw,70px);
+font-style:italic;
+font-weight:bold;
+color:#ff9fc1;
+text-shadow:
+0 0 20px #ff267e,
+0 0 60px #ff267e66;
+opacity:0;
+animation:
+loveReveal 1.2s 3s forwards,
+bigHeart 1.8s 4.2s infinite
+}
+
+.final-date{
+margin-top:25px;
+font-family:Arial,sans-serif;
+font-size:18px;
+letter-spacing:4px;
+color:#ff83ae;
+opacity:0;
+animation:fadeIn 1s 4.5s forwards
+}
+
+.final-last{
+margin-top:20px;
+font-size:18px;
+letter-spacing:2px;
+color:#d8bec9;
+opacity:0;
+animation:fadeIn 1s 5.2s forwards
+}
+
+.again-btn{
+margin-top:30px;
+padding:14px 24px;
+border:1px solid #ff6d9e44;
+border-radius:18px;
+background:#ffffff08;
+color:#ffabc7;
+cursor:pointer;
+opacity:0;
+animation:fadeIn 1s 6s forwards
+}
+
+/* DOKUNUNCA KALP */
 .touch-heart{
 position:fixed;
 pointer-events:none;
-z-index:20000;
+z-index:40000;
 font-size:25px;
 animation:touchPop 1s forwards
 }
@@ -880,7 +866,7 @@ animation:touchPop 1s forwards
 /* HAVAİ FİŞEK */
 .firework{
 position:fixed;
-z-index:19999;
+z-index:39999;
 width:6px;
 height:6px;
 border-radius:50%;
@@ -891,7 +877,7 @@ pointer-events:none
 
 .fire-particle{
 position:fixed;
-z-index:19998;
+z-index:39998;
 width:5px;
 height:5px;
 border-radius:50%;
@@ -909,7 +895,6 @@ letter-spacing:2px;
 color:#69535d
 }
 
-/* YILDIZLAR / KALPLER */
 .heart{
 position:fixed;
 bottom:-60px;
@@ -962,6 +947,11 @@ from{opacity:0;transform:translateY(25px) scale(.96)}
 to{opacity:1;transform:none}
 }
 
+@keyframes fadeIn{
+from{opacity:0}
+to{opacity:1}
+}
+
 @keyframes bounce{
 0%,100%{transform:translateY(0)}
 50%{transform:translateY(8px)}
@@ -985,8 +975,8 @@ opacity:0
 }
 
 @keyframes beamPulse{
-0%,100%{opacity:.35;transform:translateY(-50%) scaleY(.6)}
-50%{opacity:1;transform:translateY(-50%) scaleY(1)}
+0%,100%{opacity:.35}
+50%{opacity:1}
 }
 
 @keyframes beamMove{
@@ -1012,9 +1002,7 @@ opacity:0
 transform:scale(.4);
 opacity:0
 }
-25%{
-opacity:1
-}
+25%{opacity:1}
 100%{
 transform:translateY(-100px) scale(1.5) rotate(20deg);
 opacity:0
@@ -1036,15 +1024,48 @@ opacity:0
 }
 }
 
+@keyframes bigHeart{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.12)}
+}
+
+@keyframes pulseButton{
+0%,100%{box-shadow:0 0 0 #ff287c00}
+50%{box-shadow:0 0 35px #ff287c55}
+}
+
+@keyframes lineReveal{
+from{
+opacity:0;
+transform:translateY(20px)
+}
+to{
+opacity:1;
+transform:none
+}
+}
+
+@keyframes loveReveal{
+from{
+opacity:0;
+transform:scale(.7)
+}
+to{
+opacity:1;
+transform:scale(1)
+}
+}
+
+@keyframes starMove{
+from{transform:translateY(0)}
+to{transform:translateY(-160px)}
+}
+
 @media(max-width:650px){
 
-.container{
-padding:45px 0
-}
+.container{padding:45px 0}
 
-.hero{
-min-height:88vh
-}
+.hero{min-height:88vh}
 
 .moon{
 width:55px;
@@ -1058,9 +1079,7 @@ width:47px;
 height:47px
 }
 
-.hero-heart{
-font-size:76px
-}
+.hero-heart{font-size:76px}
 
 .counter{
 grid-template-columns:repeat(2,1fr)
@@ -1094,18 +1113,6 @@ font-size:14px
 width:60px
 }
 
-.final h2{
-font-size:38px
-}
-
-.visualizer{
-gap:3px
-}
-
-.bar{
-width:4px
-}
-
 .beam{
 left:75px;
 right:75px
@@ -1119,7 +1126,7 @@ padding:0 8px
 font-size:45px
 }
 
-.first-time-date{
+.first-date{
 font-size:32px
 }
 
@@ -1127,13 +1134,38 @@ font-size:32px
 font-size:19px
 }
 
+.surprise-heart{
+font-size:90px
+}
+
+.surprise-small{
+font-size:9px;
+letter-spacing:3px
+}
+
+.final-date{
+font-size:14px;
+letter-spacing:2px
+}
+
+.final-last{
+font-size:14px
+}
+
+.visualizer{
+gap:3px
+}
+
+.bar{
+width:4px
+}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ŞİFRE EKRANI -->
+<!-- ŞİFRE -->
 <div id="lock">
 <div class="lock-box">
 
@@ -1163,15 +1195,13 @@ autocomplete="off">
 </div>
 </div>
 
-
-<!-- ANA SITE -->
+<!-- SITE -->
 <div id="site" class="hidden">
 
 <div class="moon"></div>
 
 <div class="container">
 
-<!-- HERO -->
 <section class="hero">
 
 <div class="badge">
@@ -1193,11 +1223,7 @@ EVRENİ KEŞFET ↓
 
 </section>
 
-
-<!-- UNIVERSE -->
 <div class="card">
-
-<div class="universe">
 
 <div class="universe-title">
 ✨ SARYAMAA UNIVERSE ✨
@@ -1206,46 +1232,40 @@ EVRENİ KEŞFET ↓
 <div class="universe-grid">
 
 <div class="universe-item"
-onclick="scrollToSection('heartPlace')">
+onclick="go('heartPlace')">
 <div class="icon">❤️</div>
 <b>KALBİMDEKİ YERİN</b>
 <small>Kalbine dokun</small>
 </div>
 
 <div class="universe-item"
-onclick="scrollToSection('firstMoment')">
+onclick="go('firstMoment')">
 <div class="icon">🌙</div>
 <b>İLK AN</b>
 <small>Seni gördüğüm ilk an</small>
 </div>
 
 <div class="universe-item"
-onclick="scrollToSection('loveBeam')">
+onclick="go('beamCard')">
 <div class="icon">💫</div>
 <b>KALPTEN KALBE</b>
 <small>Aramızdaki ışık</small>
 </div>
 
 <div class="universe-item"
-onclick="scrollToSection('musicCard')">
+onclick="go('musicCard')">
 <div class="icon">🎵</div>
 <b>BİZİM ŞARKIMIZ</b>
 <small>Kalbin ritmi</small>
 </div>
 
 </div>
-
 </div>
-
-</div>
-
 
 <!-- KALBİMDEKİ YERİN -->
 <div class="card" id="heartPlace">
 
 <h2>❤️ KALBİMDEKİ YERİN</h2>
-
-<div class="heart-place">
 
 <div class="big-heart">
 
@@ -1270,17 +1290,14 @@ TARİF EDİLECEK BİR YER DEĞİL. ❤️<br>
 
 </div>
 
-</div>
-
-
-<!-- SENİ GÖRDÜĞÜM İLK AN -->
+<!-- İLK AN -->
 <div class="card" id="firstMoment">
 
 <h2>🌙 SENİ GÖRDÜĞÜM İLK AN</h2>
 
 <div class="first-time">
 
-<div class="first-time-date">
+<div class="first-date">
 15.12.2025
 </div>
 
@@ -1291,7 +1308,6 @@ TARİF EDİLECEK BİR YER DEĞİL. ❤️<br>
 </div>
 
 </div>
-
 
 <!-- IŞIK YOLU -->
 <div class="card">
@@ -1317,9 +1333,8 @@ BİZİMKİ DE ÖYLE BİR YOL. ❤️
 
 </div>
 
-
 <!-- KALPTEN KALBE -->
-<div class="card" id="loveBeam">
+<div class="card" id="beamCard">
 
 <h2>❤️ KALPTEN KALBE IŞIN</h2>
 
@@ -1346,8 +1361,7 @@ BİR KALPTEN DİĞERİNE... ❤️
 
 </div>
 
-
-<!-- KALP NABZI -->
+<!-- NABIZ -->
 <div class="card">
 
 <h2>💗 KALP NABZI</h2>
@@ -1367,13 +1381,10 @@ KALBİMİN RİTMİ: SARYAMAA ❤️
 <p class="text" style="margin-top:20px">
 BU KALP BİR ŞEYİ UNUTMUYOR:
 <br><br>
-<span class="highlight">
-SENİ. ❤️
-</span>
+<span class="highlight">SENİ. ❤️</span>
 </p>
 
 </div>
-
 
 <!-- HİKAYE -->
 <div class="card">
@@ -1392,8 +1403,7 @@ SENİ. ❤️
 TAKVİMDE SADECE BİR TARİH OLABİLİR.
 <br><br>
 AMA BENİM İÇİN O TARİH,
-GÜZEL BİR HİKÂYENİN
-BAŞLANGICI.
+GÜZEL BİR HİKÂYENİN BAŞLANGICI.
 <br><br>
 BAZI ŞARKILARIN,
 BAZI GECELERİN,
@@ -1431,7 +1441,6 @@ ANLAMI O GÜNDEN SONRA DEĞİŞTİ.
 
 </div>
 
-
 <!-- MÜZİK -->
 <div class="card" id="musicCard">
 
@@ -1447,9 +1456,7 @@ ANLAMI O GÜNDEN SONRA DEĞİŞTİ.
 
 <b>PINHANI - BENİ SEN İNANDIR</b>
 
-<small>
-SARYAMAA İÇİN ❤️
-</small>
+<small>SARYAMAA İÇİN ❤️</small>
 
 </div>
 
@@ -1491,7 +1498,6 @@ value=".8">
 </div>
 
 <div class="visualizer" id="visualizer">
-
 <div class="bar"></div><div class="bar"></div>
 <div class="bar"></div><div class="bar"></div>
 <div class="bar"></div><div class="bar"></div>
@@ -1502,7 +1508,6 @@ value=".8">
 <div class="bar"></div><div class="bar"></div>
 <div class="bar"></div><div class="bar"></div>
 <div class="bar"></div><div class="bar"></div>
-
 </div>
 
 <audio id="music" preload="metadata">
@@ -1511,15 +1516,13 @@ value=".8">
 
 </div>
 
-
-<!-- GÜL -->
+<!-- GÜL YAĞMURU -->
 <div class="card">
 
 <h2>🌹 GÜL YAĞMURU</h2>
 
 <p class="text">
-BU SAYFAYI BİRAZ DAHA
-GÜZELLEŞTİRELİM. ❤️
+BU SAYFAYI GÜLLERLE DOLDURALIM. ❤️
 </p>
 
 <div class="rose-box">
@@ -1532,7 +1535,6 @@ GÜZELLEŞTİRELİM. ❤️
 
 </div>
 
-
 <!-- NEDENLER -->
 <div class="card">
 
@@ -1542,40 +1544,27 @@ GÜZELLEŞTİRELİM. ❤️
 
 <div class="reason">
 <div class="reason-icon">😊</div>
-<p>
-GÜLÜŞÜNÜN HER ŞEYİ
-DAHA GÜZEL YAPMASI.
-</p>
+<p>GÜLÜŞÜNÜN HER ŞEYİ DAHA GÜZEL YAPMASI.</p>
 </div>
 
 <div class="reason">
 <div class="reason-icon">🌙</div>
-<p>
-GECELERDE BİLE AKLIMA
-GELEN GÜZEL ŞEY OLMAN.
-</p>
+<p>GECELERDE BİLE AKLIMA GELEN GÜZEL ŞEY OLMAN.</p>
 </div>
 
 <div class="reason">
 <div class="reason-icon">✨</div>
-<p>
-HAYATI DAHA ANLAMLI
-HİSSETTİRMEN.
-</p>
+<p>HAYATI DAHA ANLAMLI HİSSETTİRMEN.</p>
 </div>
 
 <div class="reason">
 <div class="reason-icon">❤️</div>
-<p>
-VE EN ÖNEMLİSİ...
-SADECE SEN OLDUĞUN İÇİN.
-</p>
+<p>VE EN ÖNEMLİSİ... SADECE SEN OLDUĞUN İÇİN.</p>
 </div>
 
 </div>
 
 </div>
-
 
 <!-- MEKTUP -->
 <div class="card">
@@ -1595,19 +1584,16 @@ ZARFA DOKUN VE MEKTUBU AÇ. 💕
 <p>
 SEVGİLİ SARYAMAA,
 <br><br>
-BUNU YAZARKEN AKLIMDAN GEÇEN
-TEK ŞEY SEN OLDUN.
+BUNU YAZARKEN AKLIMDAN GEÇEN TEK ŞEY SEN OLDUN.
 <br><br>
-BAZI DUYGULARI KELİMELERLE
-ANLATMAK ZOR.
+BAZI DUYGULARI KELİMELERLE ANLATMAK ZOR.
 <br><br>
 AMA ŞUNU BİLMENİ İSTİYORUM:
 <br><br>
 SEN BENİM İÇİN ÇOK ÖZELSİN.
 <br><br>
-GÜLÜŞÜN, KONUŞMAN,
-VARLIĞIN VE KÜÇÜK ŞEYLERİN
-BİLE BENDE GÜZEL BİR İZ BIRAKIYOR.
+GÜLÜŞÜN, KONUŞMAN VE VARLIĞIN
+BENDE GÜZEL BİR İZ BIRAKIYOR.
 <br><br>
 BU SAYFAYI HAZIRLARKEN
 YÜZÜNDE BİR GÜLÜMSEME
@@ -1624,57 +1610,27 @@ SENİ ÇOK SEVİYORUM. ❤️
 
 </div>
 
-
-<!-- SÜRPRİZ -->
+<!-- SİNEMATİK SÜRPRİZ -->
 <div class="card">
 
-<h2>🎁 GİZLİ SÜRPRİZ</h2>
+<h2>💗 SON BİR ŞEY...</h2>
 
 <p class="text">
-BÜTÜN EVRENİ GEZDİYSEN
-SON BİR ŞEY DAHA VAR.
+BURAYA KADAR GELDİYSEN,
+SANA HAZIRLADIĞIM EN ÖZEL
+SÜRPRİZİ AÇABİLİRSİN.
 </p>
 
 <div class="divider"></div>
 
-<button class="surprise-btn" onclick="showSecret()">
-🎁 SÜRPRİZİ AÇ
+<button class="surprise-btn" onclick="openFinalSurprise()">
+💗 KAPıyI AÇ
 </button>
 
-<div class="secret" id="secret">
-
-SARYAMAA... ❤️
-
-<br><br>
-
-BÜTÜN BU SAYFAYI TEK BİR CÜMLE
-İÇİN HAZIRLADIM:
-
-<br><br>
-
-<strong>
-İYİ Kİ VARSIN.
-</strong>
-
-<br><br>
-
-15.12.2025
-
-<br><br>
-
-VE BU HİKÂYENİN SONU YOK.
-
-<br>
-
-∞
-
 </div>
-
-</div>
-
 
 <!-- FİNAL -->
-<div class="final" id="final">
+<div class="card final">
 
 <h2>SARYAMAA ❤️</h2>
 
@@ -1687,20 +1643,8 @@ VE BU HİKÂYENİN SONU YOK.
 <div class="divider"></div>
 
 <p class="text">
-BAZI İNSANLAR UNUTULUR.<br>
-BAZI ANILAR SİLİNİR.<br><br>
-AMA BAZI İNSANLAR
-KALPTE BİR YER EDİNİR
-VE ORADA KALIR.
-</p>
-
-<div class="infinity">
 15.12.2025 → ∞
-</div>
-
-<button class="final-btn" onclick="finale()">
-🎆 SONSUZLUĞA BAS
-</button>
+</p>
 
 </div>
 
@@ -1712,45 +1656,98 @@ SARYAMAA UNIVERSE ❤️ · 15.12.2025
 
 </div>
 
+<!-- FİNAL TAM EKRAN -->
+<div class="surprise-screen" id="surpriseScreen">
+
+<div class="surprise-stars"></div>
+
+<div class="surprise-content">
+
+<div class="surprise-small" id="surpriseSmall">
+BİR SONRAKİ SAYFADA NE VAR?
+</div>
+
+<div class="surprise-heart" id="surpriseHeart">
+❤️
+</div>
+
+<div class="surprise-text" id="surpriseText"></div>
+
+<button
+class="touch-final"
+id="touchFinal"
+onclick="revealFinalMessage()">
+❤️ KALBE DOKUN
+</button>
+
+<div class="final-message" id="finalMessage">
+
+<div class="final-line">
+SENİ GÖRDÜĞÜM İLK AN...
+</div>
+
+<div class="final-line">
+SENİ TANIDIĞIM İLK GÜN...
+</div>
+
+<div class="final-line">
+VE BUGÜN...
+</div>
+
+<div class="final-love">
+İYİ Kİ SEN. ❤️
+</div>
+
+<div class="final-date">
+15.12.2025 → ∞
+</div>
+
+<div class="final-last">
+BU HİKÂYENİN SONU YOK.
+</div>
+
+<button class="again-btn" onclick="replaySurprise()">
+💗 TEKRAR AÇ
+</button>
+
+</div>
+
+</div>
+
+</div>
 
 <script>
 
-/* ŞİFRE */
 const PASSWORD="15122025";
 
+/* ŞİFRE */
 function unlock(){
 
-const value=document
-.getElementById("password")
-.value.trim();
+const value=document.getElementById("password").value.trim();
 
 if(value===PASSWORD){
 
-document.getElementById("lock")
-.classList.add("hidden");
-
-document.getElementById("site")
-.classList.remove("hidden");
+document.getElementById("lock").classList.add("hidden");
+document.getElementById("site").classList.remove("hidden");
 
 startHearts();
 
 }else{
 
-document.getElementById("error")
-.textContent="ŞİFRE YANLIŞ. ❤️";
+document.getElementById("error").textContent=
+"ŞİFRE YANLIŞ. ❤️";
 
 }
 
 }
 
-document.getElementById("password")
-.addEventListener("keydown",e=>{
+document.getElementById("password").addEventListener("keydown",e=>{
 if(e.key==="Enter")unlock();
 });
 
 
-/* EVREN NAVİGASYONU */
-function scrollToSection(id){
+/* MENÜ */
+function go(id){
 
 const el=document.getElementById(id);
 
@@ -1764,7 +1761,7 @@ block:"center"
 }
 
 
-/* İLK AN YAZISI */
+/* İLK AN */
 const firstText=
 "Seni gördüğüm ilk an, belki senin için sıradan bir andı. Ama bazı anlar vardır; insan daha sonra dönüp baktığında ne kadar özel olduğunu anlar. O anın güzel bir başlangıç olduğunu bilmiyordum...";
 
@@ -1824,7 +1821,7 @@ visualizer.classList.add("active");
 }).catch(()=>{
 
 alert(
-"MÜZİK BULUNAMADI. GITHUB'DA DOSYA ADININ sarki.mp3 OLDUĞUNU KONTROL ET."
+"MÜZİK BULUNAMADI. GITHUB'DAKİ DOSYANIN ADI sarki.mp3 OLMALI."
 );
 
 });
@@ -1844,18 +1841,14 @@ visualizer.classList.remove("active");
 music.addEventListener("loadedmetadata",()=>{
 
 progress.max=music.duration;
-
-duration.textContent=
-formatTime(music.duration);
+duration.textContent=formatTime(music.duration);
 
 });
 
 music.addEventListener("timeupdate",()=>{
 
 progress.value=music.currentTime;
-
-current.textContent=
-formatTime(music.currentTime);
+current.textContent=formatTime(music.currentTime);
 
 });
 
@@ -1878,7 +1871,7 @@ music.volume=volume.value;
 music.volume=.8;
 
 
-/* MÜZİK ÇALARKEN NABIZ */
+/* NABIZ */
 setInterval(()=>{
 
 if(!music.paused){
@@ -1896,8 +1889,7 @@ pulseHeart.style.transform="";
 
 
 /* SAYAÇ */
-const startDate=
-new Date("2025-12-15T00:00:00");
+const startDate=new Date("2025-12-15T00:00:00");
 
 function updateCounter(){
 
@@ -1931,66 +1923,34 @@ setInterval(updateCounter,1000);
 /* MEKTUP */
 function openLetter(){
 
-const letter=document
-.getElementById("letter");
+const letter=document.getElementById("letter");
 
 letter.classList.toggle("show");
 
-for(let i=0;i<10;i++){
-
+for(let i=0;i<10;i++)
 setTimeout(createHeart,i*100);
 
 }
 
-}
 
-
-/* GİZLİ SÜRPRİZ */
-function showSecret(){
-
-const secret=document
-.getElementById("secret");
-
-secret.classList.add("show");
-
-for(let i=0;i<25;i++){
-
-setTimeout(createHeart,i*60);
-
-}
-
-}
-
-
-/* GÜL YAĞMURU */
+/* GÜL */
 function roseRain(){
 
 for(let i=0;i<75;i++){
 
 setTimeout(()=>{
 
-const rose=document
-.createElement("div");
+const rose=document.createElement("div");
 
 rose.className="rose";
-
-rose.textContent=
-Math.random()>.2?"🌹":"🌸";
-
-rose.style.left=
-Math.random()*100+"vw";
-
-rose.style.fontSize=
-(18+Math.random()*25)+"px";
-
-rose.style.animationDuration=
-(3+Math.random()*4)+"s";
+rose.textContent=Math.random()>.2?"🌹":"🌸";
+rose.style.left=Math.random()*100+"vw";
+rose.style.fontSize=(18+Math.random()*25)+"px";
+rose.style.animationDuration=(3+Math.random()*4)+"s";
 
 document.body.appendChild(rose);
 
-setTimeout(()=>{
-rose.remove();
-},8000);
+setTimeout(()=>rose.remove(),8000);
 
 },i*45);
 
@@ -2008,8 +1968,7 @@ e.target.closest("input")||
 e.target.closest(".envelope")
 )return;
 
-const heart=document
-.createElement("div");
+const heart=document.createElement("div");
 
 heart.className="touch-heart";
 
@@ -2022,9 +1981,7 @@ heart.style.top=e.clientY+"px";
 
 document.body.appendChild(heart);
 
-setTimeout(()=>{
-heart.remove();
-},1000);
+setTimeout(()=>heart.remove(),1000);
 
 });
 
@@ -2032,8 +1989,7 @@ heart.remove();
 /* KALPLER */
 function createHeart(){
 
-const heart=document
-.createElement("div");
+const heart=document.createElement("div");
 
 heart.className="heart";
 
@@ -2041,20 +1997,13 @@ heart.textContent=[
 "❤️","💕","💗","💖","💘","💞","💓"
 ][Math.floor(Math.random()*7)];
 
-heart.style.left=
-Math.random()*100+"vw";
-
-heart.style.fontSize=
-(14+Math.random()*28)+"px";
-
-heart.style.animationDuration=
-(5+Math.random()*7)+"s";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(14+Math.random()*28)+"px";
+heart.style.animationDuration=(5+Math.random()*7)+"s";
 
 document.body.appendChild(heart);
 
-setTimeout(()=>{
-heart.remove();
-},14000);
+setTimeout(()=>heart.remove(),14000);
 
 }
 
@@ -2071,130 +2020,168 @@ setInterval(createHeart,950);
 /* YILDIZLAR */
 for(let i=0;i<55;i++){
 
-const star=document
-.createElement("div");
+const star=document.createElement("div");
 
 star.className="star";
-
-star.style.left=
-Math.random()*100+"vw";
-
-star.style.top=
-Math.random()*100+"vh";
-
-star.style.animationDelay=
-Math.random()*3+"s";
+star.style.left=Math.random()*100+"vw";
+star.style.top=Math.random()*100+"vh";
+star.style.animationDelay=Math.random()*3+"s";
 
 document.body.appendChild(star);
 
 }
 
 
-/* FİNAL HAVAİ FİŞEK */
-function finale(){
+/* SİNEMATİK SÜRPRİZ */
+function openFinalSurprise(){
 
-window.scrollTo({
-top:document.body.scrollHeight,
-behavior:"smooth"
-});
+const screen=document.getElementById("surpriseScreen");
+const text=document.getElementById("surpriseText");
+const button=document.getElementById("touchFinal");
+
+screen.classList.add("open");
+document.body.style.overflow="hidden";
+
+text.textContent="";
+button.classList.remove("show");
+
+const message="SARYAMAA...";
+
+let i=0;
+
+function type(){
+
+if(i<message.length){
+
+text.textContent+=message.charAt(i);
+i++;
+
+setTimeout(type,130);
+
+}else{
 
 setTimeout(()=>{
 
-for(let f=0;f<7;f++){
+text.textContent=
+"SANA SÖYLEMEK İSTEDİĞİM SON BİR ŞEY VAR.";
+
+button.classList.add("show");
+
+},1000);
+
+}
+
+}
+
+type();
+
+for(let i=0;i<60;i++)
+setTimeout(createHeart,i*30);
+
+}
+
+
+/* SON MESAJ */
+function revealFinalMessage(){
+
+const small=document.getElementById("surpriseSmall");
+const heart=document.getElementById("surpriseHeart");
+const text=document.getElementById("surpriseText");
+const button=document.getElementById("touchFinal");
+const final=document.getElementById("finalMessage");
+
+small.style.display="none";
+text.style.display="none";
+button.style.display="none";
+
+heart.textContent="💖";
+
+final.classList.add("show");
+
+setTimeout(megaFireworks,3000);
+setTimeout(roseRain,3700);
+
+for(let i=0;i<150;i++)
+setTimeout(createHeart,i*15);
+
+}
+
+
+/* HAVAİ FİŞEK */
+function megaFireworks(){
+
+for(let f=0;f<10;f++){
 
 setTimeout(()=>{
 
-const x=
-20+Math.random()*60;
+const x=15+Math.random()*70;
+const y=15+Math.random()*55;
 
-const y=
-15+Math.random()*45;
-
-const core=document
-.createElement("div");
+const core=document.createElement("div");
 
 core.className="firework";
-
 core.style.left=x+"vw";
 core.style.top=y+"vh";
 
 document.body.appendChild(core);
 
-for(let p=0;p<35;p++){
+for(let p=0;p<45;p++){
 
-const particle=document
-.createElement("div");
+const particle=document.createElement("div");
 
 particle.className="fire-particle";
-
 particle.style.left=x+"vw";
 particle.style.top=y+"vh";
 
-const angle=
-Math.random()*Math.PI*2;
-
-const distance=
-60+Math.random()*150;
+const angle=Math.random()*Math.PI*2;
+const distance=70+Math.random()*180;
 
 particle.style.setProperty(
-"--x",
-Math.cos(angle)*distance
+"--x",Math.cos(angle)*distance
 );
 
 particle.style.setProperty(
-"--y",
-Math.sin(angle)*distance
+"--y",Math.sin(angle)*distance
 );
 
 document.body.appendChild(particle);
 
-setTimeout(()=>{
-particle.remove();
-},1400);
+setTimeout(()=>particle.remove(),1500);
 
 }
 
-setTimeout(()=>{
-core.remove();
-},1200);
+setTimeout(()=>core.remove(),1300);
 
-},f*500);
+},f*450);
 
 }
 
-for(let i=0;i<80;i++){
-
-setTimeout(createHeart,i*25);
-
 }
 
-for(let i=0;i<100;i++){
 
-setTimeout(()=>{
+/* TEKRAR */
+function replaySurprise(){
 
-const rose=document
-.createElement("div");
+const screen=document.getElementById("surpriseScreen");
+const text=document.getElementById("surpriseText");
+const final=document.getElementById("finalMessage");
+const button=document.getElementById("touchFinal");
+const heart=document.getElementById("surpriseHeart");
+const small=document.getElementById("surpriseSmall");
 
-rose.className="rose";
+final.classList.remove("show");
 
-rose.textContent=
-Math.random()>.3?"🌹":"❤️";
+button.classList.remove("show");
+button.style.display="";
 
-rose.style.left=
-Math.random()*100+"vw";
+small.style.display="";
+text.style.display="";
+text.textContent="";
+heart.textContent="❤️";
 
-rose.style.animationDuration=
-(2+Math.random()*3)+"s";
+screen.classList.remove("open");
 
-document.body.appendChild(rose);
-
-setTimeout(()=>rose.remove(),6000);
-
-},i*20);
-
-}
-
-},800);
+setTimeout(openFinalSurprise,500);
 
 }
 
