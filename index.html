@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090006">
-<title>SARYAMAA❤️</title>
+<meta name="theme-color" content="#070006">
+<title>SARYAMAA ❤️</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -13,24 +13,23 @@ body{
 font-family:Georgia,"Times New Roman",serif;
 color:#fff;
 background:#050005;
-overflow-x:hidden;
+overflow-x:hidden
 }
 button,input{font:inherit}
+.hidden{display:none!important}
 
 body:before{
 content:"";
 position:fixed;
 inset:0;
-pointer-events:none;
 z-index:0;
+pointer-events:none;
 background:
-radial-gradient(circle at 20% 15%,#a9145550,transparent 30%),
-radial-gradient(circle at 80% 75%,#6c0a4050,transparent 32%);
+radial-gradient(circle at 15% 12%,#b5165c45,transparent 29%),
+radial-gradient(circle at 85% 80%,#710b4645,transparent 34%),
+radial-gradient(circle at 50% 50%,#ff2a7c08,transparent 55%)
 }
 
-.hidden{display:none!important}
-
-/* LOCK */
 #lock{
 position:fixed;
 inset:0;
@@ -40,38 +39,39 @@ align-items:center;
 justify-content:center;
 padding:20px;
 background:
-radial-gradient(circle at 50% 40%,#7c1244,#25000f 50%,#030003);
+radial-gradient(circle at center,#87164b,#280010 50%,#030003)
 }
 
 .lock-box{
-width:min(460px,100%);
-padding:50px 30px;
+width:min(470px,100%);
+padding:52px 30px;
 text-align:center;
 border:1px solid #ffffff20;
-border-radius:38px;
-background:#ffffff0b;
+border-radius:40px;
+background:#ffffff0c;
 backdrop-filter:blur(25px);
-box-shadow:0 0 100px #ff267044;
-animation:appear 1.2s ease;
+box-shadow:0 0 110px #ff267044;
+animation:appear 1s ease
 }
 
 .lock-heart{
-font-size:82px;
-filter:drop-shadow(0 0 30px #ff337f);
-animation:heartbeat 1.5s infinite;
+font-size:86px;
+filter:drop-shadow(0 0 35px #ff337f);
+animation:pulse 1.5s infinite
 }
 
 .lock-box h1{
-font-size:48px;
-margin:18px 0 10px;
-font-weight:normal;
+font-size:54px;
 font-style:italic;
+font-weight:normal;
+letter-spacing:3px;
+margin:18px 0 10px
 }
 
 .lock-box p{
 color:#ead1db;
 line-height:1.8;
-margin-bottom:25px;
+margin-bottom:25px
 }
 
 #password{
@@ -83,7 +83,8 @@ outline:none;
 background:#00000045;
 color:#fff;
 text-align:center;
-letter-spacing:3px;
+letter-spacing:5px;
+font-size:18px
 }
 
 .unlock{
@@ -97,189 +98,192 @@ color:#fff;
 font-weight:bold;
 cursor:pointer;
 box-shadow:0 15px 35px #ff126044;
+transition:.3s
+}
+
+.unlock:hover{
+transform:translateY(-3px) scale(1.01)
 }
 
 #error{
 height:24px;
 margin-top:12px;
-color:#ff91b5;
+color:#ff91b5
 }
 
-/* MAIN */
 #site{
 position:relative;
-z-index:1;
+z-index:1
 }
 
 .container{
 width:min(920px,92%);
 margin:auto;
-padding:70px 0;
-text-align:center;
+padding:60px 0;
+text-align:center
 }
 
 .hero{
-min-height:90vh;
+min-height:92vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+position:relative
 }
 
 .moon{
 position:absolute;
-top:8%;
+top:5%;
 right:8%;
-width:80px;
-height:80px;
+width:85px;
+height:85px;
 border-radius:50%;
-background:#fff3f7;
-box-shadow:0 0 50px #fff0f888;
-opacity:.9;
+background:#fff4f8;
+box-shadow:0 0 60px #fff0f899
+}
+
+.moon:after{
+content:"";
+position:absolute;
+width:72px;
+height:72px;
+left:-8px;
+top:-4px;
+border-radius:50%;
+background:#1a000d
 }
 
 .badge{
-padding:10px 20px;
-border-radius:40px;
+padding:10px 22px;
 border:1px solid #ffffff22;
+border-radius:40px;
 background:#ffffff0a;
 color:#ffabc7;
 font-family:Arial,sans-serif;
 font-size:11px;
-letter-spacing:3px;
+letter-spacing:4px
 }
 
 .hero-heart{
-margin:35px 0 15px;
-font-size:105px;
-filter:drop-shadow(0 0 40px #ff267e);
-animation:heartbeat 1.6s infinite;
+margin:34px 0 15px;
+font-size:110px;
+filter:drop-shadow(0 0 45px #ff267e);
+animation:pulse 1.6s infinite
 }
 
 .title{
-font-size:clamp(65px,14vw,125px);
+font-size:clamp(62px,14vw,130px);
 font-weight:normal;
 font-style:italic;
+letter-spacing:4px;
 line-height:.9;
-background:linear-gradient(
-90deg,
-#fff,
-#ff9fc0,
-#fff,
-#ff6fa5,
-#fff
-);
+background:linear-gradient(90deg,#fff,#ff9fc0,#fff,#ff69a1,#fff);
 background-size:300%;
 -webkit-background-clip:text;
 color:transparent;
-animation:shine 7s infinite;
+animation:shine 7s infinite
 }
 
 .subtitle{
 margin-top:28px;
 font-size:20px;
-line-height:1.7;
-color:#ead6df;
+line-height:1.8;
+color:#ead6df
 }
 
 .scroll{
-margin-top:45px;
+margin-top:48px;
 font-family:Arial,sans-serif;
-font-size:11px;
-letter-spacing:3px;
+font-size:10px;
+letter-spacing:4px;
 color:#9d7d89;
-animation:floatText 2s infinite;
+animation:bounce 2s infinite
 }
 
-/* CARDS */
 .card{
 margin-top:35px;
 padding:40px 28px;
 border:1px solid #ffffff16;
 border-radius:35px;
-background:linear-gradient(
-145deg,
-#ffffff0d,
-#ffffff04
-);
+background:linear-gradient(145deg,#ffffff0d,#ffffff04);
 backdrop-filter:blur(20px);
-box-shadow:
-0 25px 80px #00000055,
-inset 0 1px #ffffff10;
+box-shadow:0 25px 80px #00000055,inset 0 1px #ffffff10
 }
 
 .card h2{
-font-size:30px;
+font-size:31px;
 font-weight:normal;
 font-style:italic;
 color:#ffabc7;
-margin-bottom:24px;
+margin-bottom:24px
 }
 
 .text{
 font-size:18px;
 line-height:2;
-color:#f1dce5;
+color:#f1dce5
 }
 
-.gold{
+.highlight{
 color:#ffabc7;
+font-weight:bold
 }
 
 .divider{
-width:80px;
+width:90px;
 height:1px;
 margin:25px auto;
-background:linear-gradient(90deg,transparent,#ff6e9f,transparent);
+background:linear-gradient(90deg,transparent,#ff6e9f,transparent)
 }
 
-/* COUNTER */
+/* SAYAÇ */
 .counter{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:12px;
-margin-top:30px;
+margin-top:30px
 }
 
 .counter-box{
 padding:22px 5px;
 border-radius:22px;
 background:#00000030;
-border:1px solid #ffffff0d;
+border:1px solid #ffffff0d
 }
 
 .counter-box strong{
 display:block;
 font-family:Arial,sans-serif;
 font-size:30px;
-color:#ff7cab;
+color:#ff7cab
 }
 
 .counter-box span{
 font-family:Arial,sans-serif;
 font-size:9px;
 letter-spacing:2px;
-color:#aa8995;
+color:#aa8995
 }
 
-/* MUSIC */
+/* MÜZİK */
 .music{
 padding:22px;
 border-radius:25px;
 background:#00000035;
-border:1px solid #ffffff10;
+border:1px solid #ffffff10
 }
 
 .song{
 display:flex;
 align-items:center;
 gap:16px;
-text-align:left;
+text-align:left
 }
 
 .disc{
-width:65px;
-height:65px;
+width:66px;
+height:66px;
 border-radius:50%;
 display:flex;
 align-items:center;
@@ -288,44 +292,46 @@ flex-shrink:0;
 background:
 radial-gradient(circle,#ffabc7 0 8%,#a8004b 9% 45%,#28000f 46% 100%);
 box-shadow:0 0 30px #ff297755;
-animation:spin 5s linear infinite;
-animation-play-state:paused;
+animation:spin 4s linear infinite;
+animation-play-state:paused
 }
 
 .disc.playing{
-animation-play-state:running;
+animation-play-state:running
 }
 
-.song-info{flex:1}
+.song-info{
+flex:1
+}
 
 .song-info b{
 display:block;
 font-size:17px;
-margin-bottom:7px;
+margin-bottom:7px
 }
 
 .song-info small{
 font-family:Arial,sans-serif;
 font-size:11px;
-color:#ad8c98;
+color:#ad8c98
 }
 
 .play{
-width:52px;
-height:52px;
+width:54px;
+height:54px;
 border:0;
 border-radius:50%;
 background:#ff377f;
 color:#fff;
 cursor:pointer;
-box-shadow:0 8px 20px #ff287044;
+box-shadow:0 8px 25px #ff287044
 }
 
 .progress{
 width:100%;
 margin-top:20px;
 accent-color:#ff377f;
-cursor:pointer;
+cursor:pointer
 }
 
 .music-bottom{
@@ -335,106 +341,118 @@ gap:10px;
 margin-top:8px;
 font-family:Arial,sans-serif;
 font-size:10px;
-color:#9d7d89;
+color:#9d7d89
 }
 
-.music-bottom span:nth-child(2){flex:1}
+.music-space{
+flex:1
+}
 
 .volume{
 width:80px;
-accent-color:#ff377f;
+accent-color:#ff377f
 }
 
-/* LETTER */
-.envelope{
-position:relative;
-margin:10px auto 25px;
-width:170px;
+/* GÖRSELLEŞTİRİCİ */
+.visualizer{
 height:115px;
-border-radius:8px;
-background:linear-gradient(135deg,#9e164e,#520a2b);
-box-shadow:0 15px 40px #00000055;
-cursor:pointer;
-transition:.4s;
-}
-
-.envelope:hover{
-transform:translateY(-5px) rotate(-1deg);
-}
-
-.envelope:before{
-content:"";
-position:absolute;
-left:0;
-top:0;
-border-left:85px solid transparent;
-border-right:85px solid transparent;
-border-top:65px solid #d82d6d;
-}
-
-.seal{
-position:absolute;
-z-index:2;
-left:50%;
-top:48px;
-transform:translateX(-50%);
-width:35px;
-height:35px;
+margin-top:24px;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:50%;
-background:#ff739f;
-box-shadow:0 0 20px #ff548c;
+gap:5px;
+padding:15px;
+border-radius:22px;
+background:#00000030;
+border:1px solid #ffffff08;
+overflow:hidden
 }
 
-.letter{
-display:none;
-text-align:left;
-padding:25px;
-border-radius:20px;
-background:#fff7fa;
-color:#4a1428;
-line-height:2;
-font-size:17px;
-animation:appear .8s;
+.bar{
+width:5px;
+height:12px;
+border-radius:10px;
+background:linear-gradient(#ffc0d4,#ff287d);
+transition:height .08s ease;
+box-shadow:0 0 8px #ff3d7d66
 }
 
-.letter.show{display:block}
-
-/* SURPRISE */
-.surprise-btn{
-padding:16px 28px;
-border:1px solid #ff6d9e44;
-border-radius:18px;
-background:#ff287c16;
-color:#ffabc7;
-cursor:pointer;
-transition:.3s;
+.visualizer.active .bar{
+animation:equalizer .55s ease-in-out infinite alternate
 }
 
-.surprise-btn:hover{
-background:#ff287c28;
-transform:scale(1.04);
+.bar:nth-child(2){animation-delay:.10s}
+.bar:nth-child(3){animation-delay:.20s}
+.bar:nth-child(4){animation-delay:.05s}
+.bar:nth-child(5){animation-delay:.25s}
+.bar:nth-child(6){animation-delay:.12s}
+.bar:nth-child(7){animation-delay:.30s}
+.bar:nth-child(8){animation-delay:.08s}
+.bar:nth-child(9){animation-delay:.22s}
+.bar:nth-child(10){animation-delay:.14s}
+.bar:nth-child(11){animation-delay:.28s}
+.bar:nth-child(12){animation-delay:.07s}
+.bar:nth-child(13){animation-delay:.19s}
+.bar:nth-child(14){animation-delay:.31s}
+.bar:nth-child(15){animation-delay:.11s}
+.bar:nth-child(16){animation-delay:.24s}
+.bar:nth-child(17){animation-delay:.06s}
+.bar:nth-child(18){animation-delay:.18s}
+.bar:nth-child(19){animation-delay:.27s}
+.bar:nth-child(20){animation-delay:.09s}
+
+@keyframes equalizer{
+from{height:10px}
+to{height:78px}
 }
 
-.secret{
-display:none;
+/* GÜL YAĞMURU */
+.rose-box{
 margin-top:25px;
-font-size:22px;
-line-height:1.8;
-color:#ffabc7;
-animation:appear 1s;
+padding:25px;
+border-radius:25px;
+background:#00000025;
+border:1px solid #ffffff0d
 }
 
-.secret.show{display:block}
+.rose-btn{
+padding:16px 28px;
+border:0;
+border-radius:18px;
+background:linear-gradient(135deg,#ff477f,#800736);
+color:#fff;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 10px 30px #ff287044;
+transition:.3s
+}
 
-/* REASONS */
+.rose-btn:hover{
+transform:translateY(-3px) scale(1.03)
+}
+
+.rose{
+position:fixed;
+top:-80px;
+z-index:10000;
+pointer-events:none;
+font-size:28px;
+animation:fall linear forwards
+}
+
+@keyframes fall{
+to{
+transform:translate3d(80px,115vh,0) rotate(500deg);
+opacity:0
+}
+}
+
+/* NEDENLER */
 .reasons{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:14px;
-margin-top:25px;
+margin-top:25px
 }
 
 .reason{
@@ -442,48 +460,136 @@ padding:22px;
 border-radius:22px;
 background:#00000025;
 border:1px solid #ffffff0c;
-transition:.3s;
+transition:.3s
 }
 
 .reason:hover{
 transform:translateY(-5px);
-background:#ff287c0e;
+background:#ff287c0e
 }
 
-.reason div{
-font-size:30px;
-margin-bottom:10px;
+.reason-icon{
+font-size:31px;
+margin-bottom:10px
 }
 
 .reason p{
 font-family:Arial,sans-serif;
 font-size:13px;
-line-height:1.6;
-color:#d5bac5;
+line-height:1.7;
+color:#d5bac5
 }
 
-/* FINAL */
+/* MEKTUP */
+.envelope{
+position:relative;
+width:180px;
+height:120px;
+margin:10px auto 25px;
+border-radius:8px;
+background:linear-gradient(135deg,#a51650,#51082b);
+box-shadow:0 15px 40px #00000055;
+cursor:pointer;
+transition:.4s
+}
+
+.envelope:hover{
+transform:translateY(-5px) rotate(-1deg)
+}
+
+.envelope:before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+border-left:90px solid transparent;
+border-right:90px solid transparent;
+border-top:68px solid #d82d6d
+}
+
+.seal{
+position:absolute;
+z-index:2;
+left:50%;
+top:50px;
+transform:translateX(-50%);
+width:37px;
+height:37px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:#ff739f;
+box-shadow:0 0 22px #ff548c
+}
+
+.letter{
+display:none;
+text-align:left;
+padding:27px;
+border-radius:22px;
+background:#fff7fa;
+color:#4a1428;
+line-height:2;
+font-size:17px;
+animation:appear .8s
+}
+
+.letter.show{
+display:block
+}
+
+/* SÜRPRİZ */
+.surprise-btn{
+padding:16px 28px;
+border:1px solid #ff6d9e44;
+border-radius:18px;
+background:#ff287c16;
+color:#ffabc7;
+cursor:pointer;
+transition:.3s
+}
+
+.surprise-btn:hover{
+background:#ff287c28;
+transform:scale(1.04)
+}
+
+.secret{
+display:none;
+margin-top:25px;
+font-size:22px;
+line-height:1.9;
+color:#ffabc7;
+animation:appear .8s
+}
+
+.secret.show{
+display:block
+}
+
+/* FİNAL */
 .final{
 margin-top:45px;
-padding:60px 25px;
+padding:65px 25px;
 border-radius:40px;
 border:1px solid #ff4b8b25;
-background:
-radial-gradient(circle at center,#ff287c16,transparent 65%);
+background:radial-gradient(circle at center,#ff287c16,transparent 68%)
 }
 
 .final h2{
-font-size:45px;
+font-size:48px;
 font-weight:normal;
 font-style:italic;
+letter-spacing:3px;
 color:#ffabc7;
-margin-bottom:20px;
+margin-bottom:20px
 }
 
 .infinity{
-font-size:38px;
+font-size:40px;
 color:#ff75a8;
-margin-top:25px;
+margin-top:25px
 }
 
 footer{
@@ -491,17 +597,17 @@ padding:30px;
 text-align:center;
 font-family:Arial,sans-serif;
 font-size:10px;
-letter-spacing:1px;
-color:#69535d;
+letter-spacing:2px;
+color:#69535d
 }
 
-/* FLOATING */
+/* KALPLER */
 .heart{
 position:fixed;
 bottom:-60px;
-z-index:5;
+z-index:4;
 pointer-events:none;
-animation:floatHeart linear forwards;
+animation:heartFloat linear forwards
 }
 
 .star{
@@ -512,11 +618,10 @@ border-radius:50%;
 background:#ff9abb;
 opacity:.4;
 animation:twinkle 3s infinite;
-pointer-events:none;
+pointer-events:none
 }
 
-/* ANIMATIONS */
-@keyframes heartbeat{
+@keyframes pulse{
 0%,100%{transform:scale(1)}
 50%{transform:scale(1.13)}
 }
@@ -536,10 +641,10 @@ from{opacity:0;transform:translateY(25px) scale(.96)}
 to{opacity:1;transform:none}
 }
 
-@keyframes floatHeart{
+@keyframes heartFloat{
 to{
 transform:translateY(-115vh) rotate(40deg);
-opacity:0;
+opacity:0
 }
 }
 
@@ -548,118 +653,134 @@ opacity:0;
 50%{opacity:1;transform:scale(1.6)}
 }
 
-@keyframes floatText{
+@keyframes bounce{
 0%,100%{transform:translateY(0)}
 50%{transform:translateY(8px)}
 }
 
 @media(max-width:650px){
 
-.container{padding:45px 0}
+.container{
+padding:45px 0
+}
 
-.hero{min-height:85vh}
+.hero{
+min-height:85vh
+}
 
 .moon{
 width:55px;
 height:55px;
 right:6%;
-top:6%;
+top:5%
 }
 
-.hero-heart{font-size:75px}
+.moon:after{
+width:47px;
+height:47px
+}
+
+.hero-heart{
+font-size:76px
+}
 
 .counter{
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(2,1fr)
 }
 
 .reasons{
-grid-template-columns:1fr;
+grid-template-columns:1fr
 }
 
 .card{
-padding:30px 19px;
+padding:30px 18px
 }
 
 .text{
-font-size:16px;
+font-size:16px
 }
 
 .lock-box h1{
-font-size:40px;
+font-size:40px
 }
 
 .song-info b{
-font-size:14px;
+font-size:14px
 }
 
 .volume{
-width:60px;
+width:60px
 }
 
 .final h2{
-font-size:36px;
+font-size:38px
 }
+
+.visualizer{
+gap:3px
+}
+
+.bar{
+width:4px
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- ŞİFRE -->
 <div id="lock">
-
 <div class="lock-box">
 
 <div class="lock-heart">❤️</div>
 
-<h1>SARYAMAAA</h1>
+<h1>SARYAMAA</h1>
 
 <p>
-Sana özel küçük bir evren hazırladım. 🌙<br>
-Kapıyı açmak için bizim özel tarihimizi yaz.
+SANA ÖZEL KÜÇÜK BİR EVREN HAZIRLADIM. 🌙<br>
+KAPIYI AÇMAK İÇİN ÖZEL TARİHİMİZİ YAZ.
 </p>
 
 <input
 id="password"
 type="password"
 inputmode="numeric"
-placeholder="GG.AA.YYYY"
+maxlength="8"
+placeholder="15122025"
 autocomplete="off">
 
 <button class="unlock" onclick="unlock()">
-❤️ BENİM İÇİN AÇ
+❤️ KALBİ AÇ
 </button>
 
 <div id="error"></div>
 
 </div>
-
 </div>
 
 
-<!-- SITE -->
 <div id="site" class="hidden">
 
 <div class="moon"></div>
 
 <div class="container">
 
-<!-- HERO -->
 <section class="hero">
 
 <div class="badge">
-SANA ÖZEL • SARYAMMM ❤️
+SADECE SARYAMAA İÇİN ❤️
 </div>
 
 <div class="hero-heart">❤️</div>
 
 <h1 class="title">
-SARYAMMM
+SARYAMAA
 </h1>
 
 <p class="subtitle">
-Bazı hikâyeler anlatılmaz...<br>
-Kalpte yaşanır. 💗
+BAZI HİKÂYELER ANLATILMAZ...<br>
+KALPTE YAŞANIR. 💗
 </p>
 
 <div class="scroll">
@@ -669,37 +790,32 @@ AŞAĞI KAYDIR ↓
 </section>
 
 
-<!-- HİKAYE -->
 <div class="card">
 
-<h2>Bir Tarih, Bir Hikâye 💕</h2>
+<h2>BİZİM HİKÂYEMİZ 💕</h2>
 
 <p class="text">
 
-<span class="gold">15.12.2025</span>
+<span class="highlight">15.12.2025</span>
 
 </p>
 
 <div class="divider"></div>
 
 <p class="text">
-Takvimde sıradan görünen bir tarih,
-benim için hiç sıradan değil.
+TAKVİMDE SIRADAN GÖRÜNEN BİR TARİH,
+BENİM İÇİN HİÇ SIRADAN DEĞİL.
 <br><br>
-Çünkü o tarih,
-hikâyemizin güzel sayfalarından
-birinin başlangıcı oldu.
+ÇÜNKÜ O TARİH,
+HİKÂYEMİZİN GÜZEL SAYFALARINDAN
+BİRİNİN BAŞLANGICI OLDU.
 <br><br>
-O günden sonra bazı şarkılar,
-bazı geceler,
-bazı gülüşler
-başka anlamlar taşımaya başladı.
+O GÜNDEN SONRA BAZI ŞARKILAR,
+BAZI GECELER VE BAZI GÜLÜŞLER
+BAŞKA ANLAMLAR TAŞIMAYA BAŞLADI.
 <br><br>
-Ve bugün sana küçük bir şey
-söylemek istiyorum:
-<br><br>
-<strong class="gold">
-İyi ki varsın Saryammm. ❤️
+<strong class="highlight">
+İYİ Kİ VARSIN SARYAMAA. ❤️
 </strong>
 </p>
 
@@ -730,10 +846,9 @@ söylemek istiyorum:
 </div>
 
 
-<!-- MÜZİK -->
 <div class="card">
 
-<h2>Bu Şarkı Sana 🎵</h2>
+<h2>BU ŞARKI SANA 🎵</h2>
 
 <div class="music">
 
@@ -746,17 +861,16 @@ söylemek istiyorum:
 <div class="song-info">
 
 <b>
-Pinhani - Beni Sen İnandır
+PINHANI - BENİ SEN İNANDIR
 </b>
 
 <small>
-Birlikte dinlemek için... ❤️
+SARYAMAA İÇİN ❤️
 </small>
 
 </div>
 
-<button class="play" id="play"
-onclick="toggleMusic()">
+<button class="play" id="play" onclick="toggleMusic()">
 ▶
 </button>
 
@@ -774,7 +888,7 @@ value="0">
 
 <span id="current">0:00</span>
 
-<span></span>
+<span class="music-space"></span>
 
 <span>🔊</span>
 
@@ -793,6 +907,32 @@ value=".8">
 
 </div>
 
+
+<div class="visualizer" id="visualizer">
+
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+
+</div>
+
 <audio id="music" preload="metadata">
 <source src="sarki.mp3" type="audio/mpeg">
 </audio>
@@ -800,42 +940,61 @@ value=".8">
 </div>
 
 
-<!-- NEDEN -->
 <div class="card">
 
-<h2>Seni Neden Seviyorum? 💗</h2>
+<h2>🌹 GÜL YAĞMURU</h2>
+
+<p class="text">
+BİR BUTONA BAS VE BU SAYFAYI
+GÜLLERLE DOLDUR. ❤️
+</p>
+
+<div class="rose-box">
+
+<button class="rose-btn" onclick="roseRain()">
+🌹 GÜLLERİ YAĞDIR
+</button>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>SENİ NEDEN SEVİYORUM? 💗</h2>
 
 <div class="reasons">
 
 <div class="reason">
-<div>😊</div>
+<div class="reason-icon">😊</div>
 <p>
-Gülüşünün en kötü günü bile
-güzelleştirebilmesi.
+GÜLÜŞÜNÜN EN KÖTÜ GÜNÜ BİLE
+GÜZELLEŞTİREBİLMESİ.
 </p>
 </div>
 
 <div class="reason">
-<div>🌙</div>
+<div class="reason-icon">🌙</div>
 <p>
-Gece olduğunda bile aklıma
-gelen ilk güzel şeylerden biri olman.
+GECE OLDUĞUNDA BİLE AKLIMA
+GELEN GÜZEL ŞEYLERDEN BİRİ OLMAN.
 </p>
 </div>
 
 <div class="reason">
-<div>💫</div>
+<div class="reason-icon">✨</div>
 <p>
-Hayatı sıradan olmaktan çıkarıp
-daha güzel hissettirebilmen.
+HAYATI DAHA GÜZEL VE
+ANLAMLI HİSSETTİREBİLMEN.
 </p>
 </div>
 
 <div class="reason">
-<div>❤️</div>
+<div class="reason-icon">❤️</div>
 <p>
-Ve en önemlisi...
-sadece sen olduğun için.
+VE EN ÖNEMLİSİ...
+SADECE SEN OLDUĞUN İÇİN.
 </p>
 </div>
 
@@ -844,54 +1003,51 @@ sadece sen olduğun için.
 </div>
 
 
-<!-- MEKTUP -->
 <div class="card">
 
-<h2>Sana Bir Mektup 💌</h2>
+<h2>SANA BİR MEKTUP 💌</h2>
 
 <div class="envelope" onclick="openLetter()">
 <div class="seal">❤️</div>
 </div>
 
 <p class="text">
-Mektubu açmak için zarfa dokun. 💕
+ZARFA DOKUN VE MEKTUBU AÇ. 💕
 </p>
 
 <div class="letter" id="letter">
 
 <p>
-Sevgili Saryammm,
+SEVGİLİ SARYAMAA,
 <br><br>
-Bunu yazarken aklımdan geçen
-tek şey sen oldun.
+BUNU YAZARKEN AKLIMDAN GEÇEN
+TEK ŞEY SEN OLDUN.
 <br><br>
-Bazen bir insana ne kadar değer
-verdiğini anlatmak gerçekten zor.
-Çünkü bazı duygular kelimelerden
-daha büyük.
+BAZEN BİR İNSANA NE KADAR DEĞER
+VERDİĞİNİ ANLATMAK GERÇEKTEN ZOR.
+ÇÜNKÜ BAZI DUYGULAR KELİMELERDEN
+DAHA BÜYÜK.
 <br><br>
-Ama yine de deneyeyim...
+AMA YİNE DE DENEMEK İSTEDİM...
 <br><br>
-Sen benim için çok özelsin.
-Varlığın, konuşman, gülüşün,
-hatta küçük şeylerin bile
-bende güzel bir iz bırakıyor.
+SEN BENİM İÇİN ÇOK ÖZELSİN.
+GÜLÜŞÜN, KONUŞMAN,
+VARLIĞIN VE KÜÇÜK ŞEYLERİN BİLE
+BENDE GÜZEL BİR İZ BIRAKIYOR.
 <br><br>
-Bu yüzden bu sayfayı açtığında
-yüzünde küçük bir gülümseme
-olsun istedim.
+BU SAYFAYI AÇTIĞINDA
+YÜZÜNDE KÜÇÜK BİR GÜLÜMSEME
+OLSUN İSTEDİM.
 <br><br>
-Belki bu sadece bir internet sitesi.
-Ama içindeki her kelime
-kalpten geldi. ❤️
+ÇÜNKÜ SEN MUTLU OLDUĞUNDA
+BENİM İÇİN DE HER ŞEY
+BİRAZ DAHA GÜZEL.
 <br><br>
-İyi ki varsın.
+İYİ Kİ VARSIN.
 <br>
-İyi ki bizim hikâyemiz var.
+İYİ Kİ HAYATIMDASIN.
 <br><br>
-Seni çok seviyorum.
-<br><br>
-❤️
+SENİ ÇOK SEVİYORUM. ❤️
 </p>
 
 </div>
@@ -899,14 +1055,13 @@ Seni çok seviyorum.
 </div>
 
 
-<!-- SÜRPRİZ -->
 <div class="card">
 
-<h2>Son Bir Sürpriz 🎁</h2>
+<h2>SON BİR SÜRPRİZ 🎁</h2>
 
 <p class="text">
-Bütün sayfayı gezdiysen
-bunu da açabilirsin. ❤️
+BURAYA KADAR GELDİYSEN
+BUNU DA AÇABİLİRSİN. ❤️
 </p>
 
 <div class="divider"></div>
@@ -917,59 +1072,56 @@ bunu da açabilirsin. ❤️
 
 <div class="secret" id="secret">
 
-Saryammm... ❤️
+SARYAMAA... ❤️
 
 <br><br>
 
-Eğer bu sayfada bir dileğim
-olsaydı, tek bir şey isterdim:
+BU SAYFADAKİ HER ŞEYİN
+KÜÇÜK BİR ANLAMI VAR.
+
+<br><br>
+
+AMA EN GÜZEL ŞEY,
+HİÇBİR KODA SIĞMAYAN
+ŞU CÜMLE:
 
 <br><br>
 
 <strong>
-Bu güzel hikâyenin
-çok uzun sürmesi.
+İYİ Kİ VARSIN.
 </strong>
 
 <br><br>
 
 15.12.2025
 
-<br>
+<br><br>
 
-<span style="font-size:35px">
 ∞
-</span>
 
 </div>
 
 </div>
 
 
-<!-- FINAL -->
 <div class="final">
 
-<h2>
-Saryammm ❤️
-</h2>
+<h2>SARYAMAA ❤️</h2>
 
 <p class="text">
-
-İyi ki varsın.<br>
-İyi ki hayatımdasın.<br>
-İyi ki bizim hikâyemiz var.
-
+İYİ Kİ VARSIN.<br>
+İYİ Kİ HAYATIMDASIN.<br>
+İYİ Kİ BİZİM HİKÂYEMİZ VAR.
 </p>
 
 <div class="divider"></div>
 
 <p class="text">
-Bazı insanlar unutulur.<br>
-Bazı anılar silinir.<br><br>
-
-Ama bazı insanlar
-kalpte bir yer edinir
-ve orada kalır.
+BAZI İNSANLAR UNUTULUR.<br>
+BAZI ANILAR SİLİNİR.<br><br>
+AMA BAZI İNSANLAR
+KALPTE BİR YER EDİNİR
+VE ORADA KALIR.
 </p>
 
 <div class="infinity">
@@ -981,7 +1133,7 @@ ve orada kalır.
 </div>
 
 <footer>
-Kalpten hazırlandı ❤️ · Saryammm
+KALPTEN HAZIRLANDI ❤️ · SARYAMAA
 </footer>
 
 </div>
@@ -989,8 +1141,8 @@ Kalpten hazırlandı ❤️ · Saryammm
 
 <script>
 
-/* ŞİFRE */
-const PASSWORD="15.12.2025";
+const PASSWORD="15122025";
+
 
 function unlock(){
 
@@ -1011,19 +1163,24 @@ startHearts();
 }else{
 
 document.getElementById("error")
-.textContent="Bu tarih değil... ❤️ Tekrar dene.";
+.textContent=
+"ŞİFRE YANLIŞ. ❤️ TEKRAR DENE.";
 
 }
 
 }
+
 
 document.getElementById("password")
 .addEventListener("keydown",e=>{
+
 if(e.key==="Enter")unlock();
+
 });
 
 
 /* MÜZİK */
+
 const music=document.getElementById("music");
 const play=document.getElementById("play");
 const disc=document.getElementById("disc");
@@ -1031,6 +1188,7 @@ const progress=document.getElementById("progress");
 const volume=document.getElementById("volume");
 const current=document.getElementById("current");
 const duration=document.getElementById("duration");
+const visualizer=document.getElementById("visualizer");
 
 function formatTime(sec){
 
@@ -1043,18 +1201,24 @@ return m+":"+(s<10?"0":"")+s;
 
 }
 
+
 function toggleMusic(){
 
 if(music.paused){
 
-music.play().then(()=>{
+music.play()
+.then(()=>{
 
 play.textContent="⏸";
 disc.classList.add("playing");
+visualizer.classList.add("active");
 
-}).catch(()=>{
+})
+.catch(()=>{
 
-alert("Müzik dosyası bulunamadı. GitHub'daki MP3 dosyasının adını sarki.mp3 yap.");
+alert(
+"MÜZİK BULUNAMADI. GITHUB'DA DOSYA ADI sarki.mp3 OLMALI."
+);
 
 });
 
@@ -1064,10 +1228,12 @@ music.pause();
 
 play.textContent="▶";
 disc.classList.remove("playing");
+visualizer.classList.remove("active");
 
 }
 
 }
+
 
 music.addEventListener("loadedmetadata",()=>{
 
@@ -1078,6 +1244,7 @@ formatTime(music.duration);
 
 });
 
+
 music.addEventListener("timeupdate",()=>{
 
 progress.value=music.currentTime;
@@ -1087,13 +1254,15 @@ formatTime(music.currentTime);
 
 });
 
+
 music.addEventListener("ended",()=>{
 
 play.textContent="▶";
-
 disc.classList.remove("playing");
+visualizer.classList.remove("active");
 
 });
+
 
 progress.addEventListener("input",()=>{
 
@@ -1101,16 +1270,19 @@ music.currentTime=progress.value;
 
 });
 
+
 volume.addEventListener("input",()=>{
 
 music.volume=volume.value;
 
 });
 
+
 music.volume=.8;
 
 
 /* SAYAÇ */
+
 const startDate=
 new Date("2025-12-15T00:00:00");
 
@@ -1120,17 +1292,21 @@ let diff=new Date()-startDate;
 
 if(diff<0)diff=0;
 
-const days=Math.floor(diff/86400000);
+const days=
+Math.floor(diff/86400000);
 
 diff%=86400000;
 
-const hours=Math.floor(diff/3600000);
+const hours=
+Math.floor(diff/3600000);
 
 diff%=3600000;
 
-const minutes=Math.floor(diff/60000);
+const minutes=
+Math.floor(diff/60000);
 
-const seconds=Math.floor((diff%60000)/1000);
+const seconds=
+Math.floor((diff%60000)/1000);
 
 document.getElementById("days").textContent=days;
 document.getElementById("hours").textContent=hours;
@@ -1140,10 +1316,12 @@ document.getElementById("seconds").textContent=seconds;
 }
 
 updateCounter();
+
 setInterval(updateCounter,1000);
 
 
 /* MEKTUP */
+
 function openLetter(){
 
 const letter=
@@ -1151,10 +1329,9 @@ document.getElementById("letter");
 
 letter.classList.toggle("show");
 
-if(letter.classList.contains("show")){
+for(let i=0;i<8;i++){
 
-for(let i=0;i<8;i++)
-setTimeout(createHeart,i*120);
+setTimeout(createHeart,i*100);
 
 }
 
@@ -1162,6 +1339,7 @@ setTimeout(createHeart,i*120);
 
 
 /* SÜRPRİZ */
+
 function showSecret(){
 
 const secret=
@@ -1169,23 +1347,66 @@ document.getElementById("secret");
 
 secret.classList.add("show");
 
-for(let i=0;i<20;i++)
-setTimeout(createHeart,i*80);
+for(let i=0;i<20;i++){
+
+setTimeout(createHeart,i*70);
+
+}
+
+}
+
+
+/* GÜL YAĞMURU */
+
+function roseRain(){
+
+for(let i=0;i<70;i++){
+
+setTimeout(()=>{
+
+const rose=
+document.createElement("div");
+
+rose.className="rose";
+
+rose.textContent=
+Math.random()>.25?"🌹":"🌸";
+
+rose.style.left=
+Math.random()*100+"vw";
+
+rose.style.fontSize=
+(18+Math.random()*24)+"px";
+
+rose.style.animationDuration=
+(3+Math.random()*4)+"s";
+
+document.body.appendChild(rose);
+
+setTimeout(()=>{
+rose.remove();
+},8000);
+
+},i*45);
+
+}
 
 }
 
 
 /* KALPLER */
+
 function createHeart(){
 
-const heart=document.createElement("div");
+const heart=
+document.createElement("div");
 
 heart.className="heart";
 
 heart.textContent=[
 "❤️","💕","💗","💖",
-"💘","💞","💓","🌹"
-][Math.floor(Math.random()*8)];
+"💘","💞","💓"
+][Math.floor(Math.random()*7)];
 
 heart.style.left=
 Math.random()*100+"vw";
@@ -1198,9 +1419,12 @@ heart.style.animationDuration=
 
 document.body.appendChild(heart);
 
-setTimeout(()=>heart.remove(),14000);
+setTimeout(()=>{
+heart.remove();
+},14000);
 
 }
+
 
 function startHearts(){
 
@@ -1216,9 +1440,11 @@ setInterval(createHeart,950);
 
 
 /* YILDIZLAR */
+
 for(let i=0;i<55;i++){
 
-const star=document.createElement("div");
+const star=
+document.createElement("div");
 
 star.className="star";
 
