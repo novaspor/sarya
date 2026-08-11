@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#070006">
-<title>SARYAMAA ❤️</title>
+<meta name="theme-color" content="#080006">
+<title>SARYAMAA UNIVERSE ❤️</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -12,8 +12,9 @@ html{scroll-behavior:smooth}
 body{
 font-family:Georgia,"Times New Roman",serif;
 color:#fff;
-background:#050005;
-overflow-x:hidden
+background:#040004;
+overflow-x:hidden;
+cursor:default
 }
 button,input{font:inherit}
 .hidden{display:none!important}
@@ -22,36 +23,37 @@ body:before{
 content:"";
 position:fixed;
 inset:0;
-z-index:0;
 pointer-events:none;
+z-index:0;
 background:
-radial-gradient(circle at 15% 12%,#b5165c45,transparent 29%),
-radial-gradient(circle at 85% 80%,#710b4645,transparent 34%),
-radial-gradient(circle at 50% 50%,#ff2a7c08,transparent 55%)
+radial-gradient(circle at 15% 10%,#c1166040,transparent 28%),
+radial-gradient(circle at 85% 80%,#790b4a40,transparent 34%),
+radial-gradient(circle at 50% 50%,#ff1c7808,transparent 60%)
 }
 
+/* ŞİFRE */
 #lock{
 position:fixed;
 inset:0;
-z-index:9999;
+z-index:99999;
 display:flex;
 align-items:center;
 justify-content:center;
 padding:20px;
 background:
-radial-gradient(circle at center,#87164b,#280010 50%,#030003)
+radial-gradient(circle at 50% 35%,#8b174d,#25000f 52%,#030003)
 }
 
 .lock-box{
 width:min(470px,100%);
 padding:52px 30px;
 text-align:center;
-border:1px solid #ffffff20;
+border:1px solid #ffffff22;
 border-radius:40px;
 background:#ffffff0c;
 backdrop-filter:blur(25px);
-box-shadow:0 0 110px #ff267044;
-animation:appear 1s ease
+box-shadow:0 0 120px #ff267055;
+animation:appear 1s
 }
 
 .lock-heart{
@@ -61,10 +63,10 @@ animation:pulse 1.5s infinite
 }
 
 .lock-box h1{
-font-size:54px;
-font-style:italic;
+font-size:52px;
 font-weight:normal;
-letter-spacing:3px;
+font-style:italic;
+letter-spacing:4px;
 margin:18px 0 10px
 }
 
@@ -83,7 +85,7 @@ outline:none;
 background:#00000045;
 color:#fff;
 text-align:center;
-letter-spacing:5px;
+letter-spacing:6px;
 font-size:18px
 }
 
@@ -102,7 +104,7 @@ transition:.3s
 }
 
 .unlock:hover{
-transform:translateY(-3px) scale(1.01)
+transform:translateY(-3px)
 }
 
 #error{
@@ -111,6 +113,7 @@ margin-top:12px;
 color:#ff91b5
 }
 
+/* GENEL */
 #site{
 position:relative;
 z-index:1
@@ -119,12 +122,12 @@ z-index:1
 .container{
 width:min(920px,92%);
 margin:auto;
-padding:60px 0;
+padding:55px 0;
 text-align:center
 }
 
 .hero{
-min-height:92vh;
+min-height:95vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -135,23 +138,23 @@ position:relative
 .moon{
 position:absolute;
 top:5%;
-right:8%;
-width:85px;
-height:85px;
+right:7%;
+width:88px;
+height:88px;
 border-radius:50%;
-background:#fff4f8;
-box-shadow:0 0 60px #fff0f899
+background:#fff5f9;
+box-shadow:0 0 65px #fff0f8aa
 }
 
 .moon:after{
 content:"";
 position:absolute;
-width:72px;
-height:72px;
-left:-8px;
+width:75px;
+height:75px;
+left:-9px;
 top:-4px;
 border-radius:50%;
-background:#1a000d
+background:#16000d
 }
 
 .badge{
@@ -161,24 +164,31 @@ border-radius:40px;
 background:#ffffff0a;
 color:#ffabc7;
 font-family:Arial,sans-serif;
-font-size:11px;
+font-size:10px;
 letter-spacing:4px
 }
 
 .hero-heart{
-margin:34px 0 15px;
-font-size:110px;
+margin:34px 0 16px;
+font-size:108px;
 filter:drop-shadow(0 0 45px #ff267e);
-animation:pulse 1.6s infinite
+animation:pulse 1.5s infinite
 }
 
 .title{
 font-size:clamp(62px,14vw,130px);
 font-weight:normal;
 font-style:italic;
-letter-spacing:4px;
+letter-spacing:5px;
 line-height:.9;
-background:linear-gradient(90deg,#fff,#ff9fc0,#fff,#ff69a1,#fff);
+background:linear-gradient(
+90deg,
+#fff,
+#ff9fc0,
+#fff,
+#ff69a1,
+#fff
+);
 background-size:300%;
 -webkit-background-clip:text;
 color:transparent;
@@ -193,7 +203,7 @@ color:#ead6df
 }
 
 .scroll{
-margin-top:48px;
+margin-top:45px;
 font-family:Arial,sans-serif;
 font-size:10px;
 letter-spacing:4px;
@@ -208,7 +218,9 @@ border:1px solid #ffffff16;
 border-radius:35px;
 background:linear-gradient(145deg,#ffffff0d,#ffffff04);
 backdrop-filter:blur(20px);
-box-shadow:0 25px 80px #00000055,inset 0 1px #ffffff10
+box-shadow:
+0 25px 80px #00000055,
+inset 0 1px #ffffff10
 }
 
 .card h2{
@@ -234,7 +246,210 @@ font-weight:bold
 width:90px;
 height:1px;
 margin:25px auto;
-background:linear-gradient(90deg,transparent,#ff6e9f,transparent)
+background:linear-gradient(
+90deg,
+transparent,
+#ff6e9f,
+transparent
+)
+}
+
+/* SARYAMAA UNIVERSE */
+.universe{
+padding:30px 10px
+}
+
+.universe-title{
+font-family:Arial,sans-serif;
+font-size:11px;
+letter-spacing:5px;
+color:#ff8eb5;
+margin-bottom:25px
+}
+
+.universe-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px
+}
+
+.universe-item{
+padding:22px;
+min-height:120px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+border-radius:25px;
+background:#00000028;
+border:1px solid #ffffff0d;
+transition:.35s;
+cursor:pointer
+}
+
+.universe-item:hover{
+transform:translateY(-6px);
+border-color:#ff559044;
+background:#ff287c0d;
+box-shadow:0 15px 35px #ff277022
+}
+
+.universe-item .icon{
+font-size:35px;
+margin-bottom:10px
+}
+
+.universe-item b{
+font-size:14px;
+color:#ffabc7
+}
+
+.universe-item small{
+font-family:Arial,sans-serif;
+font-size:10px;
+margin-top:6px;
+color:#9f818d
+}
+
+/* KALBİMDEKİ YERİN */
+.heart-place{
+padding:10px 0 5px
+}
+
+.big-heart{
+position:relative;
+width:200px;
+height:180px;
+margin:10px auto 25px;
+display:flex;
+align-items:center;
+justify-content:center
+}
+
+.big-heart-shape{
+font-size:160px;
+line-height:1;
+filter:
+drop-shadow(0 0 15px #ff2e7c)
+drop-shadow(0 0 45px #ff2e7c);
+animation:heartBeat 1.2s infinite
+}
+
+.heart-place-text{
+position:absolute;
+z-index:2;
+font-size:19px;
+font-weight:bold;
+color:#fff;
+text-shadow:0 0 15px #ff2e7c
+}
+
+.place-result{
+font-size:22px;
+line-height:1.8;
+color:#ffabc7;
+margin-top:15px
+}
+
+/* KALPTEN KALBE */
+.love-beam{
+position:relative;
+height:170px;
+margin:20px 0;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 30px;
+overflow:hidden
+}
+
+.love-heart{
+font-size:55px;
+filter:drop-shadow(0 0 20px #ff2f7c);
+animation:pulse 1.4s infinite
+}
+
+.beam{
+position:absolute;
+left:105px;
+right:105px;
+top:50%;
+height:4px;
+transform:translateY(-50%);
+background:linear-gradient(
+90deg,
+transparent,
+#ff4b8b,
+#fff,
+#ff4b8b,
+transparent
+);
+box-shadow:0 0 18px #ff317c;
+animation:beamPulse 1.5s infinite
+}
+
+.beam-dot{
+position:absolute;
+top:50%;
+left:15%;
+width:14px;
+height:14px;
+border-radius:50%;
+background:#fff;
+box-shadow:
+0 0 10px #fff,
+0 0 25px #ff3d82;
+transform:translateY(-50%);
+animation:beamMove 2.5s infinite linear
+}
+
+/* IŞIK YOLU */
+.light-path{
+position:relative;
+height:100px;
+overflow:hidden;
+border-radius:25px;
+background:#00000025
+}
+
+.path-light{
+position:absolute;
+top:50%;
+width:10px;
+height:10px;
+border-radius:50%;
+background:#fff;
+box-shadow:
+0 0 10px #fff,
+0 0 25px #ff3d82,
+0 0 45px #ff3d82;
+animation:pathMove 3s infinite linear
+}
+
+.path-light:nth-child(2){animation-delay:.6s}
+.path-light:nth-child(3){animation-delay:1.2s}
+.path-light:nth-child(4){animation-delay:1.8s}
+.path-light:nth-child(5){animation-delay:2.4s}
+
+/* KALP NABZI */
+.pulse-zone{
+padding:25px;
+border-radius:25px;
+background:#00000028
+}
+
+.pulse-heart{
+font-size:100px;
+filter:drop-shadow(0 0 35px #ff257c);
+animation:heartbeatMusic 1s infinite
+}
+
+.pulse-status{
+font-family:Arial,sans-serif;
+font-size:10px;
+letter-spacing:3px;
+color:#ae8b98;
+margin-top:12px
 }
 
 /* SAYAÇ */
@@ -290,7 +505,12 @@ align-items:center;
 justify-content:center;
 flex-shrink:0;
 background:
-radial-gradient(circle,#ffabc7 0 8%,#a8004b 9% 45%,#28000f 46% 100%);
+radial-gradient(
+circle,
+#ffabc7 0 8%,
+#a8004b 9% 45%,
+#28000f 46% 100%
+);
 box-shadow:0 0 30px #ff297755;
 animation:spin 4s linear infinite;
 animation-play-state:paused
@@ -373,37 +593,11 @@ width:5px;
 height:12px;
 border-radius:10px;
 background:linear-gradient(#ffc0d4,#ff287d);
-transition:height .08s ease;
 box-shadow:0 0 8px #ff3d7d66
 }
 
 .visualizer.active .bar{
 animation:equalizer .55s ease-in-out infinite alternate
-}
-
-.bar:nth-child(2){animation-delay:.10s}
-.bar:nth-child(3){animation-delay:.20s}
-.bar:nth-child(4){animation-delay:.05s}
-.bar:nth-child(5){animation-delay:.25s}
-.bar:nth-child(6){animation-delay:.12s}
-.bar:nth-child(7){animation-delay:.30s}
-.bar:nth-child(8){animation-delay:.08s}
-.bar:nth-child(9){animation-delay:.22s}
-.bar:nth-child(10){animation-delay:.14s}
-.bar:nth-child(11){animation-delay:.28s}
-.bar:nth-child(12){animation-delay:.07s}
-.bar:nth-child(13){animation-delay:.19s}
-.bar:nth-child(14){animation-delay:.31s}
-.bar:nth-child(15){animation-delay:.11s}
-.bar:nth-child(16){animation-delay:.24s}
-.bar:nth-child(17){animation-delay:.06s}
-.bar:nth-child(18){animation-delay:.18s}
-.bar:nth-child(19){animation-delay:.27s}
-.bar:nth-child(20){animation-delay:.09s}
-
-@keyframes equalizer{
-from{height:10px}
-to{height:78px}
 }
 
 /* GÜL YAĞMURU */
@@ -440,11 +634,26 @@ font-size:28px;
 animation:fall linear forwards
 }
 
-@keyframes fall{
-to{
-transform:translate3d(80px,115vh,0) rotate(500deg);
-opacity:0
+/* İLK AN */
+.first-time{
+padding:35px 20px;
+border-radius:28px;
+background:
+radial-gradient(circle at center,#ff287c18,transparent 70%)
 }
+
+.first-time-date{
+font-size:42px;
+font-style:italic;
+color:#ffabc7;
+margin:20px 0
+}
+
+.typewriter{
+min-height:70px;
+font-size:22px;
+line-height:1.7;
+color:#f6e1e9
 }
 
 /* NEDENLER */
@@ -568,13 +777,16 @@ animation:appear .8s
 display:block
 }
 
-/* FİNAL */
+/* FINAL */
 .final{
+position:relative;
+overflow:hidden;
 margin-top:45px;
-padding:65px 25px;
+padding:70px 25px;
 border-radius:40px;
 border:1px solid #ff4b8b25;
-background:radial-gradient(circle at center,#ff287c16,transparent 68%)
+background:
+radial-gradient(circle at center,#ff287c18,transparent 68%)
 }
 
 .final h2{
@@ -587,9 +799,53 @@ margin-bottom:20px
 }
 
 .infinity{
-font-size:40px;
+font-size:42px;
 color:#ff75a8;
 margin-top:25px
+}
+
+.final-btn{
+margin-top:30px;
+padding:16px 28px;
+border:0;
+border-radius:20px;
+background:linear-gradient(135deg,#ff4786,#9b0045);
+color:#fff;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 10px 35px #ff287055
+}
+
+/* DOKUNMA */
+.touch-heart{
+position:fixed;
+pointer-events:none;
+z-index:20000;
+font-size:25px;
+animation:touchPop 1s forwards
+}
+
+/* HAVAİ FİŞEK */
+.firework{
+position:fixed;
+z-index:19999;
+width:6px;
+height:6px;
+border-radius:50%;
+background:#fff;
+box-shadow:0 0 15px #fff,0 0 30px #ff3b82;
+pointer-events:none
+}
+
+.fire-particle{
+position:fixed;
+z-index:19998;
+width:5px;
+height:5px;
+border-radius:50%;
+background:#ff7cab;
+pointer-events:none;
+animation:explode 1.2s forwards
 }
 
 footer{
@@ -601,7 +857,7 @@ letter-spacing:2px;
 color:#69535d
 }
 
-/* KALPLER */
+/* YILDIZLAR / KALPLER */
 .heart{
 position:fixed;
 bottom:-60px;
@@ -621,9 +877,22 @@ animation:twinkle 3s infinite;
 pointer-events:none
 }
 
+/* ANİMASYONLAR */
 @keyframes pulse{
 0%,100%{transform:scale(1)}
 50%{transform:scale(1.13)}
+}
+
+@keyframes heartBeat{
+0%,100%{transform:scale(1)}
+15%{transform:scale(1.15)}
+30%{transform:scale(1)}
+45%{transform:scale(1.08)}
+}
+
+@keyframes heartbeatMusic{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.16)}
 }
 
 @keyframes shine{
@@ -641,11 +910,9 @@ from{opacity:0;transform:translateY(25px) scale(.96)}
 to{opacity:1;transform:none}
 }
 
-@keyframes heartFloat{
-to{
-transform:translateY(-115vh) rotate(40deg);
-opacity:0
-}
+@keyframes bounce{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(8px)}
 }
 
 @keyframes twinkle{
@@ -653,9 +920,68 @@ opacity:0
 50%{opacity:1;transform:scale(1.6)}
 }
 
-@keyframes bounce{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(8px)}
+@keyframes heartFloat{
+to{
+transform:translateY(-115vh) rotate(40deg);
+opacity:0
+}
+}
+
+@keyframes pathMove{
+0%{left:-5%}
+100%{left:105%}
+}
+
+@keyframes beamPulse{
+0%,100%{opacity:.35;transform:translateY(-50%) scaleY(.6)}
+50%{opacity:1;transform:translateY(-50%) scaleY(1)}
+}
+
+@keyframes beamMove{
+0%{left:13%}
+50%{left:50%}
+100%{left:87%}
+}
+
+@keyframes equalizer{
+from{height:10px}
+to{height:78px}
+}
+
+@keyframes fall{
+to{
+transform:translate3d(80px,115vh,0) rotate(500deg);
+opacity:0
+}
+}
+
+@keyframes touchPop{
+0%{
+transform:scale(.4);
+opacity:0
+}
+25%{
+opacity:1
+}
+100%{
+transform:translateY(-100px) scale(1.5) rotate(20deg);
+opacity:0
+}
+}
+
+@keyframes explode{
+0%{
+transform:translate(0,0) scale(1);
+opacity:1
+}
+100%{
+transform:
+translate(
+calc(var(--x)*1px),
+calc(var(--y)*1px)
+) scale(.2);
+opacity:0
+}
 }
 
 @media(max-width:650px){
@@ -665,7 +991,7 @@ padding:45px 0
 }
 
 .hero{
-min-height:85vh
+min-height:88vh
 }
 
 .moon{
@@ -689,6 +1015,10 @@ grid-template-columns:repeat(2,1fr)
 }
 
 .reasons{
+grid-template-columns:1fr
+}
+
+.universe-grid{
 grid-template-columns:1fr
 }
 
@@ -724,12 +1054,34 @@ gap:3px
 width:4px
 }
 
+.beam{
+left:75px;
+right:75px
+}
+
+.love-beam{
+padding:0 8px
+}
+
+.love-heart{
+font-size:45px
+}
+
+.first-time-date{
+font-size:32px
+}
+
+.typewriter{
+font-size:19px
+}
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- ŞİFRE EKRANI -->
 <div id="lock">
 <div class="lock-box">
 
@@ -738,8 +1090,8 @@ width:4px
 <h1>SARYAMAA</h1>
 
 <p>
-SANA ÖZEL KÜÇÜK BİR EVREN HAZIRLADIM. 🌙<br>
-KAPIYI AÇMAK İÇİN ÖZEL TARİHİMİZİ YAZ.
+SANA ÖZEL BİR EVREN HAZIRLADIM. 🌙<br>
+GİRMEK İÇİN ÖZEL TARİHİMİZİ YAZ.
 </p>
 
 <input
@@ -751,7 +1103,7 @@ placeholder="15122025"
 autocomplete="off">
 
 <button class="unlock" onclick="unlock()">
-❤️ KALBİ AÇ
+❤️ SARYAMAA UNIVERSE'E GİR
 </button>
 
 <div id="error"></div>
@@ -760,23 +1112,23 @@ autocomplete="off">
 </div>
 
 
+<!-- ANA SITE -->
 <div id="site" class="hidden">
 
 <div class="moon"></div>
 
 <div class="container">
 
+<!-- HERO -->
 <section class="hero">
 
 <div class="badge">
-SADECE SARYAMAA İÇİN ❤️
+SARYAMAA UNIVERSE • SADECE SANA ÖZEL ❤️
 </div>
 
 <div class="hero-heart">❤️</div>
 
-<h1 class="title">
-SARYAMAA
-</h1>
+<h1 class="title">SARYAMAA</h1>
 
 <p class="subtitle">
 BAZI HİKÂYELER ANLATILMAZ...<br>
@@ -784,15 +1136,197 @@ KALPTE YAŞANIR. 💗
 </p>
 
 <div class="scroll">
-AŞAĞI KAYDIR ↓
+EVRENİ KEŞFET ↓
 </div>
 
 </section>
 
 
+<!-- UNIVERSE -->
 <div class="card">
 
-<h2>BİZİM HİKÂYEMİZ 💕</h2>
+<div class="universe">
+
+<div class="universe-title">
+✨ SARYAMAA UNIVERSE ✨
+</div>
+
+<div class="universe-grid">
+
+<div class="universe-item"
+onclick="scrollToSection('heartPlace')">
+<div class="icon">❤️</div>
+<b>KALBİMDEKİ YERİN</b>
+<small>Kalbine dokun</small>
+</div>
+
+<div class="universe-item"
+onclick="scrollToSection('firstMoment')">
+<div class="icon">🌙</div>
+<b>İLK AN</b>
+<small>Seni gördüğüm ilk an</small>
+</div>
+
+<div class="universe-item"
+onclick="scrollToSection('loveBeam')">
+<div class="icon">💫</div>
+<b>KALPTEN KALBE</b>
+<small>Aramızdaki ışık</small>
+</div>
+
+<div class="universe-item"
+onclick="scrollToSection('musicCard')">
+<div class="icon">🎵</div>
+<b>BİZİM ŞARKIMIZ</b>
+<small>Kalbin ritmi</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- KALBİMDEKİ YERİN -->
+<div class="card" id="heartPlace">
+
+<h2>❤️ KALBİMDEKİ YERİN</h2>
+
+<div class="heart-place">
+
+<div class="big-heart">
+
+<div class="big-heart-shape">❤️</div>
+
+<div class="heart-place-text">
+SARYAMAA
+</div>
+
+</div>
+
+<p class="text">
+KALBİMDEKİ YERİNİ MERAK EDİYORSAN...
+</p>
+
+<div class="divider"></div>
+
+<div class="place-result">
+TARİF EDİLECEK BİR YER DEĞİL. ❤️<br>
+ÇÜNKÜ ORADA SADECE SEN VARSIN.
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SENİ GÖRDÜĞÜM İLK AN -->
+<div class="card" id="firstMoment">
+
+<h2>🌙 SENİ GÖRDÜĞÜM İLK AN</h2>
+
+<div class="first-time">
+
+<div class="first-time-date">
+15.12.2025
+</div>
+
+<div class="divider"></div>
+
+<div class="typewriter" id="typewriter"></div>
+
+</div>
+
+</div>
+
+
+<!-- IŞIK YOLU -->
+<div class="card">
+
+<h2>💫 IŞIK YOLU</h2>
+
+<p class="text">
+BAZI YOLLAR İKİ İNSANI
+BİRBİRİNE GÖTÜRÜR.
+<br><br>
+BİZİMKİ DE ÖYLE BİR YOL. ❤️
+</p>
+
+<div class="light-path">
+
+<div class="path-light"></div>
+<div class="path-light"></div>
+<div class="path-light"></div>
+<div class="path-light"></div>
+<div class="path-light"></div>
+
+</div>
+
+</div>
+
+
+<!-- KALPTEN KALBE -->
+<div class="card" id="loveBeam">
+
+<h2>❤️ KALPTEN KALBE IŞIN</h2>
+
+<p class="text">
+MESAFE NE KADAR OLURSA OLSUN,
+BAZI KALPLERİN ARASINDA
+GÖRÜNMEYEN BİR BAĞ VARDIR.
+</p>
+
+<div class="love-beam">
+
+<div class="love-heart">❤️</div>
+
+<div class="beam"></div>
+<div class="beam-dot"></div>
+
+<div class="love-heart">❤️</div>
+
+</div>
+
+<p class="highlight">
+BİR KALPTEN DİĞERİNE... ❤️
+</p>
+
+</div>
+
+
+<!-- KALP NABZI -->
+<div class="card">
+
+<h2>💗 KALP NABZI</h2>
+
+<div class="pulse-zone">
+
+<div class="pulse-heart" id="pulseHeart">
+❤️
+</div>
+
+<div class="pulse-status">
+KALBİMİN RİTMİ: SARYAMAA ❤️
+</div>
+
+</div>
+
+<p class="text" style="margin-top:20px">
+BU KALP BİR ŞEYİ UNUTMUYOR:
+<br><br>
+<span class="highlight">
+SENİ. ❤️
+</span>
+</p>
+
+</div>
+
+
+<!-- HİKAYE -->
+<div class="card">
+
+<h2>💕 BİZİM HİKÂYEMİZ</h2>
 
 <p class="text">
 
@@ -803,20 +1337,20 @@ AŞAĞI KAYDIR ↓
 <div class="divider"></div>
 
 <p class="text">
-TAKVİMDE SIRADAN GÖRÜNEN BİR TARİH,
-BENİM İÇİN HİÇ SIRADAN DEĞİL.
+TAKVİMDE SADECE BİR TARİH OLABİLİR.
 <br><br>
-ÇÜNKÜ O TARİH,
-HİKÂYEMİZİN GÜZEL SAYFALARINDAN
-BİRİNİN BAŞLANGICI OLDU.
+AMA BENİM İÇİN O TARİH,
+GÜZEL BİR HİKÂYENİN
+BAŞLANGICI.
 <br><br>
-O GÜNDEN SONRA BAZI ŞARKILAR,
-BAZI GECELER VE BAZI GÜLÜŞLER
-BAŞKA ANLAMLAR TAŞIMAYA BAŞLADI.
+BAZI ŞARKILARIN,
+BAZI GECELERİN,
+BAZI GÜLÜŞLERİN
+ANLAMI O GÜNDEN SONRA DEĞİŞTİ.
 <br><br>
-<strong class="highlight">
+<span class="highlight">
 İYİ Kİ VARSIN SARYAMAA. ❤️
-</strong>
+</span>
 </p>
 
 <div class="counter">
@@ -846,23 +1380,20 @@ BAŞKA ANLAMLAR TAŞIMAYA BAŞLADI.
 </div>
 
 
-<div class="card">
+<!-- MÜZİK -->
+<div class="card" id="musicCard">
 
-<h2>BU ŞARKI SANA 🎵</h2>
+<h2>🎵 BİZİM ŞARKIMIZ</h2>
 
 <div class="music">
 
 <div class="song">
 
-<div class="disc" id="disc">
-🎵
-</div>
+<div class="disc" id="disc">🎵</div>
 
 <div class="song-info">
 
-<b>
-PINHANI - BENİ SEN İNANDIR
-</b>
+<b>PINHANI - BENİ SEN İNANDIR</b>
 
 <small>
 SARYAMAA İÇİN ❤️
@@ -870,7 +1401,9 @@ SARYAMAA İÇİN ❤️
 
 </div>
 
-<button class="play" id="play" onclick="toggleMusic()">
+<button class="play"
+id="play"
+onclick="toggleMusic()">
 ▶
 </button>
 
@@ -887,9 +1420,7 @@ value="0">
 <div class="music-bottom">
 
 <span id="current">0:00</span>
-
 <span class="music-space"></span>
-
 <span>🔊</span>
 
 <input
@@ -907,29 +1438,18 @@ value=".8">
 
 </div>
 
-
 <div class="visualizer" id="visualizer">
 
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
+<div class="bar"></div><div class="bar"></div>
+<div class="bar"></div><div class="bar"></div>
+<div class="bar"></div><div class="bar"></div>
+<div class="bar"></div><div class="bar"></div>
+<div class="bar"></div><div class="bar"></div>
+<div class="bar"></div><div class="bar"></div>
+<div class="bar"></div><div class="bar"></div>
+<div class="bar"></div><div class="bar"></div>
+<div class="bar"></div><div class="bar"></div>
+<div class="bar"></div><div class="bar"></div>
 
 </div>
 
@@ -940,13 +1460,14 @@ value=".8">
 </div>
 
 
+<!-- GÜL -->
 <div class="card">
 
 <h2>🌹 GÜL YAĞMURU</h2>
 
 <p class="text">
-BİR BUTONA BAS VE BU SAYFAYI
-GÜLLERLE DOLDUR. ❤️
+BU SAYFAYI BİRAZ DAHA
+GÜZELLEŞTİRELİM. ❤️
 </p>
 
 <div class="rose-box">
@@ -960,33 +1481,34 @@ GÜLLERLE DOLDUR. ❤️
 </div>
 
 
+<!-- NEDENLER -->
 <div class="card">
 
-<h2>SENİ NEDEN SEVİYORUM? 💗</h2>
+<h2>💗 SENİ NEDEN SEVİYORUM?</h2>
 
 <div class="reasons">
 
 <div class="reason">
 <div class="reason-icon">😊</div>
 <p>
-GÜLÜŞÜNÜN EN KÖTÜ GÜNÜ BİLE
-GÜZELLEŞTİREBİLMESİ.
+GÜLÜŞÜNÜN HER ŞEYİ
+DAHA GÜZEL YAPMASI.
 </p>
 </div>
 
 <div class="reason">
 <div class="reason-icon">🌙</div>
 <p>
-GECE OLDUĞUNDA BİLE AKLIMA
-GELEN GÜZEL ŞEYLERDEN BİRİ OLMAN.
+GECELERDE BİLE AKLIMA
+GELEN GÜZEL ŞEY OLMAN.
 </p>
 </div>
 
 <div class="reason">
 <div class="reason-icon">✨</div>
 <p>
-HAYATI DAHA GÜZEL VE
-ANLAMLI HİSSETTİREBİLMEN.
+HAYATI DAHA ANLAMLI
+HİSSETTİRMEN.
 </p>
 </div>
 
@@ -1003,9 +1525,10 @@ SADECE SEN OLDUĞUN İÇİN.
 </div>
 
 
+<!-- MEKTUP -->
 <div class="card">
 
-<h2>SANA BİR MEKTUP 💌</h2>
+<h2>💌 SANA BİR MEKTUP</h2>
 
 <div class="envelope" onclick="openLetter()">
 <div class="seal">❤️</div>
@@ -1023,25 +1546,20 @@ SEVGİLİ SARYAMAA,
 BUNU YAZARKEN AKLIMDAN GEÇEN
 TEK ŞEY SEN OLDUN.
 <br><br>
-BAZEN BİR İNSANA NE KADAR DEĞER
-VERDİĞİNİ ANLATMAK GERÇEKTEN ZOR.
-ÇÜNKÜ BAZI DUYGULAR KELİMELERDEN
-DAHA BÜYÜK.
+BAZI DUYGULARI KELİMELERLE
+ANLATMAK ZOR.
 <br><br>
-AMA YİNE DE DENEMEK İSTEDİM...
+AMA ŞUNU BİLMENİ İSTİYORUM:
 <br><br>
 SEN BENİM İÇİN ÇOK ÖZELSİN.
+<br><br>
 GÜLÜŞÜN, KONUŞMAN,
-VARLIĞIN VE KÜÇÜK ŞEYLERİN BİLE
-BENDE GÜZEL BİR İZ BIRAKIYOR.
+VARLIĞIN VE KÜÇÜK ŞEYLERİN
+BİLE BENDE GÜZEL BİR İZ BIRAKIYOR.
 <br><br>
-BU SAYFAYI AÇTIĞINDA
-YÜZÜNDE KÜÇÜK BİR GÜLÜMSEME
-OLSUN İSTEDİM.
-<br><br>
-ÇÜNKÜ SEN MUTLU OLDUĞUNDA
-BENİM İÇİN DE HER ŞEY
-BİRAZ DAHA GÜZEL.
+BU SAYFAYI HAZIRLARKEN
+YÜZÜNDE BİR GÜLÜMSEME
+OLMASINI HAYAL ETTİM.
 <br><br>
 İYİ Kİ VARSIN.
 <br>
@@ -1055,13 +1573,14 @@ SENİ ÇOK SEVİYORUM. ❤️
 </div>
 
 
+<!-- SÜRPRİZ -->
 <div class="card">
 
-<h2>SON BİR SÜRPRİZ 🎁</h2>
+<h2>🎁 GİZLİ SÜRPRİZ</h2>
 
 <p class="text">
-BURAYA KADAR GELDİYSEN
-BUNU DA AÇABİLİRSİN. ❤️
+BÜTÜN EVRENİ GEZDİYSEN
+SON BİR ŞEY DAHA VAR.
 </p>
 
 <div class="divider"></div>
@@ -1076,14 +1595,8 @@ SARYAMAA... ❤️
 
 <br><br>
 
-BU SAYFADAKİ HER ŞEYİN
-KÜÇÜK BİR ANLAMI VAR.
-
-<br><br>
-
-AMA EN GÜZEL ŞEY,
-HİÇBİR KODA SIĞMAYAN
-ŞU CÜMLE:
+BÜTÜN BU SAYFAYI TEK BİR CÜMLE
+İÇİN HAZIRLADIM:
 
 <br><br>
 
@@ -1097,6 +1610,10 @@ HİÇBİR KODA SIĞMAYAN
 
 <br><br>
 
+VE BU HİKÂYENİN SONU YOK.
+
+<br>
+
 ∞
 
 </div>
@@ -1104,7 +1621,8 @@ HİÇBİR KODA SIĞMAYAN
 </div>
 
 
-<div class="final">
+<!-- FİNAL -->
+<div class="final" id="final">
 
 <h2>SARYAMAA ❤️</h2>
 
@@ -1128,12 +1646,16 @@ VE ORADA KALIR.
 15.12.2025 → ∞
 </div>
 
+<button class="final-btn" onclick="finale()">
+🎆 SONSUZLUĞA BAS
+</button>
+
 </div>
 
 </div>
 
 <footer>
-KALPTEN HAZIRLANDI ❤️ · SARYAMAA
+SARYAMAA UNIVERSE ❤️ · 15.12.2025
 </footer>
 
 </div>
@@ -1141,8 +1663,8 @@ KALPTEN HAZIRLANDI ❤️ · SARYAMAA
 
 <script>
 
+/* ŞİFRE */
 const PASSWORD="15122025";
-
 
 function unlock(){
 
@@ -1163,24 +1685,59 @@ startHearts();
 }else{
 
 document.getElementById("error")
-.textContent=
-"ŞİFRE YANLIŞ. ❤️ TEKRAR DENE.";
+.textContent="ŞİFRE YANLIŞ. ❤️";
 
 }
 
 }
-
 
 document.getElementById("password")
 .addEventListener("keydown",e=>{
-
 if(e.key==="Enter")unlock();
-
 });
 
 
-/* MÜZİK */
+/* EVREN NAVİGASYONU */
+function scrollToSection(id){
 
+const el=document.getElementById(id);
+
+if(el){
+el.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+}
+
+}
+
+
+/* İLK AN YAZISI */
+const firstText=
+"Seni gördüğüm ilk an, belki senin için sıradan bir andı. Ama bazı anlar vardır; insan daha sonra dönüp baktığında ne kadar özel olduğunu anlar. O anın güzel bir başlangıç olduğunu bilmiyordum...";
+
+let typed=0;
+
+function typeFirstMoment(){
+
+const box=document.getElementById("typewriter");
+
+if(typed<firstText.length){
+
+box.textContent+=firstText.charAt(typed);
+
+typed++;
+
+setTimeout(typeFirstMoment,35);
+
+}
+
+}
+
+setTimeout(typeFirstMoment,800);
+
+
+/* MÜZİK */
 const music=document.getElementById("music");
 const play=document.getElementById("play");
 const disc=document.getElementById("disc");
@@ -1189,6 +1746,7 @@ const volume=document.getElementById("volume");
 const current=document.getElementById("current");
 const duration=document.getElementById("duration");
 const visualizer=document.getElementById("visualizer");
+const pulseHeart=document.getElementById("pulseHeart");
 
 function formatTime(sec){
 
@@ -1201,23 +1759,20 @@ return m+":"+(s<10?"0":"")+s;
 
 }
 
-
 function toggleMusic(){
 
 if(music.paused){
 
-music.play()
-.then(()=>{
+music.play().then(()=>{
 
 play.textContent="⏸";
 disc.classList.add("playing");
 visualizer.classList.add("active");
 
-})
-.catch(()=>{
+}).catch(()=>{
 
 alert(
-"MÜZİK BULUNAMADI. GITHUB'DA DOSYA ADI sarki.mp3 OLMALI."
+"MÜZİK BULUNAMADI. GITHUB'DA DOSYA ADININ sarki.mp3 OLDUĞUNU KONTROL ET."
 );
 
 });
@@ -1234,7 +1789,6 @@ visualizer.classList.remove("active");
 
 }
 
-
 music.addEventListener("loadedmetadata",()=>{
 
 progress.max=music.duration;
@@ -1243,7 +1797,6 @@ duration.textContent=
 formatTime(music.duration);
 
 });
-
 
 music.addEventListener("timeupdate",()=>{
 
@@ -1254,7 +1807,6 @@ formatTime(music.currentTime);
 
 });
 
-
 music.addEventListener("ended",()=>{
 
 play.textContent="▶";
@@ -1263,26 +1815,35 @@ visualizer.classList.remove("active");
 
 });
 
-
 progress.addEventListener("input",()=>{
-
 music.currentTime=progress.value;
-
 });
-
 
 volume.addEventListener("input",()=>{
-
 music.volume=volume.value;
-
 });
-
 
 music.volume=.8;
 
 
-/* SAYAÇ */
+/* MÜZİK ÇALARKEN NABIZ */
+setInterval(()=>{
 
+if(!music.paused){
+
+pulseHeart.style.transform=
+"scale("+(1+Math.random()*.18)+")";
+
+setTimeout(()=>{
+pulseHeart.style.transform="";
+},250);
+
+}
+
+},700);
+
+
+/* SAYAÇ */
 const startDate=
 new Date("2025-12-15T00:00:00");
 
@@ -1292,21 +1853,17 @@ let diff=new Date()-startDate;
 
 if(diff<0)diff=0;
 
-const days=
-Math.floor(diff/86400000);
+const days=Math.floor(diff/86400000);
 
 diff%=86400000;
 
-const hours=
-Math.floor(diff/3600000);
+const hours=Math.floor(diff/3600000);
 
 diff%=3600000;
 
-const minutes=
-Math.floor(diff/60000);
+const minutes=Math.floor(diff/60000);
 
-const seconds=
-Math.floor((diff%60000)/1000);
+const seconds=Math.floor((diff%60000)/1000);
 
 document.getElementById("days").textContent=days;
 document.getElementById("hours").textContent=hours;
@@ -1316,20 +1873,18 @@ document.getElementById("seconds").textContent=seconds;
 }
 
 updateCounter();
-
 setInterval(updateCounter,1000);
 
 
 /* MEKTUP */
-
 function openLetter(){
 
-const letter=
-document.getElementById("letter");
+const letter=document
+.getElementById("letter");
 
 letter.classList.toggle("show");
 
-for(let i=0;i<8;i++){
+for(let i=0;i<10;i++){
 
 setTimeout(createHeart,i*100);
 
@@ -1338,18 +1893,17 @@ setTimeout(createHeart,i*100);
 }
 
 
-/* SÜRPRİZ */
-
+/* GİZLİ SÜRPRİZ */
 function showSecret(){
 
-const secret=
-document.getElementById("secret");
+const secret=document
+.getElementById("secret");
 
 secret.classList.add("show");
 
-for(let i=0;i<20;i++){
+for(let i=0;i<25;i++){
 
-setTimeout(createHeart,i*70);
+setTimeout(createHeart,i*60);
 
 }
 
@@ -1357,26 +1911,25 @@ setTimeout(createHeart,i*70);
 
 
 /* GÜL YAĞMURU */
-
 function roseRain(){
 
-for(let i=0;i<70;i++){
+for(let i=0;i<75;i++){
 
 setTimeout(()=>{
 
-const rose=
-document.createElement("div");
+const rose=document
+.createElement("div");
 
 rose.className="rose";
 
 rose.textContent=
-Math.random()>.25?"🌹":"🌸";
+Math.random()>.2?"🌹":"🌸";
 
 rose.style.left=
 Math.random()*100+"vw";
 
 rose.style.fontSize=
-(18+Math.random()*24)+"px";
+(18+Math.random()*25)+"px";
 
 rose.style.animationDuration=
 (3+Math.random()*4)+"s";
@@ -1394,18 +1947,46 @@ rose.remove();
 }
 
 
-/* KALPLER */
+/* DOKUNUNCA KALP */
+document.addEventListener("pointerdown",e=>{
 
+if(
+e.target.closest("button")||
+e.target.closest("input")||
+e.target.closest(".envelope")
+)return;
+
+const heart=document
+.createElement("div");
+
+heart.className="touch-heart";
+
+heart.textContent=[
+"❤️","💕","💗","💖","💘"
+][Math.floor(Math.random()*5)];
+
+heart.style.left=e.clientX+"px";
+heart.style.top=e.clientY+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},1000);
+
+});
+
+
+/* KALPLER */
 function createHeart(){
 
-const heart=
-document.createElement("div");
+const heart=document
+.createElement("div");
 
 heart.className="heart";
 
 heart.textContent=[
-"❤️","💕","💗","💖",
-"💘","💞","💓"
+"❤️","💕","💗","💖","💘","💞","💓"
 ][Math.floor(Math.random()*7)];
 
 heart.style.left=
@@ -1425,14 +2006,10 @@ heart.remove();
 
 }
 
-
 function startHearts(){
 
-for(let i=0;i<20;i++){
-
+for(let i=0;i<20;i++)
 setTimeout(createHeart,i*140);
-
-}
 
 setInterval(createHeart,950);
 
@@ -1440,11 +2017,10 @@ setInterval(createHeart,950);
 
 
 /* YILDIZLAR */
-
 for(let i=0;i<55;i++){
 
-const star=
-document.createElement("div");
+const star=document
+.createElement("div");
 
 star.className="star";
 
@@ -1458,6 +2034,115 @@ star.style.animationDelay=
 Math.random()*3+"s";
 
 document.body.appendChild(star);
+
+}
+
+
+/* FİNAL HAVAİ FİŞEK */
+function finale(){
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+setTimeout(()=>{
+
+for(let f=0;f<7;f++){
+
+setTimeout(()=>{
+
+const x=
+20+Math.random()*60;
+
+const y=
+15+Math.random()*45;
+
+const core=document
+.createElement("div");
+
+core.className="firework";
+
+core.style.left=x+"vw";
+core.style.top=y+"vh";
+
+document.body.appendChild(core);
+
+for(let p=0;p<35;p++){
+
+const particle=document
+.createElement("div");
+
+particle.className="fire-particle";
+
+particle.style.left=x+"vw";
+particle.style.top=y+"vh";
+
+const angle=
+Math.random()*Math.PI*2;
+
+const distance=
+60+Math.random()*150;
+
+particle.style.setProperty(
+"--x",
+Math.cos(angle)*distance
+);
+
+particle.style.setProperty(
+"--y",
+Math.sin(angle)*distance
+);
+
+document.body.appendChild(particle);
+
+setTimeout(()=>{
+particle.remove();
+},1400);
+
+}
+
+setTimeout(()=>{
+core.remove();
+},1200);
+
+},f*500);
+
+}
+
+for(let i=0;i<80;i++){
+
+setTimeout(createHeart,i*25);
+
+}
+
+for(let i=0;i<100;i++){
+
+setTimeout(()=>{
+
+const rose=document
+.createElement("div");
+
+rose.className="rose";
+
+rose.textContent=
+Math.random()>.3?"🌹":"❤️";
+
+rose.style.left=
+Math.random()*100+"vw";
+
+rose.style.animationDuration=
+(2+Math.random()*3)+"s";
+
+document.body.appendChild(rose);
+
+setTimeout(()=>rose.remove(),6000);
+
+},i*20);
+
+}
+
+},800);
 
 }
 
