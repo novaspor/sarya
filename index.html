@@ -3,2441 +3,818 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#080006">
-<title>SARYAMAA UNIVERSE ❤️</title>
+<title>KIRIK KALP ❤️‍🩹</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
 body{
-font-family:Georgia,"Times New Roman",serif;
-color:#fff;
-background:#040004;
-overflow-x:hidden
-}
-button,input{font:inherit}
-.hidden{display:none!important}
-
-body:before{
-content:"";
-position:fixed;
-inset:0;
-z-index:0;
-pointer-events:none;
-background:
-radial-gradient(circle at 15% 10%,#c1166040,transparent 28%),
-radial-gradient(circle at 85% 80%,#790b4a40,transparent 34%),
-radial-gradient(circle at 50% 50%,#ff1c7808,transparent 60%)
+  background:#020204;
+  color:white;
+  font-family:Georgia,"Times New Roman",serif;
 }
 
-/* ŞİFRE */
-#lock{
-position:fixed;
-inset:0;
-z-index:99999;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:20px;
-background:
-radial-gradient(circle at 50% 35%,#8b174d,#25000f 52%,#030003)
+/* ANA SAHNE */
+.scene{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 45%,#30101b 0%,#10070c 35%,#020204 75%);
+  transition:background 5s ease;
 }
 
-.lock-box{
-width:min(470px,100%);
-padding:52px 30px;
-text-align:center;
-border:1px solid #ffffff22;
-border-radius:40px;
-background:#ffffff0c;
-backdrop-filter:blur(25px);
-box-shadow:0 0 120px #ff267055;
-animation:appear 1s
+.scene.dark{
+  background:#000;
 }
 
-.lock-heart{
-font-size:86px;
-filter:drop-shadow(0 0 35px #ff337f);
-animation:pulse 1.5s infinite
+/* YILDIZLAR */
+.stars{
+  position:absolute;
+  inset:0;
+  transition:opacity 5s ease;
 }
 
-.lock-box h1{
-font-size:52px;
-font-weight:normal;
-font-style:italic;
-letter-spacing:4px;
-margin:18px 0 10px
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  border-radius:50%;
+  background:#fff;
+  opacity:.7;
+  animation:twinkle 3s infinite alternate;
 }
 
-.lock-box p{
-color:#ead1db;
-line-height:1.8;
-margin-bottom:25px
+.scene.dark .stars{
+  opacity:.05;
 }
 
-#password{
-width:100%;
-padding:17px;
-border-radius:18px;
-border:1px solid #ffffff25;
-outline:none;
-background:#00000045;
-color:#fff;
-text-align:center;
-letter-spacing:6px;
-font-size:18px
-}
-
-.unlock{
-width:100%;
-margin-top:15px;
-padding:17px;
-border:0;
-border-radius:18px;
-background:linear-gradient(135deg,#ff4389,#a90049);
-color:#fff;
-font-weight:bold;
-cursor:pointer;
-box-shadow:0 15px 35px #ff126044;
-transition:.3s
-}
-
-.unlock:hover{transform:translateY(-3px)}
-
-#error{
-height:24px;
-margin-top:12px;
-color:#ff91b5
-}
-
-/* ANA */
-#site{
-position:relative;
-z-index:1
-}
-
-.container{
-width:min(920px,92%);
-margin:auto;
-padding:55px 0;
-text-align:center
-}
-
-.hero{
-min-height:95vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-position:relative
-}
-
+/* AY */
 .moon{
-position:absolute;
-top:5%;
-right:7%;
-width:88px;
-height:88px;
-border-radius:50%;
-background:#fff5f9;
-box-shadow:0 0 65px #fff0f8aa
+  position:absolute;
+  top:8%;
+  right:10%;
+  width:75px;
+  height:75px;
+  border-radius:50%;
+  background:#fff8fc;
+  box-shadow:0 0 50px #fff6;
+  transition:opacity 5s;
 }
 
-.moon:after{
-content:"";
-position:absolute;
-width:75px;
-height:75px;
-left:-9px;
-top:-4px;
-border-radius:50%;
-background:#16000d
+.scene.dark .moon{
+  opacity:.05;
 }
 
-.badge{
-padding:10px 22px;
-border:1px solid #ffffff22;
-border-radius:40px;
-background:#ffffff0a;
-color:#ffabc7;
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:4px
+/* YAĞMUR */
+.rain{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.45;
+  transition:opacity 5s;
 }
 
-.hero-heart{
-margin:34px 0 16px;
-font-size:108px;
-filter:drop-shadow(0 0 45px #ff267e);
-animation:pulse 1.5s infinite
+.scene.dark .rain{
+  opacity:.12;
+}
+
+.drop{
+  position:absolute;
+  top:-30px;
+  width:1px;
+  height:35px;
+  background:linear-gradient(transparent,#a9b5c7);
+  transform:rotate(12deg);
+  animation:rain linear infinite;
+}
+
+/* İÇERİK */
+.content{
+  position:absolute;
+  inset:0;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+  text-align:center;
+}
+
+.inner{
+  width:min(800px,95%);
+}
+
+.small{
+  font-family:Arial,sans-serif;
+  font-size:10px;
+  letter-spacing:6px;
+  color:#a9989f;
+  margin-bottom:30px;
+  opacity:0;
 }
 
 .title{
-font-size:clamp(62px,14vw,130px);
-font-weight:normal;
-font-style:italic;
-letter-spacing:5px;
-line-height:.9;
-background:linear-gradient(
-90deg,#fff,#ff9fc0,#fff,#ff69a1,#fff
-);
-background-size:300%;
--webkit-background-clip:text;
-color:transparent;
-animation:shine 7s infinite
+  font-size:clamp(38px,8vw,82px);
+  font-weight:normal;
+  font-style:italic;
+  line-height:1.15;
+  opacity:0;
 }
 
 .subtitle{
-margin-top:28px;
-font-size:20px;
-line-height:1.8;
-color:#ead6df
+  margin-top:20px;
+  font-size:clamp(17px,3vw,25px);
+  color:#d7c7cd;
+  line-height:1.8;
+  opacity:0;
 }
 
-.scroll{
-margin-top:45px;
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:4px;
-color:#9d7d89;
-animation:bounce 2s infinite
+/* KALP */
+.heart-container{
+  position:relative;
+  width:220px;
+  height:190px;
+  margin:35px auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.card{
-margin-top:35px;
-padding:40px 28px;
-border:1px solid #ffffff16;
-border-radius:35px;
-background:linear-gradient(145deg,#ffffff0d,#ffffff04);
-backdrop-filter:blur(20px);
-box-shadow:0 25px 80px #00000055,inset 0 1px #ffffff10
+.heart{
+  position:relative;
+  width:120px;
+  height:120px;
+  transform:rotate(-45deg);
+  background:#e71950;
+  filter:
+    drop-shadow(0 0 15px #ff2457)
+    drop-shadow(0 0 45px #ff174d66);
+  animation:heartbeat 1.5s infinite;
+  transition:all 2s ease;
 }
 
-.card h2{
-font-size:31px;
-font-weight:normal;
-font-style:italic;
-color:#ffabc7;
-margin-bottom:24px
+.heart:before,
+.heart:after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:#e71950;
 }
 
-.text{
-font-size:18px;
-line-height:2;
-color:#f1dce5
+.heart:before{
+  top:-60px;
+  left:0;
 }
 
-.highlight{
-color:#ffabc7;
-font-weight:bold
+.heart:after{
+  left:60px;
+  top:0;
 }
 
-.divider{
-width:90px;
-height:1px;
-margin:25px auto;
-background:linear-gradient(90deg,transparent,#ff6e9f,transparent)
+/* KIRIK KALP */
+.heart.broken{
+  animation:none;
+  transform:rotate(-45deg) scale(.9);
 }
 
-/* UNIVERSE */
-.universe-title{
-font-family:Arial,sans-serif;
-font-size:11px;
-letter-spacing:5px;
-color:#ff8eb5;
-margin-bottom:25px
+.heart.broken:before,
+.heart.broken:after{
+  background:#b80e3b;
 }
 
-.universe-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:14px
+/* ÇATLAK */
+.crack{
+  position:absolute;
+  z-index:30;
+  width:8px;
+  height:145px;
+  background:#080308;
+  transform:rotate(20deg);
+  opacity:0;
+  clip-path:polygon(
+    45% 0,
+    70% 20%,
+    48% 35%,
+    78% 55%,
+    45% 72%,
+    65% 100%,
+    30% 78%,
+    48% 57%,
+    20% 40%,
+    45% 25%
+  );
 }
 
-.universe-item{
-padding:22px;
-min-height:120px;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-border-radius:25px;
-background:#00000028;
-border:1px solid #ffffff0d;
-transition:.35s;
-cursor:pointer
+.heart.broken + .crack{
+  opacity:1;
 }
 
-.universe-item:hover{
-transform:translateY(-6px);
-border-color:#ff559044;
-background:#ff287c0d;
-box-shadow:0 15px 35px #ff277022
+/* KALP PARÇALARI */
+.fragment{
+  position:fixed;
+  z-index:50;
+  pointer-events:none;
+  font-size:22px;
+  animation:fragmentFall 2.5s forwards;
 }
 
-.universe-item .icon{
-font-size:35px;
-margin-bottom:10px
+/* YAZILAR */
+.message{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:min(800px,90%);
+  font-size:clamp(23px,4vw,42px);
+  line-height:1.7;
+  font-style:italic;
 }
 
-.universe-item b{
-font-size:14px;
-color:#ffabc7
+.line{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity 1.2s,transform 1.2s;
 }
 
-.universe-item small{
-font-family:Arial,sans-serif;
-font-size:10px;
-margin-top:6px;
-color:#9f818d
+.line.show{
+  opacity:1;
+  transform:none;
 }
 
-/* KALPİMDEKİ YER */
-.big-heart{
-position:relative;
-width:200px;
-height:180px;
-margin:10px auto 25px;
-display:flex;
-align-items:center;
-justify-content:center
+.final{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:min(850px,90%);
+  opacity:0;
+  pointer-events:none;
 }
 
-.big-heart-shape{
-font-size:160px;
-line-height:1;
-filter:drop-shadow(0 0 15px #ff2e7c) drop-shadow(0 0 45px #ff2e7c);
-animation:heartBeat 1.2s infinite
+.final.show{
+  opacity:1;
+  transition:opacity 2s;
 }
 
-.heart-place-text{
-position:absolute;
-z-index:2;
-font-size:19px;
-font-weight:bold;
-text-shadow:0 0 15px #ff2e7c
+.final-heart{
+  font-size:110px;
+  margin-bottom:30px;
+  filter:drop-shadow(0 0 35px #ff466d);
+  animation:healing 2.5s infinite;
 }
 
-.place-result{
-font-size:22px;
-line-height:1.8;
-color:#ffabc7;
-margin-top:15px
+.final-text{
+  font-size:clamp(25px,5vw,50px);
+  line-height:1.5;
+  font-style:italic;
 }
 
-/* İLK AN */
-.first-time{
-padding:35px 20px;
-border-radius:28px;
-background:radial-gradient(circle at center,#ff287c18,transparent 70%)
+.final-small{
+  margin-top:25px;
+  font-family:Arial,sans-serif;
+  color:#9e8c94;
+  font-size:11px;
+  letter-spacing:4px;
 }
 
-.first-date{
-font-size:42px;
-font-style:italic;
-color:#ffabc7;
-margin:20px 0
+/* BUTON */
+.start{
+  position:absolute;
+  bottom:9%;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:100;
+  padding:15px 28px;
+  border:1px solid #ffffff22;
+  border-radius:30px;
+  background:#ffffff08;
+  color:#ddd;
+  cursor:pointer;
+  backdrop-filter:blur(10px);
+  transition:.3s;
 }
 
-.typewriter{
-min-height:130px;
-font-size:22px;
-line-height:1.7;
-color:#f6e1e9
+.start:hover{
+  background:#ffffff15;
+  transform:translateX(-50%) translateY(-3px);
 }
 
-/* IŞIK YOLU */
-.light-path{
-position:relative;
-height:100px;
-overflow:hidden;
-border-radius:25px;
-background:#00000025;
-margin-top:25px
-}
-
-.path-light{
-position:absolute;
-top:50%;
-width:10px;
-height:10px;
-border-radius:50%;
-background:#fff;
-box-shadow:0 0 10px #fff,0 0 25px #ff3d82,0 0 45px #ff3d82;
-animation:pathMove 3s infinite linear
-}
-
-.path-light:nth-child(2){animation-delay:.6s}
-.path-light:nth-child(3){animation-delay:1.2s}
-.path-light:nth-child(4){animation-delay:1.8s}
-.path-light:nth-child(5){animation-delay:2.4s}
-
-/* KALPTEN KALBE */
-.love-beam{
-position:relative;
-height:170px;
-margin:20px 0;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 30px;
-overflow:hidden
-}
-
-.love-heart{
-font-size:55px;
-filter:drop-shadow(0 0 20px #ff2f7c);
-animation:pulse 1.4s infinite
-}
-
-.beam{
-position:absolute;
-left:105px;
-right:105px;
-top:50%;
-height:4px;
-transform:translateY(-50%);
-background:linear-gradient(90deg,transparent,#ff4b8b,#fff,#ff4b8b,transparent);
-box-shadow:0 0 18px #ff317c;
-animation:beamPulse 1.5s infinite
-}
-
-.beam-dot{
-position:absolute;
-top:50%;
-left:15%;
-width:14px;
-height:14px;
-border-radius:50%;
-background:#fff;
-box-shadow:0 0 10px #fff,0 0 25px #ff3d82;
-transform:translateY(-50%);
-animation:beamMove 2.5s infinite linear
-}
-
-/* NABIZ */
-.pulse-zone{
-padding:25px;
-border-radius:25px;
-background:#00000028
-}
-
-.pulse-heart{
-font-size:100px;
-filter:drop-shadow(0 0 35px #ff257c);
-animation:heartbeatMusic 1s infinite
-}
-
-.pulse-status{
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:3px;
-color:#ae8b98;
-margin-top:12px
-}
-
-/* SAYAÇ */
-.counter{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
-margin-top:30px
-}
-
-.counter-box{
-padding:22px 5px;
-border-radius:22px;
-background:#00000030;
-border:1px solid #ffffff0d
-}
-
-.counter-box strong{
-display:block;
-font-family:Arial,sans-serif;
-font-size:30px;
-color:#ff7cab
-}
-
-.counter-box span{
-font-family:Arial,sans-serif;
-font-size:9px;
-letter-spacing:2px;
-color:#aa8995
+.start.hidden{
+  display:none;
 }
 
 /* MÜZİK */
 .music{
-padding:22px;
-border-radius:25px;
-background:#00000035;
-border:1px solid #ffffff10
-}
-
-.song{
-display:flex;
-align-items:center;
-gap:16px;
-text-align:left
-}
-
-.disc{
-width:66px;
-height:66px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-shrink:0;
-background:radial-gradient(circle,#ffabc7 0 8%,#a8004b 9% 45%,#28000f 46% 100%);
-box-shadow:0 0 30px #ff297755;
-animation:spin 4s linear infinite;
-animation-play-state:paused
-}
-
-.disc.playing{
-animation-play-state:running
-}
-
-.song-info{
-flex:1
-}
-
-.song-info b{
-display:block;
-font-size:17px;
-margin-bottom:7px
-}
-
-.song-info small{
-font-family:Arial,sans-serif;
-font-size:11px;
-color:#ad8c98
-}
-
-.play{
-width:54px;
-height:54px;
-border:0;
-border-radius:50%;
-background:#ff377f;
-color:#fff;
-cursor:pointer
-}
-
-.progress{
-width:100%;
-margin-top:20px;
-accent-color:#ff377f;
-cursor:pointer
-}
-
-.music-bottom{
-display:flex;
-align-items:center;
-gap:10px;
-margin-top:8px;
-font-family:Arial,sans-serif;
-font-size:10px;
-color:#9d7d89
-}
-
-.music-space{flex:1}
-.volume{width:80px;accent-color:#ff377f}
-
-/* GÖRSELLEŞTİRİCİ */
-.visualizer{
-height:115px;
-margin-top:24px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:5px;
-padding:15px;
-border-radius:22px;
-background:#00000030;
-border:1px solid #ffffff08;
-overflow:hidden
-}
-
-.bar{
-width:5px;
-height:12px;
-border-radius:10px;
-background:linear-gradient(#ffc0d4,#ff287d);
-box-shadow:0 0 8px #ff3d7d66
-}
-
-.visualizer.active .bar{
-animation:equalizer .55s ease-in-out infinite alternate
-}
-
-/* GÜL */
-.rose-box{
-margin-top:25px;
-padding:25px;
-border-radius:25px;
-background:#00000025;
-border:1px solid #ffffff0d
-}
-
-.rose-btn,.surprise-btn,.final-btn{
-padding:16px 28px;
-border:0;
-border-radius:18px;
-background:linear-gradient(135deg,#ff477f,#800736);
-color:#fff;
-font-weight:bold;
-cursor:pointer;
-box-shadow:0 10px 30px #ff287044;
-transition:.3s
-}
-
-.rose-btn:hover,.surprise-btn:hover,.final-btn:hover{
-transform:translateY(-3px) scale(1.03)
-}
-
-.rose{
-position:fixed;
-top:-80px;
-z-index:10000;
-pointer-events:none;
-font-size:28px;
-animation:fall linear forwards
-}
-
-/* NEDENLER */
-.reasons{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:14px;
-margin-top:25px
-}
-
-.reason{
-padding:22px;
-border-radius:22px;
-background:#00000025;
-border:1px solid #ffffff0c;
-transition:.3s
-}
-
-.reason:hover{
-transform:translateY(-5px);
-background:#ff287c0e
-}
-
-.reason-icon{
-font-size:31px;
-margin-bottom:10px
-}
-
-.reason p{
-font-family:Arial,sans-serif;
-font-size:13px;
-line-height:1.7;
-color:#d5bac5
-}
-
-/* MEKTUP */
-.envelope{
-position:relative;
-width:180px;
-height:120px;
-margin:10px auto 25px;
-border-radius:8px;
-background:linear-gradient(135deg,#a51650,#51082b);
-box-shadow:0 15px 40px #00000055;
-cursor:pointer;
-transition:.4s
-}
-
-.envelope:hover{
-transform:translateY(-5px) rotate(-1deg)
-}
-
-.envelope:before{
-content:"";
-position:absolute;
-left:0;
-top:0;
-border-left:90px solid transparent;
-border-right:90px solid transparent;
-border-top:68px solid #d82d6d
-}
-
-.seal{
-position:absolute;
-z-index:2;
-left:50%;
-top:50px;
-transform:translateX(-50%);
-width:37px;
-height:37px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-background:#ff739f;
-box-shadow:0 0 22px #ff548c
-}
-
-.letter{
-display:none;
-text-align:left;
-padding:27px;
-border-radius:22px;
-background:#fff7fa;
-color:#4a1428;
-line-height:2;
-font-size:17px;
-animation:appear .8s
-}
-
-.letter.show{display:block}
-
-/* SİNEMATİK SÜRPRİZ */
-.surprise-screen{
-position:fixed;
-inset:0;
-z-index:30000;
-display:none;
-align-items:center;
-justify-content:center;
-padding:25px;
-background:radial-gradient(circle at center,#4d0829,#100008 45%,#020002);
-overflow:hidden
-}
-
-.surprise-screen.open{
-display:flex;
-animation:fadeIn 1s
-}
-
-.surprise-stars{
-position:absolute;
-inset:0;
-background-image:
-radial-gradient(circle,#fff 1px,transparent 1px),
-radial-gradient(circle,#ff9fbe 1px,transparent 1px);
-background-size:80px 80px,120px 120px;
-opacity:.25;
-animation:starMove 18s linear infinite
-}
-
-.surprise-content{
-position:relative;
-z-index:2;
-width:min(850px,95%);
-text-align:center
-}
-
-.surprise-small{
-font-family:Arial,sans-serif;
-font-size:11px;
-letter-spacing:5px;
-color:#bd9eab
-}
-
-.surprise-heart{
-font-size:130px;
-margin:25px 0;
-filter:drop-shadow(0 0 25px #ff2279) drop-shadow(0 0 70px #ff227988);
-animation:bigHeart 1.8s infinite
-}
-
-.surprise-text{
-min-height:100px;
-font-size:clamp(24px,4vw,42px);
-font-style:italic;
-line-height:1.6;
-color:#fff
-}
-
-.touch-final{
-display:none;
-margin:25px auto 0;
-padding:16px 28px;
-border:1px solid #ff7da855;
-border-radius:20px;
-background:#ff287c18;
-color:#ffb2ca;
-font-weight:bold;
-cursor:pointer;
-animation:pulseButton 1.5s infinite
-}
-
-.touch-final.show{display:block}
-
-.final-message{
-display:none;
-margin-top:20px
-}
-
-.final-message.show{
-display:block;
-animation:appear 1s
-}
-
-.final-line{
-font-size:clamp(20px,4vw,34px);
-line-height:1.8;
-color:#f8e5ec;
-opacity:0;
-animation:lineReveal .9s forwards
-}
-
-.final-line:nth-child(1){animation-delay:.2s}
-.final-line:nth-child(2){animation-delay:1.1s}
-.final-line:nth-child(3){animation-delay:2s}
-
-.final-love{
-margin-top:28px;
-font-size:clamp(35px,8vw,70px);
-font-style:italic;
-font-weight:bold;
-color:#ff9fc1;
-text-shadow:0 0 20px #ff267e,0 0 60px #ff267e66;
-opacity:0;
-animation:loveReveal 1.2s 3s forwards,bigHeart 1.8s 4.2s infinite
-}
-
-.final-date{
-margin-top:25px;
-font-family:Arial,sans-serif;
-font-size:18px;
-letter-spacing:4px;
-color:#ff83ae;
-opacity:0;
-animation:fadeIn 1s 4.5s forwards
-}
-
-.final-last{
-margin-top:20px;
-font-size:18px;
-letter-spacing:2px;
-color:#d8bec9;
-opacity:0;
-animation:fadeIn 1s 5.2s forwards
-}
-
-.final-buttons{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:12px;
-flex-wrap:wrap;
-margin-top:30px
-}
-
-.again-btn,.home-btn{
-padding:14px 24px;
-border:1px solid #ff6d9e44;
-border-radius:18px;
-background:#ffffff08;
-color:#ffabc7;
-cursor:pointer;
-opacity:0;
-animation:fadeIn 1s 6s forwards;
-transition:.3s
-}
-
-.again-btn:hover,.home-btn:hover{
-transform:translateY(-3px);
-background:#ff287c18
-}
-
-/* DOKUNUNCA KALP */
-.touch-heart{
-position:fixed;
-pointer-events:none;
-z-index:40000;
-font-size:25px;
-animation:touchPop 1s forwards
-}
-
-/* HAVAİ FİŞEK */
-.firework{
-position:fixed;
-z-index:39999;
-width:6px;
-height:6px;
-border-radius:50%;
-background:#fff;
-box-shadow:0 0 15px #fff,0 0 30px #ff3b82;
-pointer-events:none
-}
-
-.fire-particle{
-position:fixed;
-z-index:39998;
-width:5px;
-height:5px;
-border-radius:50%;
-background:#ff7cab;
-pointer-events:none;
-animation:explode 1.2s forwards
-}
-
-.heart{
-position:fixed;
-bottom:-60px;
-z-index:4;
-pointer-events:none;
-animation:heartFloat linear forwards
-}
-
-.star{
-position:fixed;
-width:3px;
-height:3px;
-border-radius:50%;
-background:#ff9abb;
-opacity:.4;
-animation:twinkle 3s infinite;
-pointer-events:none
-}
-
-footer{
-padding:30px;
-text-align:center;
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:2px;
-color:#69535d
+  position:absolute;
+  z-index:100;
+  bottom:25px;
+  right:25px;
+  width:45px;
+  height:45px;
+  border:1px solid #ffffff22;
+  border-radius:50%;
+  background:#ffffff0b;
+  color:white;
+  cursor:pointer;
+  backdrop-filter:blur(10px);
 }
 
 /* ANİMASYONLAR */
-@keyframes pulse{
-0%,100%{transform:scale(1)}
-50%{transform:scale(1.13)}
-}
-
-@keyframes heartBeat{
-0%,100%{transform:scale(1)}
-15%{transform:scale(1.15)}
-30%{transform:scale(1)}
-45%{transform:scale(1.08)}
-}
-
-@keyframes heartbeatMusic{
-0%,100%{transform:scale(1)}
-50%{transform:scale(1.16)}
-}
-
-@keyframes shine{
-0%{background-position:0%}
-50%{background-position:100%}
-100%{background-position:0%}
-}
-
-@keyframes spin{
-to{transform:rotate(360deg)}
-}
-
-@keyframes appear{
-from{opacity:0;transform:translateY(25px) scale(.96)}
-to{opacity:1;transform:none}
-}
-
-@keyframes fadeIn{
-from{opacity:0}
-to{opacity:1}
-}
-
-@keyframes bounce{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(8px)}
+@keyframes heartbeat{
+  0%,100%{transform:rotate(-45deg) scale(1)}
+  50%{transform:rotate(-45deg) scale(1.08)}
 }
 
 @keyframes twinkle{
-0%,100%{opacity:.1;transform:scale(.5)}
-50%{opacity:1;transform:scale(1.6)}
+  from{opacity:.15}
+  to{opacity:.9}
 }
 
-@keyframes heartFloat{
-to{
-transform:translateY(-115vh) rotate(40deg);
-opacity:0
-}
-}
-
-@keyframes pathMove{
-0%{left:-5%}
-100%{left:105%}
+@keyframes rain{
+  to{
+    transform:translate(-100px,110vh) rotate(12deg);
+  }
 }
 
-@keyframes beamPulse{
-0%,100%{opacity:.35}
-50%{opacity:1}
+@keyframes fragmentFall{
+  0%{
+    opacity:1;
+    transform:translate(0,0) rotate(0) scale(1);
+  }
+  100%{
+    opacity:0;
+    transform:
+      translate(
+        calc((var(--x) - 50) * 3px),
+        180px
+      )
+      rotate(300deg)
+      scale(.3);
+  }
 }
 
-@keyframes beamMove{
-0%{left:13%}
-50%{left:50%}
-100%{left:87%}
+@keyframes healing{
+  0%,100%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(1.12);
+  }
 }
 
-@keyframes equalizer{
-from{height:10px}
-to{height:78px}
-}
+/* MOBİL */
+@media(max-width:600px){
 
-@keyframes fall{
-to{
-transform:translate3d(80px,115vh,0) rotate(500deg);
-opacity:0
-}
-}
+  .moon{
+    width:50px;
+    height:50px;
+    right:7%;
+  }
 
-@keyframes touchPop{
-0%{transform:scale(.4);opacity:0}
-25%{opacity:1}
-100%{
-transform:translateY(-100px) scale(1.5) rotate(20deg);
-opacity:0
-}
-}
+  .heart-container{
+    transform:scale(.8);
+    margin:15px auto;
+  }
 
-@keyframes explode{
-0%{
-transform:translate(0,0) scale(1);
-opacity:1
-}
-100%{
-transform:translate(calc(var(--x)*1px),calc(var(--y)*1px)) scale(.2);
-opacity:0
-}
-}
+  .message{
+    font-size:22px;
+  }
 
-@keyframes bigHeart{
-0%,100%{transform:scale(1)}
-50%{transform:scale(1.12)}
-}
+  .final-heart{
+    font-size:85px;
+  }
 
-@keyframes pulseButton{
-0%,100%{box-shadow:0 0 0 #ff287c00}
-50%{box-shadow:0 0 35px #ff287c55}
-}
-
-@keyframes lineReveal{
-from{opacity:0;transform:translateY(20px)}
-to{opacity:1;transform:none}
-}
-
-@keyframes loveReveal{
-from{opacity:0;transform:scale(.7)}
-to{opacity:1;transform:scale(1)}
-}
-
-@keyframes starMove{
-from{transform:translateY(0)}
-to{transform:translateY(-160px)}
-}
-
-@media(max-width:650px){
-.container{padding:45px 0}
-.hero{min-height:88vh}
-.moon{width:55px;height:55px;right:6%;top:5%}
-.moon:after{width:47px;height:47px}
-.hero-heart{font-size:76px}
-.counter{grid-template-columns:repeat(2,1fr)}
-.reasons{grid-template-columns:1fr}
-.universe-grid{grid-template-columns:1fr}
-.card{padding:30px 18px}
-.text{font-size:16px}
-.lock-box h1{font-size:40px}
-.song-info b{font-size:14px}
-.volume{width:60px}
-.beam{left:75px;right:75px}
-.love-beam{padding:0 8px}
-.love-heart{font-size:45px}
-.first-date{font-size:32px}
-.typewriter{font-size:19px}
-.surprise-heart{font-size:90px}
-.surprise-small{font-size:9px;letter-spacing:3px}
-.final-date{font-size:14px;letter-spacing:2px}
-.final-last{font-size:14px}
-.visualizer{gap:3px}
-.bar{width:4px}
-.final-buttons{flex-direction:column}
-.again-btn,.home-btn{width:100%}
-}
-/* GÖZLERİMİZ */
-.eyes-card{
-margin-top:35px;
-padding:40px 25px;
-border-radius:35px;
-background:
-radial-gradient(circle at 25% 50%,#7a451d22,transparent 35%),
-radial-gradient(circle at 75% 50%,#218b4a22,transparent 35%),
-linear-gradient(145deg,#211108,#061b10);
-border:1px solid #ffffff18;
-box-shadow:
-0 25px 80px #00000066,
-inset 0 1px #ffffff12;
-overflow:hidden;
-position:relative;
-}
-
-.eyes-card:before{
-content:"";
-position:absolute;
-inset:-100px;
-background:
-radial-gradient(circle,#9b5a2b12,transparent 35%),
-radial-gradient(circle at 80% 70%,#35c96b12,transparent 35%);
-animation:eyeGlow 5s infinite alternate;
-pointer-events:none;
-}
-
-.eyes-title{
-position:relative;
-z-index:2;
-font-size:34px;
-font-style:italic;
-font-weight:normal;
-margin-bottom:12px;
-background:linear-gradient(90deg,#d49a63,#fff,#54d987);
--webkit-background-clip:text;
-color:transparent;
-}
-
-.eyes-subtitle{
-position:relative;
-z-index:2;
-font-size:16px;
-line-height:1.8;
-color:#dbcfc8;
-margin-bottom:30px;
-}
-
-.eyes-grid{
-position:relative;
-z-index:2;
-display:grid;
-grid-template-columns:1fr 100px 1fr;
-align-items:center;
-gap:15px;
-}
-
-.eye-person{
-padding:25px 15px;
-border-radius:28px;
-background:#00000035;
-border:1px solid #ffffff12;
-transition:.4s;
-}
-
-.eye-person:hover{
-transform:translateY(-7px) scale(1.02);
-}
-
-.eye-person.brown:hover{
-box-shadow:0 15px 45px #8b572e44;
-border-color:#a76b3f88;
-}
-
-.eye-person.green:hover{
-box-shadow:0 15px 45px #29c96a44;
-border-color:#42d77c88;
-}
-
-.eye{
-width:125px;
-height:78px;
-margin:auto;
-position:relative;
-border-radius:70% 15%;
-transform:rotate(45deg);
-background:#fffaf5;
-box-shadow:0 0 25px #ffffff22;
-overflow:hidden;
-}
-
-.eye:before{
-content:"";
-position:absolute;
-width:58px;
-height:58px;
-border-radius:50%;
-left:33px;
-top:10px;
-background:#79502e;
-box-shadow:
-0 0 0 10px #9b663b,
-0 0 0 17px #583619,
-0 0 30px #8b572e;
-}
-
-.eye.green{
-background:#f4fff8;
-}
-
-.eye.green:before{
-background:#188b48;
-box-shadow:
-0 0 0 10px #31b967,
-0 0 0 17px #075c2b,
-0 0 35px #36d979;
-}
-
-.eye:after{
-content:"";
-position:absolute;
-width:15px;
-height:15px;
-border-radius:50%;
-background:white;
-left:43px;
-top:18px;
-box-shadow:8px 5px 18px white;
-}
-
-.eye-name{
-margin-top:20px;
-font-size:19px;
-}
-
-.eye-color{
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:3px;
-margin-top:7px;
-}
-
-.brown .eye-color{
-color:#c98b5b;
-}
-
-.green .eye-color{
-color:#55dd8b;
-}
-
-.eye-connection{
-position:relative;
-height:130px;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.eye-heart{
-font-size:48px;
-z-index:3;
-filter:
-drop-shadow(0 0 15px #ff4d91)
-drop-shadow(0 0 35px #ff4d9166);
-animation:eyeHeartBeat 1.5s infinite;
-}
-
-.eye-line{
-position:absolute;
-left:-20px;
-right:-20px;
-height:2px;
-background:linear-gradient(
-90deg,
-#9b663b,
-#ff6c9d,
-#fff,
-#55d988,
-#188b48
-);
-box-shadow:0 0 15px #ff6c9d;
-animation:eyeLine 2s infinite;
-}
-
-.eye-message{
-position:relative;
-z-index:2;
-margin-top:28px;
-font-size:20px;
-font-style:italic;
-line-height:1.8;
-color:#eee4df;
-}
-
-.eye-highlight-brown{
-color:#c9905d;
-}
-
-.eye-highlight-green{
-color:#54d987;
-}
-
-.eye-final{
-margin-top:18px;
-font-family:Arial,sans-serif;
-font-size:10px;
-letter-spacing:4px;
-color:#bbaea7;
-}
-
-@keyframes eyeHeartBeat{
-0%,100%{transform:scale(1)}
-50%{transform:scale(1.18)}
-}
-
-@keyframes eyeLine{
-0%,100%{opacity:.35}
-50%{opacity:1}
-}
-
-@keyframes eyeGlow{
-from{transform:scale(1)}
-to{transform:scale(1.15)}
-}
-
-@media(max-width:650px){
-.eyes-grid{
-grid-template-columns:1fr;
-gap:8px;
-}
-
-.eye-connection{
-height:75px;
-}
-
-.eye-line{
-left:20%;
-right:20%;
-}
-
-.eye-person{
-max-width:280px;
-width:100%;
-margin:auto;
-}
-
-.eyes-title{
-font-size:28px;
-}
+  .start{
+    bottom:10%;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div id="lock">
-<div class="lock-box">
+<div class="scene" id="scene">
 
-<div class="lock-heart">❤️</div>
+  <div class="stars" id="stars"></div>
 
-<h1>SARYAMAA</h1>
+  <div class="moon"></div>
 
-<p>
-SANA ÖZEL BİR EVREN HAZIRLADIM. 🌙<br>
-GİRMEK İÇİN ÖZEL TARİHİMİZİ YAZ.
-</p>
+  <div class="rain" id="rain"></div>
 
-<input
-id="password"
-type="password"
-inputmode="numeric"
-maxlength="8"
-placeholder="15122025"
-autocomplete="off">
+  <div class="content">
 
-<button class="unlock" onclick="unlock()">
-❤️ SARYAMAA UNIVERSE'E GİR
-</button>
+    <div class="inner">
 
-<div id="error"></div>
+      <div class="small" id="small">
+        BAZI HİKÂYELER BİTER...
+      </div>
 
-</div>
-</div>
+      <h1 class="title" id="title">
+        KIRIK KALP
+      </h1>
 
-<div id="site" class="hidden">
+      <div class="heart-container" id="heartContainer">
 
-<div class="moon"></div>
+        <div class="heart" id="heart"></div>
 
-<div class="container">
+        <div class="crack"></div>
 
-<section class="hero">
+      </div>
 
-<div class="badge">
-SARYAMAA UNIVERSE • SADECE SANA ÖZEL ❤️
-</div>
+      <div class="subtitle" id="subtitle">
+        AMA BAZI İZLER KALIR.
+      </div>
 
-<div class="hero-heart">❤️</div>
+    </div>
 
-<h1 class="title">SARYAMAA</h1>
+  </div>
 
-<p class="subtitle">
-BAZI HİKÂYELER ANLATILMAZ...<br>
-KALPTE YAŞANIR. 💗
-</p>
+  <div class="message" id="message">
 
-<div class="scroll">
-EVRENİ KEŞFET ↓
-</div>
+    <div class="line" id="line1">
+      Bir zamanlar bir hikâye vardı.
+    </div>
 
-</section>
+    <div class="line" id="line2">
+      Güzel başladı.
+    </div>
 
-<div class="card">
+    <div class="line" id="line3">
+      Çok şey yaşandı.
+    </div>
 
-<div class="universe-title">
-✨ SARYAMAA UNIVERSE ✨
-</div>
+    <div class="line" id="line4">
+      Sonra kalp kırıldı.
+    </div>
 
-<div class="universe-grid">
+    <div class="line" id="line5">
+      Ve bazı şeyler eskisi gibi olmadı.
+    </div>
 
-<div class="universe-item" onclick="go('heartPlace')">
-<div class="icon">❤️</div>
-<b>KALBİMDEKİ YERİN</b>
-<small>Kalbine dokun</small>
-</div>
+  </div>
 
-<div class="universe-item" onclick="go('firstMoment')">
-<div class="icon">🌙</div>
-<b>İLK AN</b>
-<small>Seni gördüğüm ilk an</small>
-</div>
+  <div class="final" id="final">
 
-<div class="universe-item" onclick="go('beamCard')">
-<div class="icon">💫</div>
-<b>KALPTEN KALBE</b>
-<small>Aramızdaki ışık</small>
-</div>
+    <div class="final-heart">
+      ❤️‍🩹
+    </div>
 
-<div class="universe-item" onclick="go('musicCard')">
-<div class="icon">🎵</div>
-<b>BİZİM ŞARKIMIZ</b>
-<small>Kalbin ritmi</small>
-</div>
+    <div class="final-text">
+      HER ŞEY ESKİSİ GİBİ OLMAYABİLİR.<br>
+      <strong>AMA BEN İYİLEŞECEĞİM.</strong>
+    </div>
 
-</div>
-</div>
+    <div class="final-small">
+      BAZI YARALAR ZAMANLA GÜZELLEŞİR.
+    </div>
 
-<div class="card" id="heartPlace">
+  </div>
 
-<h2>❤️ KALBİMDEKİ YERİN</h2>
+  <button class="start" id="start" onclick="startStory()">
+    ❤️‍🩹 HİKÂYEYİ BAŞLAT
+  </button>
 
-<div class="big-heart">
-
-<div class="big-heart-shape">❤️</div>
-
-<div class="heart-place-text">
-SARYAMAA
-</div>
+  <button class="music" id="musicButton" onclick="toggleMusic()">
+    🎵
+  </button>
 
 </div>
 
-<p class="text">
-KALBİMDEKİ YERİNİ MERAK EDİYORSAN...
-</p>
-
-<div class="divider"></div>
-
-<div class="place-result">
-TARİF EDİLECEK BİR YER DEĞİL. ❤️<br>
-ÇÜNKÜ ORADA SADECE SEN VARSIN.
-</div>
-
-</div>
-
-<div class="card" id="firstMoment">
-
-<h2>🌙 SENİ GÖRDÜĞÜM İLK AN</h2>
-
-<div class="first-time">
-
-<div class="first-date">
-15.12.2025
-</div>
-
-<div class="divider"></div>
-
-<div class="typewriter" id="typewriter"></div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>💫 IŞIK YOLU</h2>
-
-<p class="text">
-BAZI YOLLAR İKİ İNSANI BİRBİRİNE GÖTÜRÜR.
-<br><br>
-BİZİMKİ DE ÖYLE BİR YOL. ❤️
-</p>
-
-<div class="light-path">
-
-<div class="path-light"></div>
-<div class="path-light"></div>
-<div class="path-light"></div>
-<div class="path-light"></div>
-<div class="path-light"></div>
-
-</div>
-
-</div>
-
-<div class="card" id="beamCard">
-
-<h2>❤️ KALPTEN KALBE IŞIN</h2>
-
-<p class="text">
-MESAFE NE KADAR OLURSA OLSUN,
-BAZI KALPLERİN ARASINDA
-GÖRÜNMEYEN BİR BAĞ VARDIR.
-</p>
-
-<div class="love-beam">
-
-<div class="love-heart">❤️</div>
-<div class="beam"></div>
-<div class="beam-dot"></div>
-<div class="love-heart">❤️</div>
-
-</div>
-
-<p class="highlight">
-BİR KALPTEN DİĞERİNE... ❤️
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>💗 KALP NABZI</h2>
-
-<div class="pulse-zone">
-
-<div class="pulse-heart" id="pulseHeart">❤️</div>
-
-<div class="pulse-status">
-KALBİMİN RİTMİ: SARYAMAA ❤️
-</div>
-
-</div>
-
-<p class="text" style="margin-top:20px">
-BU KALP BİR ŞEYİ UNUTMUYOR:
-<br><br>
-<span class="highlight">SENİ. ❤️</span>
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>💕 BİZİM HİKÂYEMİZ</h2>
-
-<p class="text">
-<span class="highlight">15.12.2025</span>
-</p>
-
-<div class="divider"></div>
-
-<p class="text">
-TAKVİMDE SADECE BİR TARİH OLABİLİR.
-<br><br>
-AMA BENİM İÇİN O TARİH,
-GÜZEL BİR HİKÂYENİN BAŞLANGICI.
-<br><br>
-BAZI ŞARKILARIN,
-BAZI GECELERİN,
-BAZI GÜLÜŞLERİN
-ANLAMI O GÜNDEN SONRA DEĞİŞTİ.
-<br><br>
-<span class="highlight">
-İYİ Kİ VARSIN SARYAMAA. ❤️
-</span>
-</p>
-
-<div class="counter">
-
-<div class="counter-box">
-<strong id="days">0</strong>
-<span>GÜN</span>
-</div>
-
-<div class="counter-box">
-<strong id="hours">0</strong>
-<span>SAAT</span>
-</div>
-
-<div class="counter-box">
-<strong id="minutes">0</strong>
-<span>DAKİKA</span>
-</div>
-
-<div class="counter-box">
-<strong id="seconds">0</strong>
-<span>SANİYE</span>
-</div>
-
-</div>
-
-</div>
-<div class="eyes-card" id="ourEyes">
-
-<h2 class="eyes-title">
-👁️ GÖZLERİMİZ
-</h2>
-
-<p class="eyes-subtitle">
-BİRİNİN GÖZLERİ KAHVERENGİ...<br>
-DİĞERİNİN GÖZLERİ YEŞİL...<br><br>
-AMA İKİSİ DE AYNI YERE BAKIYOR. ❤️
-</p>
-
-<div class="eyes-grid">
-
-<div class="eye-person brown">
-
-<div class="eye"></div>
-
-<div class="eye-name">
-SARYAMAA 🤎
-</div>
-
-<div class="eye-color">
-KAHVERENGİ GÖZLER
-</div>
-
-</div>
-
-<div class="eye-connection">
-
-<div class="eye-line"></div>
-
-<div class="eye-heart">
-❤️
-</div>
-
-</div>
-
-<div class="eye-person green">
-
-<div class="eye green"></div>
-
-<div class="eye-name">
-BEN 💚
-</div>
-
-<div class="eye-color">
-YEŞİL GÖZLER
-</div>
-
-</div>
-
-</div>
-
-<div class="eye-message">
-
-<span class="eye-highlight-brown">
-KAHVERENGİ GÖZLERİN
-</span>
-<br>
-ile
-<br>
-<span class="eye-highlight-green">
-YEŞİL GÖZLERİM
-</span>
-<br><br>
-
-aynı hikâyenin iki güzel detayı. ❤️
-
-</div>
-
-<div class="divider"></div>
-
-<div class="eye-final">
-İKİ GÖZ • İKİ RENK • TEK HİKÂYE ♡
-</div>
-
-</div>
-<div class="card" id="musicCard">
-
-<h2>🎵 BİZİM ŞARKIMIZ</h2>
-
-<div class="music">
-
-<div class="song">
-
-<div class="disc" id="disc">🎵</div>
-
-<div class="song-info">
-
-<b>PINHANI - BENİ SEN İNANDIR</b>
-
-<small>SARYAMAA İÇİN ❤️</small>
-
-</div>
-
-<button class="play" id="play" onclick="toggleMusic()">
-▶
-</button>
-
-</div>
-
-<input
-class="progress"
-id="progress"
-type="range"
-min="0"
-max="100"
-value="0">
-
-<div class="music-bottom">
-
-<span id="current">0:00</span>
-<span class="music-space"></span>
-<span>🔊</span>
-
-<input
-class="volume"
-id="volume"
-type="range"
-min="0"
-max="1"
-step=".01"
-value=".8">
-
-<span id="duration">0:00</span>
-
-</div>
-
-</div>
-
-<div class="visualizer" id="visualizer">
-
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-
-</div>
-
-<audio id="music" preload="metadata">
-<source src="sarki.mp3" type="audio/mpeg">
+<audio id="music" preload="auto" loop>
+  <source src="sarki.mp3" type="audio/mpeg">
 </audio>
-
-</div>
-
-<div class="card">
-
-<h2>🌹 GÜL YAĞMURU</h2>
-
-<p class="text">
-BU SAYFAYI GÜLLERLE DOLDURALIM. ❤️
-</p>
-
-<div class="rose-box">
-
-<button class="rose-btn" onclick="roseRain()">
-🌹 GÜLLERİ YAĞDIR
-</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>💗 SENİ NEDEN SEVİYORUM?</h2>
-
-<div class="reasons">
-
-<div class="reason">
-<div class="reason-icon">😊</div>
-<p>GÜLÜŞÜNÜN HER ŞEYİ DAHA GÜZEL YAPMASI.</p>
-</div>
-
-<div class="reason">
-<div class="reason-icon">🌙</div>
-<p>GECELERDE BİLE AKLIMA GELEN GÜZEL ŞEY OLMAN.</p>
-</div>
-
-<div class="reason">
-<div class="reason-icon">✨</div>
-<p>HAYATI DAHA ANLAMLI HİSSETTİRMEN.</p>
-</div>
-
-<div class="reason">
-<div class="reason-icon">❤️</div>
-<p>VE EN ÖNEMLİSİ... SADECE SEN OLDUĞUN İÇİN.</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>💌 SANA BİR MEKTUP</h2>
-
-<div class="envelope" onclick="openLetter()">
-<div class="seal">❤️</div>
-</div>
-
-<p class="text">
-ZARFA DOKUN VE MEKTUBU AÇ. 💕
-</p>
-
-<div class="letter" id="letter">
-
-<p>
-SEVGİLİ SARYAMAA,
-<br><br>
-BUNU YAZARKEN AKLIMDAN GEÇEN TEK ŞEY SEN OLDUN.
-<br><br>
-BAZI DUYGULARI KELİMELERLE ANLATMAK ZOR.
-<br><br>
-AMA ŞUNU BİLMENİ İSTİYORUM:
-<br><br>
-SEN BENİM İÇİN ÇOK ÖZELSİN.
-<br><br>
-GÜLÜŞÜN, KONUŞMAN VE VARLIĞIN
-BENDE GÜZEL BİR İZ BIRAKIYOR.
-<br><br>
-BU SAYFAYI HAZIRLARKEN
-YÜZÜNDE BİR GÜLÜMSEME
-OLMASINI HAYAL ETTİM.
-<br><br>
-İYİ Kİ VARSIN.
-<br>
-İYİ Kİ HAYATIMDASIN.
-<br><br>
-SENİ ÇOK SEVİYORUM. ❤️
-</p>
-
-</div>
-
-</div>
-
-<!-- SÜRPRİZ KARTI -->
-<div class="card" id="surprise">
-
-<h2>💗 SON BİR ŞEY...</h2>
-
-<p class="text">
-BURAYA KADAR GELDİYSEN,
-SANA HAZIRLADIĞIM EN ÖZEL
-SÜRPRİZİ AÇABİLİRSİN.
-</p>
-
-<div class="divider"></div>
-
-<button class="surprise-btn" onclick="openFinalSurprise()">
-💗 KAPIYI AÇ
-</button>
-
-</div>
-
-<div class="card final">
-
-<h2>SARYAMAA ❤️</h2>
-
-<p class="text">
-İYİ Kİ VARSIN.<br>
-İYİ Kİ HAYATIMDASIN.<br>
-İYİ Kİ BİZİM HİKÂYEMİZ VAR.
-</p>
-
-<div class="divider"></div>
-
-<p class="text">
-15.12.2025 → ∞
-</p>
-
-<button class="final-btn" onclick="go('surprise')">
-💗 SÜRPRİZE GİT
-</button>
-
-</div>
-
-</div>
-
-<footer>
-SARYAMAA UNIVERSE ❤️ · 15.12.2025
-</footer>
-
-</div>
-
-<!-- TAM EKRAN SÜRPRİZ -->
-<div class="surprise-screen" id="surpriseScreen">
-
-<div class="surprise-stars"></div>
-
-<div class="surprise-content">
-
-<div class="surprise-small" id="surpriseSmall">
-BİR SONRAKİ SAYFADA NE VAR?
-</div>
-
-<div class="surprise-heart" id="surpriseHeart">
-❤️
-</div>
-
-<div class="surprise-text" id="surpriseText"></div>
-
-<button
-class="touch-final"
-id="touchFinal"
-onclick="revealFinalMessage()">
-❤️ KALBE DOKUN
-</button>
-
-<div class="final-message" id="finalMessage">
-
-<div class="final-line">
-SENİ GÖRDÜĞÜM İLK AN...
-</div>
-
-<div class="final-line">
-SENİ TANIDIĞIM İLK GÜN...
-</div>
-
-<div class="final-line">
-VE BUGÜN...
-</div>
-
-<div class="final-love">
-İYİ Kİ SEN. ❤️
-</div>
-
-<div class="final-date">
-15.12.2025 → ∞
-</div>
-
-<div class="final-last">
-BU HİKÂYENİN SONU YOK.
-</div>
-
-<div class="final-buttons">
-
-<button class="again-btn" onclick="replaySurprise()">
-💗 TEKRAR AÇ
-</button>
-
-<button class="home-btn" onclick="closeFinalSurprise()">
-🏠 ANA SAYFAYA DÖN
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
 
 <script>
 
-const PASSWORD="15122025";
+/* YILDIZLAR */
+const stars=document.getElementById("stars");
 
-/* ŞİFRE */
-function unlock(){
+for(let i=0;i<100;i++){
 
-const value=document.getElementById("password").value.trim();
+  const star=document.createElement("div");
 
-if(value===PASSWORD){
+  star.className="star";
 
-document.getElementById("lock").classList.add("hidden");
-document.getElementById("site").classList.remove("hidden");
+  star.style.left=Math.random()*100+"%";
+  star.style.top=Math.random()*100+"%";
 
-startHearts();
+  star.style.animationDelay=
+    Math.random()*3+"s";
 
-}else{
+  star.style.animationDuration=
+    (2+Math.random()*4)+"s";
 
-document.getElementById("error").textContent=
-"ŞİFRE YANLIŞ. ❤️";
-
-}
-
-}
-
-document.getElementById("password").addEventListener("keydown",e=>{
-if(e.key==="Enter")unlock();
-});
-
-
-/* SAYFA İÇİ GEÇİŞ */
-function go(id){
-
-const el=document.getElementById(id);
-
-if(el){
-el.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
-}
-
+  stars.appendChild(star);
 }
 
 
-/* İLK AN YAZISI */
-const firstText=
-"Seni gördüğüm ilk an, belki senin için sıradan bir andı. Ama bazı anlar vardır; insan daha sonra dönüp baktığında ne kadar özel olduğunu anlar. O anın güzel bir başlangıç olduğunu bilmiyordum...";
+/* YAĞMUR */
+const rain=document.getElementById("rain");
 
-let typed=0;
+for(let i=0;i<80;i++){
 
-function typeFirstMoment(){
+  const drop=document.createElement("div");
 
-const box=document.getElementById("typewriter");
+  drop.className="drop";
 
-if(typed<firstText.length){
+  drop.style.left=Math.random()*100+"%";
 
-box.textContent+=firstText.charAt(typed);
-typed++;
+  drop.style.animationDuration=
+    (.5+Math.random()*1)+"s";
 
-setTimeout(typeFirstMoment,35);
+  drop.style.animationDelay=
+    Math.random()*2+"s";
 
+  rain.appendChild(drop);
 }
 
-}
 
-setTimeout(typeFirstMoment,800);
+/* ELEMENTLER */
+const scene=
+document.getElementById("scene");
+
+const heart=
+document.getElementById("heart");
+
+const start=
+document.getElementById("start");
+
+const music=
+document.getElementById("music");
+
+const musicButton=
+document.getElementById("musicButton");
 
 
 /* MÜZİK */
-const music=document.getElementById("music");
-const play=document.getElementById("play");
-const disc=document.getElementById("disc");
-const progress=document.getElementById("progress");
-const volume=document.getElementById("volume");
-const current=document.getElementById("current");
-const duration=document.getElementById("duration");
-const visualizer=document.getElementById("visualizer");
-const pulseHeart=document.getElementById("pulseHeart");
-
-function formatTime(sec){
-
-if(!isFinite(sec))return"0:00";
-
-const m=Math.floor(sec/60);
-const s=Math.floor(sec%60);
-
-return m+":"+(s<10?"0":"")+s;
-
-}
-
 function toggleMusic(){
 
-if(music.paused){
+  if(music.paused){
 
-music.play().then(()=>{
+    music.play().then(()=>{
 
-play.textContent="⏸";
-disc.classList.add("playing");
-visualizer.classList.add("active");
+      musicButton.textContent="⏸️";
 
-}).catch(()=>{
+    }).catch(()=>{
 
-alert("MÜZİK BULUNAMADI. GITHUB'DAKİ DOSYANIN ADI sarki.mp3 OLMALI.");
+      alert(
+        "Müzik bulunamadı. sarki.mp3 dosyasının index.html ile aynı klasörde olduğundan emin ol."
+      );
+
+    });
+
+  }else{
+
+    music.pause();
+
+    musicButton.textContent="🎵";
+
+  }
+
+}
+
+
+/* HİKÂYE */
+function startStory(){
+
+  start.classList.add("hidden");
+
+  music.play().then(()=>{
+
+    musicButton.textContent="⏸️";
+
+  }).catch(()=>{});
+
+
+  /* BAŞLANGIÇ */
+  setTimeout(()=>{
+
+    document
+      .getElementById("small")
+      .style.opacity="1";
+
+  },500);
+
+
+  setTimeout(()=>{
+
+    document
+      .getElementById("title")
+      .style.opacity="1";
+
+  },1200);
+
+
+  setTimeout(()=>{
+
+    document
+      .getElementById("subtitle")
+      .style.opacity="1";
+
+  },1800);
+
+
+  /* KALBİ KIR */
+  setTimeout(()=>{
+
+    breakHeart();
+
+  },3000);
+
+
+  /* YAZILAR */
+  setTimeout(()=>{
+
+    showLine("line1");
+
+  },5000);
+
+  setTimeout(()=>{
+
+    showLine("line2");
+
+  },6500);
+
+  setTimeout(()=>{
+
+    showLine("line3");
+
+  },8000);
+
+  setTimeout(()=>{
+
+    showLine("line4");
+
+  },9500);
+
+  setTimeout(()=>{
+
+    showLine("line5");
+
+  },11000);
+
+
+  /* KARARMA */
+  setTimeout(()=>{
+
+    scene.classList.add("dark");
+
+  },12500);
+
+
+  /* FİNAL */
+  setTimeout(()=>{
+
+    showFinal();
+
+  },15500);
+
+}
+
+
+/* KALBİ KIR */
+function breakHeart(){
+
+  heart.classList.add("broken");
+
+  heart.style.transform=
+    "rotate(-45deg) scale(.85) translateX(-8px)";
+
+  createFragments();
+
+}
+
+
+/* KALP PARÇALARI */
+function createFragments(){
+
+  for(let i=0;i<28;i++){
+
+    const fragment=
+      document.createElement("div");
+
+    fragment.className="fragment";
+
+    fragment.textContent=
+      Math.random()>0.5 ? "💔" : "❤️";
+
+    fragment.style.left=
+      (50+Math.random()*12-6)+"vw";
+
+    fragment.style.top=
+      (45+Math.random()*12-6)+"vh";
+
+    fragment.style.setProperty(
+      "--x",
+      Math.random()*100
+    );
+
+    fragment.style.animationDelay=
+      Math.random()*.8+"s";
+
+    document.body.appendChild(fragment);
+
+    setTimeout(()=>{
+
+      fragment.remove();
+
+    },3500);
+
+  }
+
+}
+
+
+/* YAZI GÖSTER */
+function showLine(id){
+
+  document
+    .getElementById(id)
+    .classList.add("show");
+
+}
+
+
+/* FİNAL */
+function showFinal(){
+
+  document
+    .getElementById("message")
+    .style.display="none";
+
+  document
+    .getElementById("heartContainer")
+    .style.opacity="0";
+
+  document
+    .getElementById("final")
+    .classList.add("show");
+
+}
+
+
+/* SAYFAYA TIKLAYINCA KÜÇÜK KALP */
+document.addEventListener("click",function(e){
+
+  if(e.target.closest("button")) return;
+
+  const h=
+    document.createElement("div");
+
+  h.textContent=
+    ["🖤","💔","❤️‍🩹","✨"][
+      Math.floor(Math.random()*4)
+    ];
+
+  h.style.position="fixed";
+  h.style.left=e.clientX+"px";
+  h.style.top=e.clientY+"px";
+  h.style.zIndex="500";
+  h.style.pointerEvents="none";
+  h.style.fontSize="22px";
+
+  h.animate([
+
+    {
+      transform:"translateY(0) scale(.5)",
+      opacity:0
+    },
+
+    {
+      transform:"translateY(-80px) scale(1.3)",
+      opacity:1
+    },
+
+    {
+      transform:"translateY(-130px) scale(.7)",
+      opacity:0
+    }
+
+  ],{
+    duration:1200,
+    easing:"ease-out"
+  });
+
+  document.body.appendChild(h);
+
+  setTimeout(()=>{
+    h.remove();
+  },1200);
 
 });
-
-}else{
-
-music.pause();
-
-play.textContent="▶";
-disc.classList.remove("playing");
-visualizer.classList.remove("active");
-
-}
-
-}
-
-music.addEventListener("loadedmetadata",()=>{
-
-progress.max=music.duration;
-duration.textContent=formatTime(music.duration);
-
-});
-
-music.addEventListener("timeupdate",()=>{
-
-progress.value=music.currentTime;
-current.textContent=formatTime(music.currentTime);
-
-});
-
-music.addEventListener("ended",()=>{
-
-play.textContent="▶";
-disc.classList.remove("playing");
-visualizer.classList.remove("active");
-
-});
-
-progress.addEventListener("input",()=>{
-music.currentTime=progress.value;
-});
-
-volume.addEventListener("input",()=>{
-music.volume=volume.value;
-});
-
-music.volume=.8;
-
-
-/* NABIZ */
-setInterval(()=>{
-
-if(!music.paused){
-
-pulseHeart.style.transform=
-"scale("+(1+Math.random()*.18)+")";
-
-setTimeout(()=>{
-pulseHeart.style.transform="";
-},250);
-
-}
-
-},700);
-
-
-/* SAYAÇ */
-const startDate=new Date("2025-12-15T00:00:00");
-
-function updateCounter(){
-
-let diff=new Date()-startDate;
-
-if(diff<0)diff=0;
-
-const days=Math.floor(diff/86400000);
-
-diff%=86400000;
-
-const hours=Math.floor(diff/3600000);
-
-diff%=3600000;
-
-const minutes=Math.floor(diff/60000);
-
-const seconds=Math.floor((diff%60000)/1000);
-
-document.getElementById("days").textContent=days;
-document.getElementById("hours").textContent=hours;
-document.getElementById("minutes").textContent=minutes;
-document.getElementById("seconds").textContent=seconds;
-
-}
-
-updateCounter();
-setInterval(updateCounter,1000);
-
-
-/* MEKTUP */
-function openLetter(){
-
-const letter=document.getElementById("letter");
-
-letter.classList.toggle("show");
-
-for(let i=0;i<10;i++)
-setTimeout(createHeart,i*100);
-
-}
-
-
-/* GÜL YAĞMURU */
-function roseRain(){
-
-for(let i=0;i<75;i++){
-
-setTimeout(()=>{
-
-const rose=document.createElement("div");
-
-rose.className="rose";
-rose.textContent=Math.random()>.2?"🌹":"🌸";
-rose.style.left=Math.random()*100+"vw";
-rose.style.fontSize=(18+Math.random()*25)+"px";
-rose.style.animationDuration=(3+Math.random()*4)+"s";
-
-document.body.appendChild(rose);
-
-setTimeout(()=>rose.remove(),8000);
-
-},i*45);
-
-}
-
-}
-
-
-/* DOKUNUNCA KALP */
-document.addEventListener("pointerdown",e=>{
-
-if(
-e.target.closest("button")||
-e.target.closest("input")||
-e.target.closest(".envelope")
-)return;
-
-const heart=document.createElement("div");
-
-heart.className="touch-heart";
-
-heart.textContent=[
-"❤️","💕","💗","💖","💘"
-][Math.floor(Math.random()*5)];
-
-heart.style.left=e.clientX+"px";
-heart.style.top=e.clientY+"px";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>heart.remove(),1000);
-
-});
-
-
-/* KALPLER */
-function createHeart(){
-
-const heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.textContent=[
-"❤️","💕","💗","💖","💘","💞","💓"
-][Math.floor(Math.random()*7)];
-
-heart.style.left=Math.random()*100+"vw";
-heart.style.fontSize=(14+Math.random()*28)+"px";
-heart.style.animationDuration=(5+Math.random()*7)+"s";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>heart.remove(),14000);
-
-}
-
-function startHearts(){
-
-for(let i=0;i<20;i++)
-setTimeout(createHeart,i*140);
-
-setInterval(createHeart,950);
-
-}
-
-
-/* YILDIZLAR */
-for(let i=0;i<55;i++){
-
-const star=document.createElement("div");
-
-star.className="star";
-star.style.left=Math.random()*100+"vw";
-star.style.top=Math.random()*100+"vh";
-star.style.animationDelay=Math.random()*3+"s";
-
-document.body.appendChild(star);
-
-}
-
-
-/* SÜRPRİZİ AÇ */
-function openFinalSurprise(){
-
-const screen=document.getElementById("surpriseScreen");
-const text=document.getElementById("surpriseText");
-const button=document.getElementById("touchFinal");
-const final=document.getElementById("finalMessage");
-const small=document.getElementById("surpriseSmall");
-const heart=document.getElementById("surpriseHeart");
-
-screen.classList.add("open");
-document.body.style.overflow="hidden";
-
-final.classList.remove("show");
-
-small.style.display="";
-text.style.display="";
-button.style.display="";
-button.classList.remove("show");
-
-heart.textContent="❤️";
-text.textContent="";
-
-const message="SARYAMAA...";
-let i=0;
-
-function type(){
-
-if(i<message.length){
-
-text.textContent+=message.charAt(i);
-i++;
-
-setTimeout(type,130);
-
-}else{
-
-setTimeout(()=>{
-
-text.textContent=
-"SANA SÖYLEMEK İSTEDİĞİM SON BİR ŞEY VAR.";
-
-button.classList.add("show");
-
-},1000);
-
-}
-
-}
-
-type();
-
-for(let i=0;i<60;i++)
-setTimeout(createHeart,i*30);
-
-}
-
-
-/* FİNAL MESAJ */
-function revealFinalMessage(){
-
-const small=document.getElementById("surpriseSmall");
-const heart=document.getElementById("surpriseHeart");
-const text=document.getElementById("surpriseText");
-const button=document.getElementById("touchFinal");
-const final=document.getElementById("finalMessage");
-
-small.style.display="none";
-text.style.display="none";
-button.style.display="none";
-heart.textContent="💖";
-
-final.classList.add("show");
-
-setTimeout(megaFireworks,3000);
-setTimeout(roseRain,3700);
-
-for(let i=0;i<150;i++)
-setTimeout(createHeart,i*15);
-
-}
-
-
-/* HAVAİ FİŞEK */
-function megaFireworks(){
-
-for(let f=0;f<10;f++){
-
-setTimeout(()=>{
-
-const x=15+Math.random()*70;
-const y=15+Math.random()*55;
-
-const core=document.createElement("div");
-
-core.className="firework";
-core.style.left=x+"vw";
-core.style.top=y+"vh";
-
-document.body.appendChild(core);
-
-for(let p=0;p<45;p++){
-
-const particle=document.createElement("div");
-
-particle.className="fire-particle";
-particle.style.left=x+"vw";
-particle.style.top=y+"vh";
-
-const angle=Math.random()*Math.PI*2;
-const distance=70+Math.random()*180;
-
-particle.style.setProperty("--x",Math.cos(angle)*distance);
-particle.style.setProperty("--y",Math.sin(angle)*distance);
-
-document.body.appendChild(particle);
-
-setTimeout(()=>particle.remove(),1500);
-
-}
-
-setTimeout(()=>core.remove(),1300);
-
-},f*450);
-
-}
-
-}
-
-
-/* ANA SAYFAYA DÖN */
-function closeFinalSurprise(){
-
-const screen=document.getElementById("surpriseScreen");
-const surprise=document.getElementById("surprise");
-
-screen.classList.remove("open");
-
-document.body.style.overflow="";
-
-setTimeout(()=>{
-
-surprise.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
-
-},300);
-
-}
-
-
-/* TEKRAR AÇ */
-function replaySurprise(){
-
-const screen=document.getElementById("surpriseScreen");
-const text=document.getElementById("surpriseText");
-const final=document.getElementById("finalMessage");
-const button=document.getElementById("touchFinal");
-const heart=document.getElementById("surpriseHeart");
-const small=document.getElementById("surpriseSmall");
-
-final.classList.remove("show");
-
-button.classList.remove("show");
-button.style.display="";
-
-small.style.display="";
-text.style.display="";
-text.textContent="";
-heart.textContent="❤️";
-
-screen.classList.remove("open");
-
-document.body.style.overflow="";
-
-setTimeout(()=>{
-openFinalSurprise();
-},500);
-
-}
 
 </script>
 
