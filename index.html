@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KIRIK KALP ❤️‍🩹</title>
+<title>Bir Hikâyenin Sonrası 🖤</title>
 
 <style>
 *{
@@ -19,386 +19,534 @@ html,body{
 }
 
 body{
-  background:#020204;
-  color:white;
+  background:#020306;
+  color:#fff;
   font-family:Georgia,"Times New Roman",serif;
 }
 
-/* ANA SAHNE */
+/* =========================
+   SAHNE
+========================= */
+
 .scene{
-  position:fixed;
-  inset:0;
+  position:relative;
+  width:100%;
+  height:100vh;
   overflow:hidden;
   background:
-    radial-gradient(circle at 50% 45%,#30101b 0%,#10070c 35%,#020204 75%);
-  transition:background 5s ease;
+    radial-gradient(circle at 50% 40%,#151824 0%,#07090f 38%,#010204 100%);
+  transition:background 4s;
 }
 
 .scene.dark{
   background:#000;
 }
 
-/* YILDIZLAR */
+/* =========================
+   YILDIZLAR
+========================= */
+
 .stars{
   position:absolute;
   inset:0;
-  transition:opacity 5s ease;
+  transition:opacity 5s;
 }
 
 .star{
   position:absolute;
   width:2px;
   height:2px;
+  background:white;
   border-radius:50%;
-  background:#fff;
-  opacity:.7;
+  box-shadow:0 0 8px #fff;
   animation:twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+  from{opacity:.15;transform:scale(.6)}
+  to{opacity:1;transform:scale(1.5)}
 }
 
 .scene.dark .stars{
   opacity:.05;
 }
 
-/* AY */
+/* =========================
+   AY
+========================= */
+
 .moon{
   position:absolute;
-  top:8%;
-  right:10%;
-  width:75px;
-  height:75px;
+  width:100px;
+  height:100px;
   border-radius:50%;
-  background:#fff8fc;
-  box-shadow:0 0 50px #fff6;
-  transition:opacity 5s;
+  right:9%;
+  top:9%;
+  background:#e9edf8;
+  box-shadow:
+    0 0 30px #cdd6ff,
+    0 0 90px #8997c755;
+  transition:5s;
 }
 
 .scene.dark .moon{
-  opacity:.05;
+  opacity:.08;
+  transform:translateY(40px);
 }
 
-/* YAĞMUR */
+/* =========================
+   YAĞMUR
+========================= */
+
 .rain{
   position:absolute;
-  inset:0;
+  inset:-20%;
   pointer-events:none;
-  opacity:.45;
-  transition:opacity 5s;
+  opacity:0;
+  transition:opacity 3s;
 }
 
-.scene.dark .rain{
-  opacity:.12;
+.rain.active{
+  opacity:1;
 }
 
 .drop{
   position:absolute;
-  top:-30px;
+  top:-50px;
   width:1px;
-  height:35px;
-  background:linear-gradient(transparent,#a9b5c7);
-  transform:rotate(12deg);
-  animation:rain linear infinite;
+  height:70px;
+  background:linear-gradient(
+    transparent,
+    #9ca9c9aa
+  );
+  transform:rotate(14deg);
+  animation:rainFall linear infinite;
 }
 
-/* İÇERİK */
+@keyframes rainFall{
+  to{
+    transform:translateY(120vh) rotate(14deg);
+  }
+}
+
+/* =========================
+   ANA İÇERİK
+========================= */
+
 .content{
   position:absolute;
-  inset:0;
   z-index:10;
+  inset:0;
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
-  padding:25px;
   text-align:center;
-}
-
-.inner{
-  width:min(800px,95%);
+  padding:25px;
 }
 
 .small{
   font-family:Arial,sans-serif;
   font-size:10px;
   letter-spacing:6px;
-  color:#a9989f;
-  margin-bottom:30px;
+  color:#8c91a3;
   opacity:0;
+  animation:show 2s 1s forwards;
 }
 
 .title{
-  font-size:clamp(38px,8vw,82px);
+  margin-top:22px;
+  font-size:clamp(42px,8vw,85px);
   font-weight:normal;
   font-style:italic;
-  line-height:1.15;
   opacity:0;
+  animation:titleIn 2.5s 2s forwards;
 }
 
 .subtitle{
+  max-width:650px;
   margin-top:20px;
-  font-size:clamp(17px,3vw,25px);
-  color:#d7c7cd;
-  line-height:1.8;
+  color:#aeb2c1;
+  font-size:18px;
+  line-height:1.9;
   opacity:0;
+  animation:show 2s 4s forwards;
 }
 
-/* KALP */
-.heart-container{
+@keyframes show{
+  to{
+    opacity:1;
+  }
+}
+
+@keyframes titleIn{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+    letter-spacing:20px;
+  }
+  to{
+    opacity:1;
+    transform:none;
+    letter-spacing:3px;
+  }
+}
+
+/* =========================
+   KALP ALANI
+========================= */
+
+.heart-area{
   position:relative;
-  width:220px;
-  height:190px;
-  margin:35px auto;
+  width:280px;
+  height:250px;
+  margin:20px 0;
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
 }
 
 .heart{
   position:relative;
-  width:120px;
-  height:120px;
+  width:125px;
+  height:125px;
   transform:rotate(-45deg);
-  background:#e71950;
+  background:#9c102b;
   filter:
-    drop-shadow(0 0 15px #ff2457)
-    drop-shadow(0 0 45px #ff174d66);
+    drop-shadow(0 0 15px #c20f35)
+    drop-shadow(0 0 45px #78091f);
   animation:heartbeat 1.5s infinite;
-  transition:all 2s ease;
+  transition:2s;
 }
 
 .heart:before,
 .heart:after{
   content:"";
   position:absolute;
-  width:120px;
-  height:120px;
+  width:125px;
+  height:125px;
   border-radius:50%;
-  background:#e71950;
+  background:#9c102b;
 }
 
 .heart:before{
-  top:-60px;
+  top:-62px;
   left:0;
 }
 
 .heart:after{
-  left:60px;
+  left:62px;
   top:0;
 }
 
-/* KIRIK KALP */
-.heart.broken{
-  animation:none;
-  transform:rotate(-45deg) scale(.9);
-}
-
-.heart.broken:before,
-.heart.broken:after{
-  background:#b80e3b;
-}
-
-/* ÇATLAK */
-.crack{
-  position:absolute;
-  z-index:30;
-  width:8px;
-  height:145px;
-  background:#080308;
-  transform:rotate(20deg);
-  opacity:0;
-  clip-path:polygon(
-    45% 0,
-    70% 20%,
-    48% 35%,
-    78% 55%,
-    45% 72%,
-    65% 100%,
-    30% 78%,
-    48% 57%,
-    20% 40%,
-    45% 25%
-  );
-}
-
-.heart.broken + .crack{
-  opacity:1;
-}
-
-/* KALP PARÇALARI */
-.fragment{
-  position:fixed;
-  z-index:50;
-  pointer-events:none;
-  font-size:22px;
-  animation:fragmentFall 2.5s forwards;
-}
-
-/* YAZILAR */
-.message{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:min(800px,90%);
-  font-size:clamp(23px,4vw,42px);
-  line-height:1.7;
-  font-style:italic;
-}
-
-.line{
-  opacity:0;
-  transform:translateY(25px);
-  transition:opacity 1.2s,transform 1.2s;
-}
-
-.line.show{
-  opacity:1;
-  transform:none;
-}
-
-.final{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:min(850px,90%);
-  opacity:0;
-  pointer-events:none;
-}
-
-.final.show{
-  opacity:1;
-  transition:opacity 2s;
-}
-
-.final-heart{
-  font-size:110px;
-  margin-bottom:30px;
-  filter:drop-shadow(0 0 35px #ff466d);
-  animation:healing 2.5s infinite;
-}
-
-.final-text{
-  font-size:clamp(25px,5vw,50px);
-  line-height:1.5;
-  font-style:italic;
-}
-
-.final-small{
-  margin-top:25px;
-  font-family:Arial,sans-serif;
-  color:#9e8c94;
-  font-size:11px;
-  letter-spacing:4px;
-}
-
-/* BUTON */
-.start{
-  position:absolute;
-  bottom:9%;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:100;
-  padding:15px 28px;
-  border:1px solid #ffffff22;
-  border-radius:30px;
-  background:#ffffff08;
-  color:#ddd;
-  cursor:pointer;
-  backdrop-filter:blur(10px);
-  transition:.3s;
-}
-
-.start:hover{
-  background:#ffffff15;
-  transform:translateX(-50%) translateY(-3px);
-}
-
-.start.hidden{
-  display:none;
-}
-
-/* MÜZİK */
-.music{
-  position:absolute;
-  z-index:100;
-  bottom:25px;
-  right:25px;
-  width:45px;
-  height:45px;
-  border:1px solid #ffffff22;
-  border-radius:50%;
-  background:#ffffff0b;
-  color:white;
-  cursor:pointer;
-  backdrop-filter:blur(10px);
-}
-
-/* ANİMASYONLAR */
 @keyframes heartbeat{
   0%,100%{transform:rotate(-45deg) scale(1)}
   50%{transform:rotate(-45deg) scale(1.08)}
 }
 
-@keyframes twinkle{
-  from{opacity:.15}
-  to{opacity:.9}
+/* KIRILMA */
+
+.heart.broken{
+  animation:breakHeart 3s forwards;
 }
 
-@keyframes rain{
-  to{
-    transform:translate(-100px,110vh) rotate(12deg);
+@keyframes breakHeart{
+  0%{
+    transform:rotate(-45deg) scale(1);
+    filter:drop-shadow(0 0 30px #ff183d);
   }
+  30%{
+    transform:rotate(-45deg) scale(1.15);
+  }
+  100%{
+    transform:rotate(-45deg) scale(.2);
+    opacity:.05;
+    filter:none;
+  }
+}
+
+/* KALP ÇATLAĞI */
+
+.crack{
+  position:absolute;
+  z-index:20;
+  width:4px;
+  height:130px;
+  background:#05060a;
+  transform:rotate(12deg);
+  opacity:0;
+  transition:opacity 1s;
+  box-shadow:0 0 8px #000;
+}
+
+.crack.show{
+  opacity:1;
+}
+
+/* PARÇALAR */
+
+.fragments{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+
+.fragment{
+  position:absolute;
+  color:#a40e2c;
+  font-size:22px;
+  opacity:0;
+}
+
+.fragment.fly{
+  animation:fragmentFall 3s forwards;
 }
 
 @keyframes fragmentFall{
   0%{
     opacity:1;
-    transform:translate(0,0) rotate(0) scale(1);
+    transform:translate(0,0) rotate(0);
   }
   100%{
     opacity:0;
     transform:
       translate(
-        calc((var(--x) - 50) * 3px),
-        180px
+        calc((var(--x) - .5) * 500px),
+        350px
       )
-      rotate(300deg)
-      scale(.3);
+      rotate(300deg);
   }
 }
 
-@keyframes healing{
-  0%,100%{
-    transform:scale(1);
+/* =========================
+   YAZILAR
+========================= */
+
+.story{
+  position:absolute;
+  z-index:30;
+  width:min(700px,90%);
+  text-align:center;
+  opacity:0;
+  transform:translateY(20px);
+  transition:1.5s;
+  pointer-events:none;
+}
+
+.story.show{
+  opacity:1;
+  transform:none;
+}
+
+.story p{
+  font-size:clamp(21px,4vw,34px);
+  line-height:1.8;
+  font-style:italic;
+  text-shadow:0 0 25px #000;
+}
+
+/* =========================
+   MÜZİK
+========================= */
+
+.music-box{
+  position:absolute;
+  z-index:100;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 18px;
+  border:1px solid #ffffff14;
+  border-radius:40px;
+  background:#ffffff08;
+  backdrop-filter:blur(15px);
+  opacity:0;
+  animation:show 2s 5s forwards;
+}
+
+.music-button{
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:50%;
+  background:#151722;
+  color:#fff;
+  cursor:pointer;
+}
+
+.music-text{
+  font-family:Arial,sans-serif;
+  font-size:10px;
+  letter-spacing:2px;
+  color:#a5a9b7;
+}
+
+/* =========================
+   FİNAL KALBİ
+========================= */
+
+.final-heart{
+  position:absolute;
+  z-index:40;
+  width:110px;
+  height:110px;
+  transform:rotate(-45deg) scale(0);
+  background:#641225;
+  opacity:0;
+}
+
+.final-heart:before,
+.final-heart:after{
+  content:"";
+  position:absolute;
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:#641225;
+}
+
+.final-heart:before{
+  top:-55px;
+}
+
+.final-heart:after{
+  left:55px;
+}
+
+.final-heart.rebuild{
+  animation:rebuild 4s forwards;
+}
+
+@keyframes rebuild{
+  0%{
+    opacity:0;
+    transform:rotate(-45deg) scale(.1);
   }
-  50%{
-    transform:scale(1.12);
+
+  45%{
+    opacity:.4;
+    transform:rotate(-45deg) scale(.6);
+  }
+
+  75%{
+    opacity:.75;
+    transform:rotate(-45deg) scale(1);
+  }
+
+  100%{
+    opacity:1;
+    transform:rotate(-45deg) scale(1);
+    filter:
+      drop-shadow(0 0 20px #9d1637)
+      drop-shadow(0 0 60px #641225);
   }
 }
 
-/* MOBİL */
+/* =========================
+   FİNAL METİN
+========================= */
+
+.final{
+  position:absolute;
+  z-index:200;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
+  opacity:0;
+  pointer-events:none;
+  transition:3s;
+  background:radial-gradient(
+    circle,
+    #12070b55,
+    #000 75%
+  );
+}
+
+.final.show{
+  opacity:1;
+}
+
+.final-inner{
+  max-width:800px;
+}
+
+.final-small{
+  font-family:Arial,sans-serif;
+  font-size:10px;
+  letter-spacing:6px;
+  color:#666b78;
+  margin-bottom:30px;
+}
+
+.final h2{
+  font-size:clamp(25px,5vw,48px);
+  font-weight:normal;
+  line-height:1.8;
+  color:#d7d9df;
+}
+
+.final strong{
+  display:block;
+  margin-top:30px;
+  font-size:clamp(25px,5vw,45px);
+  font-style:italic;
+  color:#eee;
+}
+
+.final-line{
+  margin-top:25px;
+  color:#777c89;
+  font-size:17px;
+  line-height:1.9;
+}
+
+/* =========================
+   VIGNETTE
+========================= */
+
+.vignette{
+  position:absolute;
+  z-index:50;
+  inset:0;
+  pointer-events:none;
+  box-shadow:
+    inset 0 0 180px #000,
+    inset 0 0 350px #000;
+}
+
+/* =========================
+   MOBİL
+========================= */
+
 @media(max-width:600px){
 
   .moon{
-    width:50px;
-    height:50px;
+    width:60px;
+    height:60px;
     right:7%;
   }
 
-  .heart-container{
-    transform:scale(.8);
-    margin:15px auto;
+  .heart-area{
+    transform:scale(.75);
+    margin:-5px 0;
   }
 
-  .message{
-    font-size:22px;
+  .subtitle{
+    font-size:15px;
   }
 
-  .final-heart{
-    font-size:85px;
+  .music-box{
+    bottom:18px;
   }
 
-  .start{
-    bottom:10%;
+  .music-text{
+    display:none;
   }
 }
 </style>
@@ -416,93 +564,153 @@ body{
 
   <div class="content">
 
-    <div class="inner">
+    <div class="small">
+      BAZI HİKÂYELERİN SONU SESSİZ OLUR
+    </div>
 
-      <div class="small" id="small">
-        BAZI HİKÂYELER BİTER...
-      </div>
+    <h1 class="title">
+      BİR ZAMANLAR...
+    </h1>
 
-      <h1 class="title" id="title">
-        KIRIK KALP
-      </h1>
+    <p class="subtitle">
+      Bir kalp vardı.<br>
+      Gerçekten inanmıştı.
+    </p>
 
-      <div class="heart-container" id="heartContainer">
+    <div class="heart-area">
 
-        <div class="heart" id="heart"></div>
+      <div class="heart" id="heart"></div>
 
-        <div class="crack"></div>
+      <div class="crack" id="crack"></div>
 
-      </div>
+      <div class="fragments" id="fragments"></div>
 
-      <div class="subtitle" id="subtitle">
-        AMA BAZI İZLER KALIR.
-      </div>
+      <div class="final-heart" id="finalHeart"></div>
 
     </div>
 
   </div>
 
-  <div class="message" id="message">
+  <!-- HİKÂYE YAZILARI -->
 
-    <div class="line" id="line1">
-      Bir zamanlar bir hikâye vardı.
-    </div>
-
-    <div class="line" id="line2">
-      Güzel başladı.
-    </div>
-
-    <div class="line" id="line3">
-      Çok şey yaşandı.
-    </div>
-
-    <div class="line" id="line4">
-      Sonra kalp kırıldı.
-    </div>
-
-    <div class="line" id="line5">
-      Ve bazı şeyler eskisi gibi olmadı.
-    </div>
-
+  <div class="story" id="story1">
+    <p>
+      Bazı insanlar hayatımıza<br>
+      tesadüfen girer...
+    </p>
   </div>
+
+  <div class="story" id="story2">
+    <p>
+      Sonra bir bakarsın,<br>
+      hayatının en güzel kısmı olmuşlar.
+    </p>
+  </div>
+
+  <div class="story" id="story3">
+    <p>
+      Ama bazen<br>
+      güzel başlayan şeyler de biter.
+    </p>
+  </div>
+
+  <div class="story" id="story4">
+    <p>
+      Ve insan,<br>
+      geriye sadece anılarıyla kalır.
+    </p>
+  </div>
+
+  <div class="story" id="story5">
+    <p>
+      Kırılan şey sadece bir kalp değildi...
+    </p>
+  </div>
+
+  <div class="story" id="story6">
+    <p>
+      Birlikte kurulan hayallerdi.
+    </p>
+  </div>
+
+  <div class="story" id="story7">
+    <p>
+      Ama her şeyin bir sonu varsa...
+    </p>
+  </div>
+
+  <div class="story" id="story8">
+    <p>
+      Bir başlangıcı da olabilir.
+    </p>
+  </div>
+
+  <!-- FİNAL -->
 
   <div class="final" id="final">
 
-    <div class="final-heart">
-      ❤️‍🩹
-    </div>
+    <div class="final-inner">
 
-    <div class="final-text">
-      HER ŞEY ESKİSİ GİBİ OLMAYABİLİR.<br>
-      <strong>AMA BEN İYİLEŞECEĞİM.</strong>
-    </div>
+      <div class="final-small">
+        VE SONUNDA...
+      </div>
 
-    <div class="final-small">
-      BAZI YARALAR ZAMANLA GÜZELLEŞİR.
+      <h2>
+        Kalbim kırıldı.
+        <br>
+        Ama hâlâ burada.
+      </h2>
+
+      <strong>
+        Her şey eskisi gibi olmayabilir.
+        <br>
+        Ama ben iyileşeceğim.
+      </strong>
+
+      <div class="final-line">
+        Bazı insanlar unutulmaz.<br>
+        Bazı anılar silinmez.<br>
+        Ama insan yine de yoluna devam etmeyi öğrenir.
+      </div>
+
     </div>
 
   </div>
 
-  <button class="start" id="start" onclick="startStory()">
-    ❤️‍🩹 HİKÂYEYİ BAŞLAT
-  </button>
+  <!-- MÜZİK -->
 
-  <button class="music" id="musicButton" onclick="toggleMusic()">
-    🎵
-  </button>
+  <div class="music-box">
+
+    <button
+      class="music-button"
+      id="musicButton"
+      onclick="toggleMusic()">
+      ▶
+    </button>
+
+    <div class="music-text">
+      SARKI • BİR HİKÂYENİN SONRASI
+    </div>
+
+  </div>
+
+  <div class="vignette"></div>
 
 </div>
 
-<audio id="music" preload="auto" loop>
+<audio id="music" preload="auto">
   <source src="sarki.mp3" type="audio/mpeg">
 </audio>
 
 <script>
 
-/* YILDIZLAR */
+/* =================================
+   YILDIZLAR
+================================= */
+
 const stars=document.getElementById("stars");
 
-for(let i=0;i<100;i++){
+for(let i=0;i<110;i++){
 
   const star=document.createElement("div");
 
@@ -512,19 +720,22 @@ for(let i=0;i<100;i++){
   star.style.top=Math.random()*100+"%";
 
   star.style.animationDelay=
-    Math.random()*3+"s";
+    Math.random()*4+"s";
 
-  star.style.animationDuration=
-    (2+Math.random()*4)+"s";
+  star.style.opacity=
+    .1+Math.random()*.8;
 
   stars.appendChild(star);
 }
 
 
-/* YAĞMUR */
+/* =================================
+   YAĞMUR
+================================= */
+
 const rain=document.getElementById("rain");
 
-for(let i=0;i<80;i++){
+for(let i=0;i<100;i++){
 
   const drop=document.createElement("div");
 
@@ -533,7 +744,7 @@ for(let i=0;i<80;i++){
   drop.style.left=Math.random()*100+"%";
 
   drop.style.animationDuration=
-    (.5+Math.random()*1)+"s";
+    (.5+Math.random()*1.2)+"s";
 
   drop.style.animationDelay=
     Math.random()*2+"s";
@@ -542,15 +753,108 @@ for(let i=0;i<80;i++){
 }
 
 
-/* ELEMENTLER */
+/* =================================
+   ELEMENTLER
+================================= */
+
 const scene=
 document.getElementById("scene");
 
 const heart=
 document.getElementById("heart");
 
-const start=
-document.getElementById("start");
+const crack=
+document.getElementById("crack");
+
+const fragments=
+document.getElementById("fragments");
+
+const finalHeart=
+document.getElementById("finalHeart");
+
+const final=
+document.getElementById("final");
+
+
+/* =================================
+   PARÇALANAN KALP
+================================= */
+
+function breakHeart(){
+
+  crack.classList.add("show");
+
+  heart.classList.add("broken");
+
+  for(let i=0;i<35;i++){
+
+    const piece=
+      document.createElement("div");
+
+    piece.className="fragment";
+
+    piece.textContent=
+      Math.random()>.4 ? "♥" : "•";
+
+    piece.style.left=
+      (35+Math.random()*30)+"%";
+
+    piece.style.top=
+      (35+Math.random()*25)+"%";
+
+    piece.style.setProperty(
+      "--x",
+      Math.random()
+    );
+
+    piece.style.fontSize=
+      (10+Math.random()*20)+"px";
+
+    fragments.appendChild(piece);
+
+    setTimeout(()=>{
+      piece.classList.add("fly");
+    },i*30);
+
+    setTimeout(()=>{
+      piece.remove();
+    },4000);
+
+  }
+}
+
+
+/* =================================
+   HİKÂYE
+================================= */
+
+const stories=[
+  document.getElementById("story1"),
+  document.getElementById("story2"),
+  document.getElementById("story3"),
+  document.getElementById("story4"),
+  document.getElementById("story5"),
+  document.getElementById("story6"),
+  document.getElementById("story7"),
+  document.getElementById("story8")
+];
+
+function showStory(index){
+
+  stories.forEach(
+    s=>s.classList.remove("show")
+  );
+
+  if(stories[index]){
+    stories[index].classList.add("show");
+  }
+
+}
+
+
+/* =================================
+   MÜZİK
+================================= */
 
 const music=
 document.getElementById("music");
@@ -558,261 +862,164 @@ document.getElementById("music");
 const musicButton=
 document.getElementById("musicButton");
 
-
-/* MÜZİK */
 function toggleMusic(){
 
   if(music.paused){
 
-    music.play().then(()=>{
-
-      musicButton.textContent="⏸️";
-
-    }).catch(()=>{
-
-      alert(
-        "Müzik bulunamadı. sarki.mp3 dosyasının index.html ile aynı klasörde olduğundan emin ol."
-      );
-
-    });
+    music.play()
+      .then(()=>{
+        musicButton.textContent="Ⅱ";
+      })
+      .catch(()=>{
+        alert(
+          "sarki.mp3 dosyasını index.html ile aynı klasöre koy."
+        );
+      });
 
   }else{
 
     music.pause();
 
-    musicButton.textContent="🎵";
+    musicButton.textContent="▶";
 
   }
 
 }
 
 
-/* HİKÂYE */
-function startStory(){
+/* =================================
+   SİNEMATİK AKIŞ
+================================= */
 
-  start.classList.add("hidden");
+setTimeout(()=>{
+  showStory(0);
+},6500);
 
-  music.play().then(()=>{
+setTimeout(()=>{
+  showStory(1);
+},9500);
 
-    musicButton.textContent="⏸️";
+setTimeout(()=>{
+  showStory(2);
+},12500);
 
-  }).catch(()=>{});
+setTimeout(()=>{
+  showStory(3);
+},15500);
 
+setTimeout(()=>{
 
-  /* BAŞLANGIÇ */
-  setTimeout(()=>{
+  showStory(4);
 
-    document
-      .getElementById("small")
-      .style.opacity="1";
+  breakHeart();
 
-  },500);
+  rain.classList.add("active");
 
+},18500);
 
-  setTimeout(()=>{
+setTimeout(()=>{
+  showStory(5);
+},22000);
 
-    document
-      .getElementById("title")
-      .style.opacity="1";
+setTimeout(()=>{
+  scene.classList.add("dark");
+  showStory(6);
+},25500);
 
-  },1200);
-
-
-  setTimeout(()=>{
-
-    document
-      .getElementById("subtitle")
-      .style.opacity="1";
-
-  },1800);
-
-
-  /* KALBİ KIR */
-  setTimeout(()=>{
-
-    breakHeart();
-
-  },3000);
+setTimeout(()=>{
+  showStory(7);
+},28500);
 
 
-  /* YAZILAR */
-  setTimeout(()=>{
+/* =================================
+   KALBİN YENİDEN BİRLEŞMESİ
+================================= */
 
-    showLine("line1");
+setTimeout(()=>{
 
-  },5000);
+  stories.forEach(
+    s=>s.classList.remove("show")
+  );
 
-  setTimeout(()=>{
+  finalHeart.classList.add("rebuild");
 
-    showLine("line2");
-
-  },6500);
-
-  setTimeout(()=>{
-
-    showLine("line3");
-
-  },8000);
-
-  setTimeout(()=>{
-
-    showLine("line4");
-
-  },9500);
-
-  setTimeout(()=>{
-
-    showLine("line5");
-
-  },11000);
+},31500);
 
 
-  /* KARARMA */
-  setTimeout(()=>{
+/* =================================
+   FİNAL
+================================= */
 
-    scene.classList.add("dark");
+setTimeout(()=>{
 
-  },12500);
+  final.classList.add("show");
 
-
-  /* FİNAL */
-  setTimeout(()=>{
-
-    showFinal();
-
-  },15500);
-
-}
+},35000);
 
 
-/* KALBİ KIR */
-function breakHeart(){
+/* =================================
+   FİNALE KADAR MÜZİĞİ HAZIRLA
+================================= */
 
-  heart.classList.add("broken");
-
-  heart.style.transform=
-    "rotate(-45deg) scale(.85) translateX(-8px)";
-
-  createFragments();
-
-}
+music.volume=.7;
 
 
-/* KALP PARÇALARI */
-function createFragments(){
+/* =================================
+   SAYFAYA DOKUNUNCA KÜÇÜK IŞIKLAR
+================================= */
 
-  for(let i=0;i<28;i++){
+document.addEventListener("pointerdown",e=>{
 
-    const fragment=
+  for(let i=0;i<4;i++){
+
+    const spark=
       document.createElement("div");
 
-    fragment.className="fragment";
+    spark.style.position="fixed";
+    spark.style.left=e.clientX+"px";
+    spark.style.top=e.clientY+"px";
+    spark.style.width="4px";
+    spark.style.height="4px";
+    spark.style.borderRadius="50%";
+    spark.style.background="#fff";
+    spark.style.boxShadow="0 0 12px #fff";
+    spark.style.pointerEvents="none";
+    spark.style.zIndex="500";
 
-    fragment.textContent=
-      Math.random()>0.5 ? "💔" : "❤️";
+    const angle=
+      Math.random()*Math.PI*2;
 
-    fragment.style.left=
-      (50+Math.random()*12-6)+"vw";
+    const distance=
+      30+Math.random()*60;
 
-    fragment.style.top=
-      (45+Math.random()*12-6)+"vh";
+    spark.animate([
 
-    fragment.style.setProperty(
-      "--x",
-      Math.random()*100
-    );
+      {
+        transform:"translate(0,0)",
+        opacity:1
+      },
 
-    fragment.style.animationDelay=
-      Math.random()*.8+"s";
+      {
+        transform:
+          `translate(
+            ${Math.cos(angle)*distance}px,
+            ${Math.sin(angle)*distance}px
+          )`,
+        opacity:0
+      }
 
-    document.body.appendChild(fragment);
+    ],{
+      duration:800,
+      easing:"ease-out"
+    });
+
+    document.body.appendChild(spark);
 
     setTimeout(()=>{
-
-      fragment.remove();
-
-    },3500);
+      spark.remove();
+    },850);
 
   }
-
-}
-
-
-/* YAZI GÖSTER */
-function showLine(id){
-
-  document
-    .getElementById(id)
-    .classList.add("show");
-
-}
-
-
-/* FİNAL */
-function showFinal(){
-
-  document
-    .getElementById("message")
-    .style.display="none";
-
-  document
-    .getElementById("heartContainer")
-    .style.opacity="0";
-
-  document
-    .getElementById("final")
-    .classList.add("show");
-
-}
-
-
-/* SAYFAYA TIKLAYINCA KÜÇÜK KALP */
-document.addEventListener("click",function(e){
-
-  if(e.target.closest("button")) return;
-
-  const h=
-    document.createElement("div");
-
-  h.textContent=
-    ["🖤","💔","❤️‍🩹","✨"][
-      Math.floor(Math.random()*4)
-    ];
-
-  h.style.position="fixed";
-  h.style.left=e.clientX+"px";
-  h.style.top=e.clientY+"px";
-  h.style.zIndex="500";
-  h.style.pointerEvents="none";
-  h.style.fontSize="22px";
-
-  h.animate([
-
-    {
-      transform:"translateY(0) scale(.5)",
-      opacity:0
-    },
-
-    {
-      transform:"translateY(-80px) scale(1.3)",
-      opacity:1
-    },
-
-    {
-      transform:"translateY(-130px) scale(.7)",
-      opacity:0
-    }
-
-  ],{
-    duration:1200,
-    easing:"ease-out"
-  });
-
-  document.body.appendChild(h);
-
-  setTimeout(()=>{
-    h.remove();
-  },1200);
 
 });
 
